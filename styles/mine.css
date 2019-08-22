@@ -1,0 +1,29 @@
+
+
+.grivin-border{
+    background: #FFFFFF;
+    border: solid 4px #272425;
+    z-index: 1;
+}
+
+.box-shadow{
+    box-shadow: 0px 45px 70px rgba(0,0,0,0.24);
+
+}
+
+.grivin-border:before{
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border: 2px solid #CE9042;
+}
+
+input.form-control:focus{
+    box-shadow: 0 0 0 0.2rem rgba(156, 42, 48, 0.25);
+}
+
+
