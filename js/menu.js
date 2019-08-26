@@ -15,8 +15,9 @@
 
 $(document).ready(function()
 {
-	"use strict";
 
+
+	alert("LOADED");
 	/* 
 
 	1. Vars and Inits
@@ -24,6 +25,7 @@ $(document).ready(function()
 	*/
 
 	var header = $('.header');
+	var headerLogo = $('.header_logo');
 	var hamburgerBar = $('.hamburger_bar');
 	var hamburger = $('.hamburger');
 
@@ -56,14 +58,18 @@ $(document).ready(function()
 
 	function setHeader()
 	{
+
 		if($(window).scrollTop() > 91)
 		{
 			header.addClass('scrolled');
+			headerLogo.addClass('scrolled');
 			hamburgerBar.addClass('scrolled');
 		}
 		else
 		{
 			header.removeClass('scrolled');
+			headerLogo.removeClass('scrolled');
+
 			hamburgerBar.removeClass('scrolled');
 		}
 	}

@@ -27,6 +27,7 @@ $(document).ready(function()
 	var header = $('.header');
 	var hamburgerBar = $('.hamburger_bar');
 	var hamburger = $('.hamburger');
+	var headerLogo = $('.header_logo');
 
 	setHeader();
 
@@ -62,11 +63,15 @@ $(document).ready(function()
 		{
 			header.addClass('scrolled');
 			hamburgerBar.addClass('scrolled');
+			headerLogo.addClass('scrolled');
+
 		}
 		else
 		{
 			header.removeClass('scrolled');
 			hamburgerBar.removeClass('scrolled');
+			headerLogo.removeClass('scrolled');
+
 		}
 	}
 
