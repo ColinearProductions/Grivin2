@@ -1,3 +1,23 @@
+@font-face {
+    font-family: trajan;
+    src: url(../font/TrajanP0.otf);
+}
+
+
+.grivin-emblem{
+    font-family: trajan, serif !important;
+    color:black;
+    text-shadow: -1px 0 white, -3px 0 #CE9042;
+
+
+    line-height: .4;
+    font-size: 55px;
+}
+
+.grivin-font{
+    font-family: trajan, serif !important;
+}
+
 
 
 .grivin-border{
