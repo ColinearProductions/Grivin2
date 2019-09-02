@@ -16,6 +16,8 @@
     <link href="plugins/jquery-timepicker/jquery.timepicker.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
     <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+
+
     <link rel="stylesheet" type="text/css" href="styles/mine.css">
     <link rel="stylesheet" type="text/css"
           href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css">
@@ -170,86 +172,121 @@
     <!-- Home -->
 
 
-    <div class="intro" style="margin-top:20vh;margin-bottom: 0;">
+    <div class="intro " style="margin-top:20vh;margin-bottom: 20vh;">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <h1 class="text-center font-weight-bold my-3">
-                        Contact
-                    </h1>
+
+                <div class="col-md-6 text-center">
+                    <img src="img/RoseWine.png" class="img-fluid " style="max-height: 70vh">
+
                 </div>
-                <div class="col-md-7 my-5">
-                    <div class="row">
-                        <div class="col-md-6 p-2">
-                            <input type="email" class="form-control  p-2"
-                                   style="border:2px solid #9C2A30; font-size:1.4rem" placeholder="Nume">
-                        </div>
-                        <div class="col-md-6 p-2">
-                            <input type="email" class="form-control  p-2"
-                                   style="border:2px solid #9C2A30; font-size:1.4rem" placeholder="Subiect">
-                        </div>
-                        <div class="col-md-6 p-2">
-                            <input type="email" class="form-control  p-2"
-                                   style="border:2px solid #9C2A30; font-size:1.4rem" placeholder="Adresaa de email">
-                        </div>
-                        <div class="col-md-6 p-2">
+                <div class="col-md-6">
+                    <div style="border-bottom:1px solid gray" class="pb-4">
+                        <h1 class="font-weight-bold">Vin Rosu Grivin</h1>
+                        <h3 style="color:gray">Demisec <small style="font-weight: normal">|</small> 75 cl <small
+                                style="font-weight: normal">|</small> Dealu Mare, Romania</h3>
+                        <h3 style="color:gray"> 13.5%</h3>
+                    </div>
+                    <div style="border-bottom:1px solid gray" class="py-4">
+                        <h2 class="font-weight-bold">75.00 lei <small
+                                style="color:gray;text-decoration: line-through;margin-left: 15px;"> 100.00 lei</small>
+                        </h2>
 
-                            <input type="email" class="form-control  p-2"
-                                   style="border:2px solid #9C2A30; font-size:1.4rem" placeholder="Numar de telefon">
 
+                        <input type="number" id="quantity_picker" name="quantity" min="1" max="5" value="1">
+
+
+                        <div class="button red  trans_200  "
+                             style=" border-radius: 5px; display: inline-block; margin-bottom:2px;">
+                            <a href="#">Adauga in cos</a>
                         </div>
-                        <div class="col-md-12 p-2">
-                            <textarea class="form-control p-2" style="border:2px solid #9C2A30; font-size:1.4rem"
-                                      placeholder="Mesajul dumneavoastra"></textarea>
-                        </div>
-                        <div class="col-md-12 p-2">
-                            <div class="text-center">
-                                <div class="g-recaptcha" style=" display: inline-block;" data-sitekey="6LfZSzMUAAAAALtmC0ZC7BmtwN-eEw3Fs8LjwwSV" data-callback="correctCaptcha"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 p-2">
-                            <div class="button red" style="width:100%"><a href="#">Trimite</a></div>
-                        </div>
+
+
                     </div>
 
+                    <div class="my-3">
+                        <h4 class="font-weight-bold">
+                            Acest vin roșu este un cupaj nobil de Merlot, Cabernet Sauvignon și
+                            Syrah, fiind rezultatul unei meticuloase imbinari a muncii în podgorie
+                            și în crama.
+                        </h4>
+                        <h4 class="font-weight-bold">
+                            Acest vin este bogat, fervent și elegant. Cu o culoare intensa, mirosul
+                            este complex, cu indicii de fructe coapte si condimente, ardei, cuișoare
+                            și un strop de vanilie dulce, are un gust plin și bine structurat cu
+                            taninuri usor mătăsoase. Se recomanda savurarea lui la o temperatura
+                            intre 18 si 20 de grade Celsius.
+                        </h4>
+                        <div class="row">
+                            <div class="col-md-12 my-2 font-weight-bold" style="font-size: 16px;line-height: 19px;">
+                                <img src="//cdn.shopify.com/s/files/1/0017/2815/1616/t/3/assets/livrare_rapida.svg?593">
+                                <span class="ml-2">Livrare in maxim 2 zile lucratoare</span>
+                            </div>
+
+                            <div class="col-md-12 my-2 font-weight-bold" style="font-size: 16px;line-height: 19px;">
+                                <img src="//cdn.shopify.com/s/files/1/0017/2815/1616/t/3/assets/shipping.svg?593">
+                                <span class="ml-2">Transport in cutii securizate</span>
+                            </div>
+
+                            <div class="col-md-12 my-2 font-weight-bold" style="font-size: 16px;line-height: 19px;">
+                                <img src="//cdn.shopify.com/s/files/1/0017/2815/1616/t/3/assets/retur2.svg?593">
+                                <span class="ml-2">14 de zile perioada de retur</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4 offset-md-1 my-5">
-                    <h3 class="font-weight-bold">
-                        Adresa
-                    </h3>
-                    <h4>
-                        Strada Tipografilor 11-15 București 013714
-                    </h4>
-                    <h3 class="font-weight-bold">
-                        Telefon
-                    </h3>
-                    <h4>
 
-                        +0721 234 567
-                    </h4>
-                    <h3 class="font-weight-bold">
-                        Email
-                    </h3>
-                    <h4>
 
-                        contact@grivin.com
-                    </h4>
-                    <h3 class="font-weight-bold">
-                        Social
-                    </h3>
-                    <h4>
-                        <i class="fa fa-facebook-square" aria-hidden="true" style="font-size:2rem"></i>
-                        <i class="fa fa-instagram" aria-hidden="true" style="font-size:2rem"></i>
-                        <i class="fa fa-linkedin-square" aria-hidden="true" style="font-size:2rem"></i>
+            </div>
+            <div class="row my-5 pt-3 mx-1 " style="border-top:1px solid gray">
 
-                    </h4>
+                <div class="">
+
+                    <h3 class="font-weight-bold mb-3">LIVRAREA SI PLATA</h3>
+
+
+                    <h5 class=" mb-4">Coletele vor fi livrate prin intermediul curierului Fan Courier</h5>
+
+
+                    <h4 class="font-weight-bold">Livrare in Bucuresti</h4>
+                    <ul class="dotted">
+                        <li>
+                            <h5 class="">Tranport Gratuit pentru comenzi cu valoarea mai mare de 200 lei</h5>
+
+                        </li>
+                        <li>
+                            <h5 class="mb-4">Pentru comenzi cu valoare mai mica de 200 lei, costul transportului este de
+                                14,99 lei (TVA inclus)</h5>
+
+                        </li>
+                    </ul>
+
+
+                    <h4 class="font-weight-bold">Livrare in Tara</h4>
+                    <ul class="dotted">
+                        <li>
+                            <h5 class="">Tranport Gratuit pentru comenzi cu valoarea mai mare de 200 lei</h5>
+                        </li>
+                        <li>
+                            <h5 class="mb-4">Pentru comenzi cu valoare mai mica de 200 lei, costul transportului este de
+                                19,99 lei (TVA inclus)</h5>
+                        </li>
+                    </ul>
+
+
+                    <h4 class="font-weight-bold">Plata</h4>
+                    <ul class="dotted">
+                        <li>
+                    <h5 class="">Momentan singurul mod de plata pe care il oferim este prin ramburs - plata la
+                        livrare</h5>
+                        </li>
+                    </ul>
+
+
                 </div>
             </div>
         </div>
     </div>
-
-
-    <!-- Footer -->
 
 
     <footer class="footer">
@@ -338,7 +375,7 @@
 
 
 <script src="js/custom.js"></script>
-
+>
 
 <script>
 
