@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Venue</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="The Venue template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+    <link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+    <link href="plugins/jquery-datepicker/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="plugins/jquery-timepicker/jquery.timepicker.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+
+
+    <link rel="stylesheet" type="text/css" href="styles/mine.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+    <style>
+        div.wrapper1 {
+            overflow: hidden;
+            width: 100%;
+
+        }
+
+        div.wrapper1 > div {
+            width: 100%;
+            height: 100%;
+
+            -webkit-transition: all 1s linear;
+            -moz-transition: all 1s linear;
+            -o-transition: all 1s linear;
+            -ms-transition: all 1s linear;
+            transition: all 1s linear;
+
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -ms-background-size: cover;
+            background-size: cover;
+
+            transform-origin: bottom left;
+        }
+
+        div.wrapper1:hover > div {
+            -webkit-transform: scale(3);
+            -moz-transform: scale(3);
+            -o-transform: scale(3);
+            -ms-transform: scale(3);
+            transform: scale(3);
+
+            -webkit-backface-visibility: hidden;
+            filter: blur(0);
+            -webkit-filter: blur(0);
+        }
+
+        #p1 {
+            background-image: url(img/0737114-min2.jpg);
+            min-height: 460px;
+            width: 100%;
+            transform-origin: 15% 92%;
+        }
+
+        @media (min-width: 992px) {
+            #p1 {
+                min-height: 475px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            #p1 {
+                min-height: 605px;
+            }
+        }
+
+        .confidentiality>ul {
+            list-style-type: disc;
+            padding-left: 40px;
+        }
+
+        li {
+            color: black;
+        }
+
+    </style>
+
+
+</head>
+<body>
+<div class="super_container">
+    <!-- Header -->
+
+    <!-- Header -->
+    <header class="header" style="background: rgba(0,0,0,0.65)">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="header_content d-flex flex-row align-items-center main_nav_wrapper">
+                        <div class="col-md-12 px-0  d-xs-block d-md-none">
+                            <div class="logo text-center">
+                                <a href="index.html">
+                                    <img src="img/sigla_mica.png" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <nav class="main_nav d-none d-lg-block">
+                                <ul class="d-flex flex-row align-items-center justify-content-end ">
+
+                                    <li><a href="galerie.html">Galerie</a></li>
+                                    <li><a href="#">Cos</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-md-4 d-lg-block d-none">
+                            <div class="logo text-center">
+                                <a href="index.html">
+                                    <img src="img/Doar%20sigla.svg" class="img-fluid header_logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <nav class="main_nav  d-none d-lg-block">
+                                <ul class="d-flex flex-row align-items-center ">
+                                    <li><a href="index.html">Acasa</a></li>
+                                    <li><a href="despre.html">Despre Noi</a></li>
+                                    <li><a href="magazin.html">Magazin</a></li>
+
+                                </ul>
+                            </nav>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hamburger -->
+
+    <div class="hamburger_bar trans_400 d-flex flex-row align-items-center justify-content-start">
+        <div class="hamburger">
+            <div class="menu_toggle d-flex flex-row align-items-center justify-content-start">
+                <span>menu</span>
+                <div class="hamburger_container">
+                    <div class="menu_hamburger">
+                        <div class="line_1 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                        <div class="line_2 hamburger_lines" style="visibility: inherit; opacity: 1;"></div>
+                        <div class="line_3 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu -->
+
+    <div class="menu trans_800">
+        <div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+            <ul>
+                <li><a href="index.html">Acasa</a></li>
+                <li><a href="despre.html">Despre Noi</a></li>
+                <li><a href="magazin.html">Magazin</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="#">Cos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="menu_reservations_phone ml-auto">Reservations: +34 586 778 8892</div>
+    </div>
+
+    <!-- Home -->
+
+
+    <div class="intro " style="margin-top:25vh;margin-bottom: 20vh;">
+        <div class="container">
+            <div class="row confidentiality">
+
+
+                <meta charset="utf-8">
+                <h1 class="ui-title-bar__title">Politica de confidentialitate</h1>
+                <p><strong>PRELUCRARE DATE PERSONALE CONFORM REGULAMENT (UE) 2016/679</strong></p>
+                <p><br>Politica de Confidențialitate descrie categoriile datelor dumneavoastră pe care le prelucrăm,
+                    modalitatea și scopurile în care le colectăm, în ce situații transferăm date cu caracter personal și
+                    diversele drepturi și opțiuni de care dispuneți în acest sens. În același timp, Politica noastră de
+                    Confidențialitate detaliază modul în care prelucrăm datele cu caracter personal în gestionarea
+                    relației cu clienții.</p>
+                <p>&nbsp;</p>
+                <h3><strong>&nbsp;1. Principii de protectie a datelor</strong></h3>
+                <br>
+                <ol>
+                    <ol></ol>
+                </ol>
+                <ul>
+                    <li>Colectarea datelor personale se va face numai in scopurile specificate, explicite si legitime
+                        (prezentate la pct. 3) .
+                    </li>
+                    <li>Datele nu vor fi procesate catre terti intr-o maniera incompatibila cu acele scopuri;</li>
+                    <li>În cazul în care intervin actualizări ale datelor transmise, consimţământul rămâne în vigoare
+                        până la notificarea Grivin House SRL în acest sens de către dumneavoastră;
+                    </li>
+                    <li>Procesarea datelor personale se va face într-o maniera legala, corecta si transparenta;</li>
+                    <li>Toate datele personale vor fi pastrate confidential si stocate intr-o maniera ce asigura
+                        securitatea necesara;
+                    </li>
+                    <li>Datele personale nu vor fi distribuite persoanelor terte, decat in cazul in care acest lucru
+                        este necesar pentru realizarea scopurilor prezentate la pct 3.;
+                    </li>
+                    <li>Persoanele vizate au dreptul de a solicita accesul la datele personale, rectificarea si
+                        stergerea acestora, impotrivirea sau restrictionarea de la procesarea datelor, cat si de la
+                        dreptul de portabilitate al datelor.
+                    </li>
+                </ul>
+                <br>
+                <ol></ol>
+                <h3><strong>2. Date personale si colectarea lor</strong></h3>
+                <ul></ul>
+                <p>Datele pe care le colectam pot include urmatoarele:</p>
+                <ul>
+                    <li>Datele personale includ toate tipurile de informatii directe sau indirecte (si anume utilizate
+                        in legatura cu alte date) ce se refera la persoana fizica subiect, cum ar fi : numele si
+                        prenumele,adresa de e-mail, adresa postala, numarul de telefon mobil sau fix si alte date de
+                        contact similare necesare realizarii contactului cu dvs in vederea procesarii comenzilor plasate
+                        sau pentru orice alte obiective planificate in relatia cu dvs;
+                    </li>
+                    <li>Colectam date de logare pentru accesarea contului shop online grivin.com</li>
+                    <li>Colectam prin Google Analtycs date despre dispozitivul dvs. si despre modul in care dvs. si
+                        dispozitivul interactionati cu produsele noastre ;
+                    </li>
+                    <li>Colectam prin Google Analtycs date despre caracteristicile pe care le utilizati, articolele pe
+                        care le achizitionati de pe paginile noastre web pe care le vizitati ;
+                    </li>
+                    <li>Colectam prin Google Analtycs date despre dispozitivul si reteaua pe care le utilizati pentru a
+                        va conecta la produsele noastre, respectiv locatie geografica, limba, sistem de operare. Nu se
+                        colecteaza informatii despre aplicatii software instalate pe dispozitiv, sau chei de produs.
+                    </li>
+                </ul>
+                <p>&nbsp;</p>
+                <p><strong>IMPORTANT:</strong> TOATE INFORMATIILE COLECTATE DE GOOGLE ANALYTICS PRIN INTERMEDIUL
+                    SITE-URILOR NOASTRE SUNT DOAR LA NIVEL STATISTIC, ELE NEPUTAND FI ASOCIATE UNEI ANUMITE PERSOANE.
+                    ESTE POSIBIL CA GOOGLE ANALYTICS SA STOCHEZE INFORMATII REFERITOARE LA IP, DAR ACELE INFORMATII NU
+                    NE SUNT DISPONIBILE. NOI PUTEM VEDEA DOAR DATELE GENERATE STATISTICE.</p>
+                <h3>
+                    <br> <br><strong>3. Scopul colectarii datelor personale</strong>
+                </h3>
+                <ul>
+                    <li>orice comunicare legata de informarea persoanei fizice privind validarea, expedierea si
+                        facturarea comenzilor, rezolvarea anularilor sau a problemelor de orice natura referitoare la o
+                        comanda, la bunurile achizitionate de pe magazinul online grivin.com;
+                    </li>
+                    <li>orice comunicare legata de informarea persoanei fizice privind expedierea postala/curierat de
+                        mostre, materiale informative, materiale promotionale;
+                    </li>
+                    <li>orice comunicare catre persoanele fizice din baza noastra de date legata de trimiterea de
+                        newslettere informative si/sau alerte periodice, noutati privind produsele, formulare de
+                        feedback, sau alte actiuni sau activitati ale companiei, transmise prin folosirea postei
+                        electronice (e-mail, SMS) a persoanei fizice;
+                    </li>
+                    <li>respectarea obligatiilor legale</li>
+                </ul>
+                <p>&nbsp;</p>
+                <p><strong>IMPORTANT:</strong> De asemenea, acolo unde este cazul sau situatia o impune pentru
+                    realizarea scopului definit mai sus (cu titul de exemplu: expediere unei comenzi, procesare unei
+                    comenzi cu plata cu cardul, expedierea de colete cu mostre, materiale informative/promotionale),
+                    GRIVIN HOUSE SRL poate furniza datele cu caracter personal altor companii partenere, dar numai in
+                    temeiul unui angajament de confidentialitate din partea acestora, prin care garanteaza ca aceste
+                    date sunt pastrate in siguranta si ca furnizarea acestor informatii personale se face conform
+                    legislatiei in vigoare, dupa cum urmeaza: furnizorilor de servicii de curierat, furnizorilor de
+                    servicii de marketing, furnizorilor de servicii de plata/bancare, furnizori de servicii in IT, sau
+                    alte servicii similare. Daca nu sunteti de acord cu divulgarea datelor personale acestor companii,
+                    sunteti rugati sa contactati DPO la adresa de email gdpr@grivin.com<br> <br>Informatiile cu
+                    caracter personal pot fi furnizate si catre Parchetul General, Politie, instantele judecatoresti si
+                    altor organe abilitate ale statului, in baza si in limitele prevederilor legale si ca urmare a unor
+                    cereri expres formulate.</p>
+                <p>&nbsp;</p>
+                <h3><strong>4. Utilizarea datelor personale</strong></h3>
+                <ul>
+                    <li>vom utiliza datele personale numai pentru scopul in care au fost colectate si vom stoca datele
+                        doar atat cat este necesar pentru scopurile mai sus mentionat (pct. 3);
+                    </li>
+                </ul>
+                <p>&nbsp;</p>
+                <h3><strong>5. Securitatea procesarii</strong></h3>
+                <ul>
+                    <li>Vom procesa datele in mod sigur, vom aplica si mentine masuri tehnice adecvate pentru a proteja
+                        datele personale impotriva distrugerii sau pierderii accidentale sau ilegale, alterare,
+                        divulgare sau acces neautorizat, in mod special atunci cand procesarea presupune transmiterea
+                        datelor printr-o retea, atat cat si impotriva oricarei alte forme de procesare ilegala.
+                    </li>
+                    <li>Întrebari legate de securitatea datelor personale pot fi trimise catre DPO la adresa de email
+                        gdpr@grivin.com
+                    </li>
+                </ul>
+                <p>&nbsp;</p>
+                <h3><strong>6. Accesul si rectificarea sau stergerea datelor personale</strong></h3>
+                <ul>
+                    <li>aveti dreptul de a solicita in orice moment accesul la: rectificarea, portabilitatea, stergerea
+                        sau restrictionarea procesarii datelor colectate;
+                    </li>
+                    <li>pentru pastrarea datelor personale actualizate, va recomandam sa ne informati despre orice
+                        schimbare sau discrepanta;
+                    </li>
+                </ul>
+                <p>&nbsp;</p>
+                <p>Consimţământul exprimat va rămâne valabil până la retragerea lui de către dumneavoastră.</p>
+                <p>Odata ce v-ati exprimat in scris dezacordul, datele dvs. personale nu vor mai fi procesate și se vor
+                    lua măsurile corespunzătoare pentru ștergerea oricăror înregistrări cu datele dumneavoastră cu
+                    caracter personal.</p>
+                <p>Consimţământul poate fi retras oricând, în mod gratuit, accesand link-ul de DEZABONARE din footer-ul
+                    oricarui email primit de la GRIVIN HOUSE SRL sau adresand direct cererea dvs. in scris pe email
+                    office@grivin.com</p>
+                <p>Pentru vizualizarea sau modificarea datelor personale sau pentru a obtine informatii legate de datele
+                    personale, precum si pentru pentru orice nemulţumire legată de prelucrarea datelor personale, vă
+                    puteţi adresa utilizând adresa de email office@grivin.com</p>
+                <p>Vă reamintim drepturile acordate de Regulamentul General privind Protecţia Datelor 679/2016, inclusiv
+                    dreptul de informare, acces, rectificare, de a nu fi supus unei decizii bazate exclusiv pe
+                    prelucrarea automată, dreptul de ştergere.&nbsp;</p>
+                <p>Puteţi să vă exercitaţi oricare din aceste drepturi prin email la adresa office@grivin.ro.</p>
+                <p>Este posibil să vă cerem să vă dovediți identitatea comunicându-ne o copie a unui mijloc valabil de
+                    identificare pentru a ne conforma cu obligațiile de securitate pe care le avem și a împiedica
+                    divulgarea neautorizată a datelor.&nbsp;</p>
+                <p>Vom lua în considerare orice solicitări sau plângeri pe care le primim și vă vom transmite un răspuns
+                    în timp util. Dacă nu sunteți mulțumit de răspunsul nostru, puteți înainta plângerea către
+                    Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal – cu sediul în Bd.
+                    Gheorghe Magheru nr. 28-30, București, România.</p>
+                <p>&nbsp;</p>
+                <h3><strong>7. Actualizari ale acesti politici de confidentialitate</strong></h3>
+                <p>Cea mai recentă actualizare a acestei Politici de Confidențialitate a fost realizată în luna iulie
+                    2018. Ne rezervăm dreptul de a actualiza și modifica periodic această Politică de Confidențialitate,
+                    pentru a reflecta orice modificări ale modului în care prelucrăm datele dumneavoastră cu caracter
+                    personal sau orice modificări ale cerințelor legale. În cazul oricărei astfel de modificări, vom
+                    afișa pe website-urile companiei, versiunea modificată a Politicii de Confidențialitate .</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+                <!-- Footer Logo -->
+                <div class="col-lg-3 footer_col d-flex flex-column align-items-center justify-content-center">
+
+
+                    <div class="footer_logo">
+                        <img src="img/logo_complet.png" class="img-fluid">
+
+                    </div>
+                    <div class="copyright">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p style="line-height: 1.2;">Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                            All rights reserved | This template is made with <i class="fa fa-heart-o"
+                                                                                aria-hidden="true"></i> by <a
+                                    href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+
+
+                </div>
+
+                <!-- Footer About -->
+                <div class="col-lg-6 footer_col">
+                    <div class="footer_about grivin-border">
+                        <div class="iframe-container ">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.5443652725126!2d26.07056751552495!3d44.483511479101516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b202457931b3a1%3A0x7e6f024c408c3327!2sS-Park%2C%20Strada%20Tipografilor%2011-15%2C%20Bucure%C8%99ti%20013714!5e0!3m2!1sen!2sro!4v1566816615075!5m2!1sen!2sro"
+                                    width="600" height="250" frameborder="0" style="border:0;"
+                                    allowfullscreen=""></iframe>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Footer Contact -->
+                <div class="col-lg-3 footer_col d-flex flex-column align-items-center justify-content-center">
+                    <div class="footer_contact ">
+                        <ul>
+                            <li class="d-flex flex-row align-items-start justify-content-start">
+                                <div>
+                                    <div class="footer_contact_title">Address:</div>
+                                </div>
+
+                                <div class="footer_contact_text">Strada Tipografilor 11-15 București 013714</div>
+                            </li>
+                            <li class="d-flex flex-row align-items-start justify-content-start">
+                                <div>
+                                    <div class="footer_contact_title">Phone:</div>
+                                </div>
+                                <div class="footer_contact_text">+0721 234 567</div>
+                            </li>
+                            <li class="d-flex flex-row align-items-start justify-content-start">
+                                <div>
+                                    <div class="footer_contact_title">Email:</div>
+                                </div>
+                                <div class="footer_contact_text">contact@grivin.com</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap-4.1.2/popper.js"></script>
+<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock/TimelineMax.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/greensock/animation.gsap.min.js"></script>
+<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="plugins/jquery-datepicker/jquery-ui.js"></script>
+<script src="plugins/jquery-timepicker/jquery.timepicker.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.js"></script>
+
+
+<script src="js/custom.js"></script>
+>
+
+<script>
+
+
+    $(document).ready(function () {
+        $('.popup-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function (item) {
+                    return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+                }
+            }
+        });
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Venue</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="The Venue template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+    <link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+    <link href="plugins/jquery-datepicker/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="plugins/jquery-timepicker/jquery.timepicker.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+
+
+    <link rel="stylesheet" type="text/css" href="styles/mine.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+    <style>
+        div.wrapper1 {
+            overflow: hidden;
+            width: 100%;
+
+        }
+
+        div.wrapper1 > div {
+            width: 100%;
+            height: 100%;
+
+            -webkit-transition: all 1s linear;
+            -moz-transition: all 1s linear;
+            -o-transition: all 1s linear;
+            -ms-transition: all 1s linear;
+            transition: all 1s linear;
+
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -ms-background-size: cover;
+            background-size: cover;
+
+            transform-origin: bottom left;
+        }
+
+        div.wrapper1:hover > div {
+            -webkit-transform: scale(3);
+            -moz-transform: scale(3);
+            -o-transform: scale(3);
+            -ms-transform: scale(3);
+            transform: scale(3);
+
+            -webkit-backface-visibility: hidden;
+            filter: blur(0);
+            -webkit-filter: blur(0);
+        }
+
+        #p1 {
+            background-image: url(img/0737114-min2.jpg);
+            min-height: 460px;
+            width: 100%;
+            transform-origin: 15% 92%;
+        }
+
+        @media (min-width: 992px) {
+            #p1 {
+                min-height: 475px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            #p1 {
+                min-height: 605px;
+            }
+        }
+
+        .confidentiality > ul {
+            list-style-type: disc;
+            padding-left: 40px;
+        }
+
+        li {
+            color: black;
+        }
+
+        p{
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+<div class="super_container">
+    <!-- Header -->
+
+    <!-- Header -->
+    <header class="header" style="background: rgba(0,0,0,0.65)">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="header_content d-flex flex-row align-items-center main_nav_wrapper">
+                        <div class="col-md-12 px-0  d-xs-block d-md-none">
+                            <div class="logo text-center">
+                                <a href="index.html">
+                                    <img src="img/sigla_mica.png" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <nav class="main_nav d-none d-lg-block">
+                                <ul class="d-flex flex-row align-items-center justify-content-end ">
+
+                                    <li><a href="galerie.html">Galerie</a></li>
+                                    <li><a href="#">Cos</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-md-4 d-lg-block d-none">
+                            <div class="logo text-center">
+                                <a href="index.html">
+                                    <img src="img/Doar%20sigla.svg" class="img-fluid header_logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <nav class="main_nav  d-none d-lg-block">
+                                <ul class="d-flex flex-row align-items-center ">
+                                    <li><a href="index.html">Acasa</a></li>
+                                    <li><a href="despre.html">Despre Noi</a></li>
+                                    <li><a href="magazin.html">Magazin</a></li>
+
+                                </ul>
+                            </nav>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hamburger -->
+
+    <div class="hamburger_bar trans_400 d-flex flex-row align-items-center justify-content-start">
+        <div class="hamburger">
+            <div class="menu_toggle d-flex flex-row align-items-center justify-content-start">
+                <span>menu</span>
+                <div class="hamburger_container">
+                    <div class="menu_hamburger">
+                        <div class="line_1 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                        <div class="line_2 hamburger_lines" style="visibility: inherit; opacity: 1;"></div>
+                        <div class="line_3 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu -->
+
+    <div class="menu trans_800">
+        <div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+            <ul>
+                <li><a href="index.html">Acasa</a></li>
+                <li><a href="despre.html">Despre Noi</a></li>
+                <li><a href="magazin.html">Magazin</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="#">Cos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="menu_reservations_phone ml-auto">Reservations: +34 586 778 8892</div>
+    </div>
+
+    <!-- Home -->
+
+
+    <div class="intro " style="margin-top:25vh;margin-bottom: 20vh;">
+        <div class="container">
+            <div class="row confidentiality">
+
+                <h1 class="font-weight-bold">Termeni si conditii</h1>
+                <p>Folosind site-ul www.grivin.com (denumit in continuare si grivin.com), sunteti implicit de acord cu
+                    Termenii si Conditiile de Utilizare de mai jos. Pentru folosirea in cele mai bune conditii a
+                    site-ului, se recomanda citirea cu atentie a Termenilor si Conditiilor de Utilizare. In cazul in
+                    care nu sunteti de acord cu Termenii si Conditiile de Utilizare, nu folositi site-ul
+                    www.vinexpert.ro. www.vinexpert.ro isi rezerva dreptul de a modifica Termenii si Conditiile de
+                    Utilizare oricand considera necesar, fara notificare prealabila. Versiunea in vigoare a Termenilor
+                    si Conditiilor de Utilizare este in permanenta disponibila pe site. Verficati aceasta pagina
+                    periodic, pentru a lua cunostinta de eventualele schimbari. Continuarea folosirii site-ului dupa
+                    schimbarea Termenilor si Conditiilor de Utilizare implica acceptarea modificarilor efectuate si a
+                    noilor Termeni si Conditii de Utilizare.</p>
+                <h2>Informatii generale</h2>
+
+                <p>
+                    Prin site intelegem colectia de informatii obtinuta prin accesarea adresei de web
+                    www.vinexpert.ro., site ce este proprietatea S.C. GRIVIN HOUSE S.R.L. (numita in continuare
+                    GRIVIN) care il intretine si il administreaza:
+                </p>
+
+                <p style="padding-left: 30px;">S.C. VINEXPERT S.R.L.</p>
+                <div style="padding-left: 30px;">Bd. Octavian Goga nr. 24, Bl. M62, sector 3, Bucuresti 030984</div>
+                <div style="padding-left: 30px;">Reg. Com.: J40/4444/1999</div>
+                <div style="padding-left: 30px;">CUI: RO11763890</div>
+                <div style="padding-left: 30px;">IBAN LEI: RO02 BACX 0000 0005 7863 7000</div>
+                <div style="padding-left: 30px;">IBAN EURO: RO72 BACX 0000 0005 7863 7001</div>
+                <div style="padding-left: 30px;">Banca: UniCredit Bank, Agentia Unirii, Bucuresti</div>
+                <p><br>Toate preturile afisate pe site sunt exprimate in RON si includ TVA (19%).<br>Datorita volumului
+                    mare de informatii si a conditiilor impuse de catre producatori, caracteristicile si
+                    disponibilitatea produselor prezentate in acest site se pot schimba fara o notificare prealabila.
+                </p>
+                <p>&nbsp;</p>
+                <h3><strong>Colectarea de informatii personale</strong></h3>
+                VINEXPERT.ro aplica cele mai inalte standarde in tratamentul confidential al clientilor. Toate
+                informatiile (inclusiv, dar nu exclusiv, cele legate de contul clientului, tranzactii, corespondenta)
+                sunt utilizate cu maxima discretie. Singurele informatii personale colectate de VINEXPERT.ro sunt acelea
+                furnizate voluntar de catre utilizator, la efectuarea tranzactiilor sau in alte operatiuni. Simpla
+                navigare a site-ului nu implica colectarea de informatii personale. Anumite functionalitati sau servicii
+                din site necesita furnizarea anumitor informatii personale; acestea vor fi folosite numai in scopul
+                pentru care au fost furnizate si/sau pentru comunicarile dintre site si clientii sai, atunci cand
+                acestea sunt necesare (de exemplu: confirmarea unei comenzi, anuntarea programului de sarbatori,
+                reduceri de pret, promotii).<br><br>VINEXPERT.ro nu va divulga informatiile personale ale utilizatorilor
+                colectate pe site nici unei terte persoane neautorizate. Aceste informatii pot fi insa divulgate
+                autoritatilor indrituite sa verifice tranzactiile comerciale, numai la solicitarea justificata a
+                acestora. VINEXPERT.ro poate furniza unor persoane competente informatii colective si statistici in
+                legatura cu numarul, profilul sau alte caracteristici ale utilizatorilor sai, in scopul analizarii
+                statistice a acestora. Aceste informatii nu vor include date de identificare personala.<br><br>
+                <h3><strong>Cautari</strong></h3>
+                <p>Toate functiile de cautare oferite de VINEXPERT.ro sunt puse la dispozitia utilizatorilor in scopul
+                    sporirii functionalitatii site-ului. VINEXPERT.ro nu colecteaza informatii personale in urma
+                    operatiunilor de cautare, dar poate pastra si analiza istoricul cautarilor efectuate, in scopul de a
+                    identifica interesele clientilor si de a imbunatati serviciile oferite acestora.<br>Hyperlink-uri si
+                    alte site-uri<br>VINEXPERT.ro poate include in site link-uri catre alte site-uri, aflate sau nu in
+                    proprietatea VINEXPERT nu poate fi, in nici o circumstanta, responsabil pentru continutul acestor
+                    site-uri.<br>Greseli de tiparire<br>VINEXPERT.ro si furnizorii sai nu isi asuma responsabilitatea
+                    pentru greselile de tiparire sau afisare in ceea ce priveste preturile, caracteristicile sau
+                    imaginile produselor. In cazul in care o comanda nu poate fi onorata din cauza unor astfel de erori,
+                    VINEXPERT.ro isi rezerva dreptul de a anula comanda respectiva si de a anunta clientul in cel mai
+                    scurt timp posibil despre eroarea aparuta.<br><br></p>
+                <h3><strong>Utilizarea site-ului de catre persoane sub 18 ani</strong></h3>
+                <p>VINEXPERT.ro nu este destinat persoanelor sub 18 ani. Acestea, desi nu pot fi impiedicate, nu detin
+                    totusi dreptul de a trimite sau posta informatii in VINEXPERT.ro, de orice natura ar fi acestea.
+                    Orice astfel de operatie va fi executata prin intermediul reprezentantului legal al minorului.</p>
+                <p>&nbsp;</p>
+                <h3><strong>Inregistrarea ca membru, parola si comportamentul ca membru.</strong></h3>
+                <p>Prin inregistrarea ca membru veti fi solicitat sa va alegeti un nume de utilizator (adresa de e-mail)
+                    si o parola. Sunteti responsabil(a) de pastrarea in siguranta a parolei de aces ca membru al
+                    site-ului VINEXPERT.ro, orice activitate desfasurata sub numele dumneavoastra de utilizator fiind
+                    integral in responsabilitatea dumneavoastra.<br><br>Sunteti de acord sa ne instiintati imediat
+                    despre orice pierdere a parolei sau semn de activitate neautorizata sub numele dumneavoastra de
+                    utilizator.<br>Sunteti pe deplin in cunostinta de cauza ca orice informatie, date, text, fotografii,
+                    grafica etc continute in acest site sunt responsabilitatea acelei persoane/entitati de la care
+                    provine. In aceste conditii nu putem sub nici o forma, direct sau indirect, fi facuti responsabili
+                    pentru continutul site-ului incluzand, dar nelimitandu-se la, informatii trunchiate, incomplete sau
+                    gresite sau pentru orice consecinte ale utilizarii acestora.<br>Promotii si concursuri<br>Noi ne
+                    stabilim singuri regulamentele promotiilor si ale concursurilor pe care le organizam. Aceste
+                    regulamente sunt aduse la cunostinta eventualilor participanti numai prin intermediul site-ului
+                    propriu sau alte mijloace de comunicare publica sau privata. De promotii beneficiaza doar acele
+                    comenzi care respecta intocmai regulile afisate pe site. De asemenea promotiile se aplica doar
+                    comenzilor care sunt inregistrate de catre companie in perioada de timp in care promotia este valida
+                    si numai in limita stocului disponibil.<br>Nu garantam disponibilitatea pe stoc a produselor pentru
+                    promotie si o putem intrerupe sau anula in orice moment fara nici o notificare prealabila.</p>
+                <p>&nbsp;</p>
+                <p><strong>Pretul produselor</strong></p>
+                <p>Preturile sunt afisate pe site in lei si anume: LEI (RON) cu TVA.</p>
+                <br><strong>Plata produselor</strong><br>Produsele comandate raman proprietatea VINEXPERT pana in
+                momentul achitarii integrale a sumelor de plata.<br>Plata produselor comandate se poate face:<br>
+                <ol>
+                    <li>ramburs/numerar la livrare (clienti persoane fizice)</li>
+                    <li>prin virament bancar in contul nostru (clienti persoane juridice sau clienti persoane fizice).
+                    </li>
+                    <li>on-line prin card bancar (carte de credit/debit, inclusiv cardurile romanesti)</li>
+                    <li>plata cu numerar sau carte de credit/debit la ridicarea marfii din magazinele noastre.</li>
+                </ol>
+                <p><br><strong>Livrarea produselor</strong><br>Produsele comandate se pot livra atat in tara cat si in
+                    strainatate, utilizand modalitatea si termenul de livrare alese de tine la efectuarea comenzii.
+                    Produsele se afla in ambalajul ales de tine si sunt asigurate pe tot parcursul transportului pana la
+                    livrare.<br><br><strong>LIVRAREA COMENZILOR IN BUCURESTI se face:</strong><br><span>GRATUIT la sediul tau – daca valoarea (cu TVA) depaseste 200 RON</span><br><span>Costul transportului (pentru comenzi sub 200 RON)&nbsp;este de 14,99 RON (TVA inclus)</span><br><br><br><strong>LIVRAREA
+                        COMENZILOR IN TARA se face:</strong><br><span>GRATUIT la sediul tau – daca valoarea (cu TVA) depaseste 200 RON</span><br><span>Costul transportului (pentru comenzi sub 200 RON)&nbsp;este de 19,99 RON (TVA inclus)</span>
+                </p>
+                <p>In cazul platii in avans prin virament bancar, termenul de livrare se calculeaza din momentul
+                    intrarii intregii sume in contul VINEXPERT.ro.<br><br>In cazul in care nu puteti fi gasit la data si
+                    ora stabilite pentru livrare, vei fi apelat la numarul de telefon declarat, in caz contrar,
+                    VINEXPERT.ro va pastra bunurile comandate timp de 3 zile lucratoare, interval in care va vom
+                    contacta din nou pentru a definitiva livrarea. In cazul in care nici de aceasta data nu veti fi
+                    gasit, comanda va fi anulata.<br>In cazuri speciale (produsele comandate nu se afla in stocul nostru
+                    sau al furnizorului, dificultati de transport) ne rezervam dreptul de a mari corespunzator perioada
+                    de livrare.<br><br><strong>LIVRAREA COMENZILOR IN AFARA TARII:</strong><br>Pentru comenzile ce se
+                    doresc a fi expediate in afara tarii, trebuie sa ne solicitati in scris o cotatie de transport, la
+                    adresa sales@vinexpert.ro.<br><br>VINEXPERT isi rezerva dreptul de a nu acepta comenzi si/sau
+                    livrari de la anumiti clienti si/sau catre anumite adrese.<br><br><strong>Termenul de Valabilitate,
+                        Garantia si/sau Service-ul Produselor</strong><br>Produsele ce sunt comercializate prin acest
+                    site au, fiecare, termenul de valabilitate, garantia si/sau service-ul oferite acestora de
+                    producator. Nu se poate invoca garantia in conditiile utilizarii improprii sau incorecte a
+                    produsului. In maxim 48 de ore de la livrarea produsului, in cazul depistarii unor probleme de
+                    functionare, clientul poate solicita companiei noastre returnarea produsului/produselor, numai in
+                    ambalajul original si impreuna cu originalele documentelor tranzactiei respective. In acest caz,
+                    acestuia i se poate inlocui respectivul obiect cu unul identic sau – daca acest lucru nu este
+                    posibil – poate primi inapoi suma platita pentru acel obiect.<br><br><strong>Date personale</strong><br>Pe
+                    site-ul https://www.vinexpert.ro, utilizatorul este responsabil pentru toate activitatile care
+                    survin prin accesarea contului si parolei personale. VINEXPERT nu poate fi facuta responsabila
+                    pentru erorile survenite in urma neglijentei utilizatorului privind securitatea si
+                    confidentialitatea contului si parolei sale.<br>Datele personale ale utilizatorului vor putea fi
+                    folosite de catre https://www.vinexpert.ro si furnizorii sai numai in scopul declarat al acestui
+                    site. Informatiile din contul de inregistrare, precum si datele din formularul de comanda vor fi
+                    folosite pentru a trimite utilizatorului confirmarea comenzilor, informari despre eventualele
+                    promotii, etc.<br>Datele personale vor putea fi insa transmise autoritatilor in drept sa verifice
+                    tranzactiile comerciale sau altor autoritati in drept sa efectueze orice verificari justificate in
+                    baza legii, daca acest lucru va fi solicitat in conformitate cu legile in vigoare.<br><br><strong>Securitatea
+                        informatiilor</strong><br>VINEXPERT garanteaza securitatea si confidentialitatea datelor
+                    gazduite si transmise prin sistemul sau informatic. VINEXPERT nu isi asuma insa responsabilitatea
+                    pentru pierderile de informatii cauzate de orice defectiuni sau erori ale softului cu care este
+                    conceput si gazduit site-ul si nici nu garanteaza faptul ca site-ul, serverul/serverele sau
+                    mailurile expediate de https://www.vinexpert.ro nu contin virusi sau alte componente daunatoare. De
+                    asemenea, VINEXPERT nu raspunde pentru defectiunile care pericliteaza securitatea serverului pe care
+                    este gazduit site-ul. Garantam securitatea si confidentialitatea, dar nu garantam securitatea sau
+                    stabilitatea software.<br><br><strong>Responsabilitati privind produsele si serviciile</strong><br>Produsele
+                    (atunci cand este cazul) sunt insotite de certificate de garantie ale producatorilor. VINEXPERT. nu
+                    va putea fi facuta responsabila in cazul oricaror neconcordante sau lipsuri in ceea ce priveste
+                    produsele, calitatea acestora sau orice alte aspecte privind aceste produse. Orice reclamatie va fi
+                    adusa la cunostinta VINEXPERT in maximum 48 de ore de la receptionarea produselor, urmand ca aceasta
+                    sa fie transmisa furnizorului produselor respective, spre solutionare.<br>În cazul în care produsele
+                    nu se pot livra sau sufera defectiuni pe timpul livrarii, clientul poate cere returnarea imediata a
+                    sumelor încasate deja de societatea VINEXPERT, dar nu si alte despagubiri.<br><br>VINEXPERT nu poate
+                    garanta disponibilitatea în stocuri a tuturor produselor afisate. Din acest motiv, VINEXPERT îsi
+                    asuma dreptul de a nu onora comanda în cazul în care respectivul produs nu este aprovizionat
+                    momentan. Clientul va primi înapoi banii încasati de societatea VINEXPERT pentru respectiva comanda.<br><br><strong>Declinarea
+                        garantiilor si limitari ale responsabilitatilor</strong><br>VINEXPERT nu ofera nici o garantie
+                    utilizatorilor referitoare la disponibilitatea serviciilor sale, corectitudinea informatiilor
+                    publicate sau securitatea serviciilor sale.<br>Continutul site-ului (texte, descrieri ale
+                    produselor, caracteristici tehnice, imagini, simboluri) este proprietate a firmei VINEXPERT si a
+                    partenerilor sai si a fost alcatuit în colaborare cu furnizorii produselor prezentate. Imaginile
+                    sunt prezentate pe site cu titlu de exemplu, iar produsele efectiv livrate pot diferi de imagini în
+                    orice mod (culoare, accesorii, aspect etc.)<br>Site-ul https://www.vinexpert.ro si materialele
+                    aferente sunt oferite “asa cum sunt” si “atat cat sunt disponibile”.<br>VINEXPERT nu isi asuma
+                    responsabilitatea si nu poate fi facuta responsabila pentru orice pagube aparute prin folosirea in
+                    orice fel a produselor achizitionate prin intermediul acestui site, produse pentru care VINEXPERT nu
+                    ofera nici o garantie, expresa sau implicita.<br>VINEXPERT nu garanteaza si nici nu va putea fi
+                    considerata responsabila in cazul in care produsele achizitionate nu corespund scopului pentru care
+                    au fost achizitionate.<br>De asemenea, VINEXPERT nu ofera nici o garantie in cazul oricaror
+                    consecinte care pot aparea, cauzate de nefunctionarea serviciilor, intarzierea informatiilor sau
+                    securitatea aplicatiilor sale.<br>VINEXPERT nu va fi facuta responsabila pentru orice pagube, de
+                    orice fel, incluzand, dar nu limitativ, orice daune directe, indirecte sau incidentale. Nu raspundem
+                    pentru nici o paguba de-a voastra, de orice fel.<br><br><strong>Politica de preturi. Transportul
+                        produselor.</strong><br>Preturile produselor sunt cele afisate pentru fiecare produs in
+                    parte.<br>VINEXPERT va putea desfasura orice campanie promotionala referitor la produsele afisate pe
+                    site, promotii ale caror conditii vor fi stabilite in intregime de catre VINEXPERT.</p>
+                <p><br><strong>Litigii</strong><br>Orice tentativa de acces neautorizat la site-ul www.vinexpert.ro si
+                    orice incercare de frauda va fi raportata fara intarziere autoritatilor competente. Toate litigiile
+                    vor fi solutionate pe cale amiabila. Daca litigiul nu poate fi solutionat pe acel amiabila, sau una
+                    din parti renunta la solutionarea pe cale amiabila, litigiul se va solutiona prin arbitrajul Curtii
+                    de Arbitraj Comercial International de pe langa Camera de Comert si Industrie a Romaniei si a
+                    Municipiului Bucuresti in conformitate cu Regulile de procedura arbitrala ale acestei Curti.
+                    Hotararea arbitrala este definitiva si obligatorie. Forta majora invocata si probate de una din
+                    parti in conditiile legii, exonereaza partile de obligatii – cu exceptia obligatiei de plata pentru
+                    serviciile prestate pana la aparitia ei – pe intreaga durata a fortei majore.<br><br><strong>Daune
+                        la transport</strong><br>Produsele primite vor fi verificate in prezenta reprezentantului
+                    transportatorului, iar daca din nefericire produsele se dovedesc a avea daune din cauza
+                    transportului, clientul are dreptul de a refuza comanda si este rugat sa reclame aceste daune la
+                    sales@vinexpert.ro VINEXPERT returneaza contravaloarea (daca plata a fost efectuata in avans) sau
+                    retrimite coletul la cererea clientului.<br><br><strong>Drepturi de autor (COPYRIGHT)</strong><br>Întregul
+                    continut al site-ului www.vinexpert.ro – imagini, texte, grafice, simboluri, elemente de grafica
+                    WEB, scripturi, programe si alte date – este proprietatea VINEXPERT si a furnizorilor sai si este
+                    aparat de Legea drepturilor de autor si de legile privind proprietatea intelectuala si industriala.
+                    Folosirea fara acordul VINEXPERT a oricaror elemente enumerate mai sus se pedepseste conform legilor
+                    în vigoare.<br><br><strong>Comentarii, Comunicari si Alte Date/Informatii</strong><br>Persoanele
+                    care acceseaza/viziteaza site-ul pot face comentarii si orice alte comunicari; pot sa trimita
+                    e-mailuri, sa transmita sugestii, idei, întrebari sau alte informatii, atâta timp cât continutul
+                    acestora nu este ilegal, obscen, amenintator, defaimator, nu tulbura în nici un fel viata privata a
+                    altor persoane, nu încalca drepturile de proprietate intelectuala, nu contine virusi, texte vizând
+                    diverse campanii de promovare, scrisori în lant, email-uri în masa sau orice alta forma de spam.
+                    Persoanele care vor utiliza o adresa falsa de e-mail sau vor transmite mesaje electronice sau orice
+                    alte comunicari în numele unei alte persoane fizice sau juridice sau în numele oricarei alte
+                    entitati vor fi sanctionate în conformitate cu legile în vigoare. VINEXPERT.ro are dreptul (dar nu
+                    si obligatia) de a sterge orice astfel de continuturi identificate pe site.</p>
+                <p><br><strong>Parteneri</strong><br>VINEXPERT are contracte de revânzare cu reprezentanti importanti ai
+                    marcilor prezente în magazinele noastre. Despre calitatea produselor, despre autenticitatea marcii
+                    si despre orice alte nelamuriri despre o anume marca sau un anume produs, clientul se poate adresa
+                    reprezentantului marcii respective sau importatorului din România.<br><br><strong>Cum stiti daca
+                        informatiile de pe credit cardul dvs sunt in siguranta?</strong><br>Pentru a fi siguri ca ati
+                    accesat serverul nostru de securitate, inainte de a introduce informatii financiare cu caracter
+                    privat, verificati in coltul din stanga jos al browserului dvs. In cazul in care vedeti o cheie
+                    nedesfacuta sau o incuietoare inchisa (depinde de browserul pe care il aveti dvs), atunci sistemul
+                    SSL este activ. Ca sa repetati verificarea sistemului de siguranta, uitati-va la URL-ul sau linia de
+                    locatie a browserului dvs. In cazul in care ati accesat un server de securitate, primele caractere
+                    din adresa ar trebui sa se modifice de la “http” la”https”.<br>Anumite versiuni de browsere si
+                    anumite firewall-uri nu permit comunicarea prin intermediul serverelor de securitate pe care le
+                    folosim noi pentru a procesa comenzi la magazin. In cazul in care nu puteti accesa serverul de
+                    securitate, indiferent din ce motiv, va rugam sa ne transmiteti comanda dvs prin e-mail la
+                    sales@vinexpert.ro Reprezentantii serviciului nostru de support clienti va vor acorda asistenta de
+                    care aveti nevoie.<br><br><strong>Taxe Suplimentare</strong><br>Pretul final platit de client este
+                    format din pretul produsului si cheltuielile de expeditie. VINEXPERT nu percepe nici o taxa
+                    suplimentara clientului la cumpararea produsului. Pentru orice taxa perceputa suplimentar, va rugam
+                    sa va adresati imediat la sales@vinexpert.ro<br><br><strong>Dispozitii Finale</strong><br>Daca
+                    oricare dintre clauzele de mai sus va fi gasita nula sau nevalida, indiferent de cauza, aceasta
+                    clauza nu va afecta valabilitatea celorlalte clauze. Odata cu cumpararea si lansarea comenzii,
+                    clientul acepta fara obiectiuni conditiile si termenii de utilizare, valoarea acestora fiind aceasi
+                    cu un contract valabil încheiat.</p>
+                <p>&nbsp;</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+                <!-- Footer Logo -->
+                <div class="col-lg-3 footer_col d-flex flex-column align-items-center justify-content-center">
+
+
+                    <div class="footer_logo">
+                        <img src="img/logo_complet.png" class="img-fluid">
+
+                    </div>
+                    <div class="copyright">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p style="line-height: 1.2;">Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                            All rights reserved | This template is made with <i class="fa fa-heart-o"
+                                                                                aria-hidden="true"></i> by <a
+                                    href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+
+
+                </div>
+
+                <!-- Footer About -->
+                <div class="col-lg-6 footer_col">
+                    <div class="footer_about grivin-border">
+                        <div class="iframe-container ">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.5443652725126!2d26.07056751552495!3d44.483511479101516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b202457931b3a1%3A0x7e6f024c408c3327!2sS-Park%2C%20Strada%20Tipografilor%2011-15%2C%20Bucure%C8%99ti%20013714!5e0!3m2!1sen!2sro!4v1566816615075!5m2!1sen!2sro"
+                                    width="600" height="250" frameborder="0" style="border:0;"
+                                    allowfullscreen=""></iframe>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Footer Contact -->
+                <div class="col-lg-3 footer_col d-flex flex-column align-items-center justify-content-center">
+                    <div class="footer_contact ">
+                        <ul>
+                            <li class="d-flex flex-row align-items-start justify-content-start">
+                                <div>
+                                    <div class="footer_contact_title">Address:</div>
+                                </div>
+
+                                <div class="footer_contact_text">Strada Tipografilor 11-15 București 013714</div>
+                            </li>
+                            <li class="d-flex flex-row align-items-start justify-content-start">
+                                <div>
+                                    <div class="footer_contact_title">Phone:</div>
+                                </div>
+                                <div class="footer_contact_text">+0721 234 567</div>
+                            </li>
+                            <li class="d-flex flex-row align-items-start justify-content-start">
+                                <div>
+                                    <div class="footer_contact_title">Email:</div>
+                                </div>
+                                <div class="footer_contact_text">contact@grivin.com</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap-4.1.2/popper.js"></script>
+<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock/TimelineMax.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/greensock/animation.gsap.min.js"></script>
+<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="plugins/jquery-datepicker/jquery-ui.js"></script>
+<script src="plugins/jquery-timepicker/jquery.timepicker.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.js"></script>
+
+
+<script src="js/custom.js"></script>
+>
+
+<script>
+
+
+    $(document).ready(function () {
+        $('.popup-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function (item) {
+                    return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+                }
+            }
+        });
+    });
+</script>
+
+
+</body>
+</html>

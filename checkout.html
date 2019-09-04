@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Venue</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="The Venue template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+    <link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+    <link href="plugins/jquery-datepicker/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="plugins/jquery-timepicker/jquery.timepicker.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.10/select2-bootstrap.css"
+          rel="stylesheet"/>
+
+    <link rel="stylesheet" type="text/css" href="styles/mine.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+    <style>
+        div.wrapper1 {
+            overflow: hidden;
+            width: 100%;
+
+        }
+
+        div.wrapper1 > div {
+            width: 100%;
+            height: 100%;
+
+            -webkit-transition: all 1s linear;
+            -moz-transition: all 1s linear;
+            -o-transition: all 1s linear;
+            -ms-transition: all 1s linear;
+            transition: all 1s linear;
+
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -ms-background-size: cover;
+            background-size: cover;
+
+            transform-origin: bottom left;
+        }
+
+        div.wrapper1:hover > div {
+            -webkit-transform: scale(3);
+            -moz-transform: scale(3);
+            -o-transform: scale(3);
+            -ms-transform: scale(3);
+            transform: scale(3);
+
+            -webkit-backface-visibility: hidden;
+            filter: blur(0);
+            -webkit-filter: blur(0);
+        }
+
+        #p1 {
+            background-image: url(img/0737114-min2.jpg);
+            min-height: 460px;
+            width: 100%;
+            transform-origin: 15% 92%;
+        }
+
+        @media (min-width: 992px) {
+            #p1 {
+                min-height: 475px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            #p1 {
+                min-height: 605px;
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+<!-- Header -->;
+
+
+<div class="intro p-0 ">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-6 px-5 pt-5" style="border-right:1px solid rgba(128,128,128,0.36); height:95vh;">
+
+                <div class="" style="height:100%;">
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <img src="img/logo_complet.png" style="max-height:3vh;">
+                            <h2 class="my-4">Date de contact</h2>
+
+                        </div>
+
+                        <div class="col-md-12 p-2">
+                            <input type="email" class="form-control"
+                                   style="border:1px solid rgba(156,42,48,0.52); font-size:1.4rem" placeholder="Email">
+                        </div>
+                        <div class="col-md-6 p-2">
+                            <input type="email" class="form-control"
+                                   style="border:1px solid rgba(156,42,48,0.52); font-size:1.4rem" placeholder="Nume">
+                        </div>
+                        <div class="col-md-6 p-2">
+                            <input type="email" class="form-control"
+                                   style="border:1px solid rgba(156,42,48,0.52); font-size:1.4rem"
+                                   placeholder="Prenume">
+                        </div>
+                        <div class="col-md-12 p-2">
+                            <input type="email" class="form-control"
+                                   style="border:1px solid rgba(156,42,48,0.52); font-size:1.4rem" placeholder="Adresa">
+                        </div>
+                        <div class="col-md-12 p-2">
+                            <input type="email" class="form-control"
+                                   style="border:1px solid rgba(156,42,48,0.52); font-size:1.4rem" placeholder="Oras">
+                        </div>
+
+
+                        <div class="col-md-12 p-2">
+                            <label for="judet">
+                                Judet
+                            </label>
+                            <select id="judet" class="js-example-basic-single form-control" name="state">
+
+                                <option value="0">Alege Judet</option>
+                                <option value="Alba">Alba</option>
+                                <option value="Arad">Arad</option>
+                                <option value="Arges">Arges</option>
+                                <option value="Bacau">Bacau</option>
+                                <option value="Bihor">Bihor</option>
+                                <option value="Bistrita Nasaud">Bistrita Nasaud</option>
+                                <option value="Botosani">Botosani</option>
+                                <option value="Brasov">Brasov</option>
+                                <option value="Braila">Braila</option>
+                                <option value="Bucuresti">Bucuresti</option>
+                                <option value="Buzau">Buzau</option>
+                                <option value="Caras Severin">Caras Severin</option>
+                                <option value="Calarasi">Calarasi</option>
+                                <option value="Cluj">Cluj</option>
+                                <option value="Constanta">Constanta</option>
+                                <option value="Covasna">Covasna</option>
+                                <option value="Dambovita">Dambovita</option>
+                                <option value="Dolj">Dolj</option>
+                                <option value="Galati">Galati</option>
+                                <option value="Giurgiu">Giurgiu</option>
+                                <option value="Gorj">Gorj</option>
+                                <option value="Harghita">Harghita</option>
+                                <option value="Hunedoara">Hunedoara</option>
+                                <option value="Ialomita">Ialomita</option>
+                                <option value="Iasi">Iasi</option>
+                                <option value="Ilfov">Ilfov</option>
+                                <option value="Maramures">Maramures</option>
+                                <option value="Mehedinti">Mehedinti</option>
+                                <option value="Mures">Mures</option>
+                                <option value="Neamt">Neamt</option>
+                                <option value="Olt">Olt</option>
+                                <option value="Prahova">Prahova</option>
+                                <option value="Satu Mare">Satu Mare</option>
+                                <option value="Salaj">Salaj</option>
+                                <option value="Sibiu">Sibiu</option>
+                                <option value="Suceava">Suceava</option>
+                                <option value="Teleorman">Teleorman</option>
+                                <option value="Timis">Timis</option>
+                                <option value="Tulcea">Tulcea</option>
+                                <option value="Vaslui">Vaslui</option>
+                                <option value="Valcea">Valcea</option>
+                                <option value="Vrancea">Vrancea</option>
+
+                            </select>
+
+
+                        </div>
+                        <div class="col-md-6 p-2">
+                            <input type="email" class="form-control"
+                                   style="border:1px solid rgba(156,42,48,0.52); font-size:1.4rem" placeholder="Oras">
+                        </div>
+                        <div class="col-md-6 p-2">
+                            <input type="email" class="form-control"
+                                   style="border:1px solid rgba(156,42,48,0.52); font-size:1.4rem"
+                                   placeholder="Cod postal">
+                        </div>
+
+
+                        <div class="col-md-12 p-2">
+
+                            <input type="email" class="form-control"
+                                   style="border:1px solid rgba(156,42,48,0.52); font-size:1.4rem"
+                                   placeholder="Numar de telefon">
+
+                        </div>
+
+                        <!--
+                        <div class="col-md-12 p-2">
+                            <div class="text-center">
+                                <div class="g-recaptcha" style=" display: inline-block;"
+                                     data-sitekey="6LfZSzMUAAAAALtmC0ZC7BmtwN-eEw3Fs8LjwwSV"
+                                     data-callback="correctCaptcha">
+                                    <div style="width: 304px; height: 78px;">
+                                        <div>
+                                            <iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfZSzMUAAAAALtmC0ZC7BmtwN-eEw3Fs8LjwwSV&amp;co=aHR0cDovL2xvY2FsaG9zdDo2MzM0Mg..&amp;hl=en-GB&amp;v=v1565591531251&amp;size=normal&amp;cb=7og3svp9f0b2"
+                                                    width="304" height="78" role="presentation" name="a-20cgp79l0ws"
+                                                    frameborder="0" scrolling="no"
+                                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                                        </div>
+                                        <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                                  class="g-recaptcha-response"
+                                                  style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6 px-5 pt-5">
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-center">
+                            Continut cos
+                        </h2>
+                        <table class="table borderless ">
+
+                            <tbody>
+                            <tr class="" style="border-bottom:1px solid #eeeeee">
+                                <td class="hidden-sm-down text-center">
+                                    <img class="img-fluid" src="img/RoseWine.png" alt="" style="max-height: 70px">
+                                </td>
+                                <td style="width:40%" class="hidden-sm-up text-center">
+                                    <img class="img-fluid" src="img/RoseWine.png" alt="" style="max-height: 70px">
+                                </td>
+                                <td class="hidden-sm-up">
+                                    <div class=" ">
+                                        <h5>Grivin Classic - Rosu</h5>
+                                        <h5>x3</h5>
+                                        <h5>100.00 Lei</h5>
+                                    </div>
+
+                                </td>
+
+
+                                <td style="vertical-align: middle" class="hidden-sm-down text-center">
+                                    <h4>Grivin Classic - Rosu</h4>
+                                </td>
+                                <td style="vertical-align: middle" class="hidden-sm-down text-center">
+                                    <h4>x3</h4>
+                                </td>
+
+                                <td style="vertical-align: middle" class="hidden-sm-down text-right">
+                                    <h4>300.00 Lei</h4>
+
+                                </td>
+
+
+
+
+                            </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                    <div class="col-md-12">
+
+                        <table class="table borderless text-left">
+                            <tbody>
+                            <tr>
+                                <td class="p-0">
+                                    <h5 >
+                                        Subtotal
+                                    </h5>
+                                </td>
+                                <td class="text-right p-0">
+                                    <h4>
+                                        300.00 Lei
+                                    </h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p-0">
+                                    <h5>
+                                        Transport
+                                    </h5>
+                                </td>
+                                <td class="text-right p-0">
+                                    <h4>
+                                        20.00 lei
+                                    </h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p-0">
+                                    <h4 >
+                                        Total
+                                    </h4>
+                                    <small>
+                                        Include 60.85 lei TVA (19%)
+                                    </small>
+                                </td>
+                                <td class="text-right p-0">
+                                    <h3 style="font-weight: bold">
+                                        320.00 Lei
+                                    </h3>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                        <div class="col-md-12 p-2 mb-5 mt-3">
+                            <div class="button red" style="width:100%"><a href="#">Plaseaza Comanda</a></div>
+                        </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap-4.1.2/popper.js"></script>
+<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock/TimelineMax.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/greensock/animation.gsap.min.js"></script>
+<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="plugins/jquery-datepicker/jquery-ui.js"></script>
+<script src="plugins/jquery-timepicker/jquery.timepicker.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.js"></script>
+
+
+<script src="js/custom.js"></script>
+
+
+<script>
+
+
+    $(document).ready(function () {
+        $('.popup-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function (item) {
+                    return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+                }
+            }
+        });
+
+
+    });
+
+
+</script>
+
+
+</body>
+</html>
