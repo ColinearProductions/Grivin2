@@ -3,9 +3,14 @@
     src: url(../font/TrajanP0.otf);
 }
 
+@font-face {
+    font-family: main;
+    src: url(../font/main_font.otf);
+}
+
 
 * {
-    font-family: "averta-regular", sans-serif;
+    font-family: main, sans-serif;
 }
 
 .grivin-emblem {
