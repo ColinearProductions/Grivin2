@@ -1,0 +1,101 @@
+doctype html
+head
+    title Despre noi | Grivin House
+    meta(name='description' content='Grivin House')
+    include pug_includes/css_imports
+
+- var headerStyle= 'background: rgba(0,0,0,0.65)'
+.super_container
+    include pug_includes/header
+    // Home
+    .intro(style='margin-top:20vh;margin-bottom: 0;')
+        .container
+            .row
+                .col
+                    .themenu_title_bar_container
+                        .themenu_stars.text-center.grivin-emblem(style='z-index:2') Grivin
+                        //
+                          <div class="themenu_rating text-center" style="z-index:2">
+                          <div class="rating_r rating_r_5"><i></i><i></i><i></i><i></i><i></i></div>
+                          </div>
+                        .grivin-border.d-flex.flex-column.align-items-center.justify-content-center
+                            .themenu_title.text-black-50(style='padding: 15px') Magazinul nostru
+                            .intro_text.pl-5.pr-5.pb-5
+                                p
+                                    | Un concept unic de magazin deschis recent intr-o cladire de birouri reprezentativa in
+                                    | care combinam
+                                    | intr-un mod elegant pasiunea pentru vin, arta si muzica buna.
+                                    | Va oferim o selectie speciala de vinuri, pictura, sculptura, fotografie, grafica,
+                                    | sticlarie, toate produse
+                                    | unicat realizate de artisti recunoscuti din Romania, albume de arta si arhitectura
+                                    | precum si muzica buna.
+                                    | Am pus laolalta pasiunile noastre pentru frumos, suntem onorati sa avem in familie
+                                    | mai multi artisti
+                                    | plastici, pictori, sculptori, arhitecti, am incercat sa cream un concept unic prin
+                                    | care sa oferim produse
+                                    | deosebite intr-un magazin de cadouri.
+                                    | Am reusit sa alaturam arta vinului bun si muzicii bune, albumelor de arta si
+                                    | produselor de sticlarie
+                                    | lucrate manual, toate incantandu-ne simturile si relaxandu-ne.
+                                    | Impreuna cu arhitectul nostru am creat o mica galerie de arta iar prin modul in care
+                                    | am imbinat
+                                    | produsele am reusit sa obtinem atmosfera relaxanta pe care clientii nostri o
+                                    | apreciaza in orice moment
+                                    | al zilei.
+                                    | Consideram ca armonia e esentiala in vietile noastre, prin conceptul propus incercam
+                                    | sa oferim
+                                    | echilibrul intre valorile simple si dorintele celor care ne viziteaza.
+                            .row.px-4.pb-5
+                                .col-lg-4
+                                    .intro_image
+                                        img(src='img/galery/p13.jpg' alt='https://unsplash.com/@quanle2819')
+                                .col-lg-4
+                                    .intro_image
+                                        img(src='img/galery/p14.jpg' alt='https://unsplash.com/@quanle2819')
+                                .col-lg-4
+                                    .intro_image
+                                        img(src='img/galery/p4.jpg' alt='https://unsplash.com/@quanle2819')
+    .intro.mb-5
+        .container
+            .row
+                .col
+                    .themenu_title_bar_container
+                        .themenu_stars.text-center.grivin-emblem(style='z-index:2') Grivin
+                        .grivin-border.d-flex.flex-column.align-items-center.justify-content-center
+                            .themenu_title.text-black-50.p-4 Provenienta Vinului
+                            .intro_text.pb-3.pl-5.pr-5
+                                p
+                                    | Vinul nostru este produs intr-o mica podgorie situata in sud-vestul Romaniei, in conditii exceptionale de
+                                    | sol si clima, specifice judetului Mehedinti.
+                            #zoom-picture-container.container.hidden-md-down
+                                .row.grivin-border
+                                    .zoom-wrapper
+                                        #zoom-picture
+                            .intro_text.pb-5.pl-5.pr-5
+                                p
+                                    | Viticultura a existat &icirc;n aceast&abreve; zon&abreve; inca din timpul dacilor, fiind o zon&abreve; locuit&abreve; &#x219;i nu foarte &icirc;ndep&abreve;rtat&abreve;
+                                    | de capitala Daciei romane, Ulpia Traiana Sarmizegetusa.
+                                p
+                                    | Clima zonei este temperat - continental&abreve;, &icirc;n care se simt influen&#x21B;e mediteraneene; iarna, &icirc;n special, au
+                                    | loc invazii de mase de aer umed &#x219;i cald de origine mediteranean&abreve; &#x219;i oceanic&abreve;, ceea ce face ca acest
+                                    | anotimp al anului s&abreve; fie mai bl&acirc;nd, iar verile sunt &icirc;n general c&abreve;lduroase dar cu nop&#x21B;i r&abreve;coroase datorate
+                                    | proximit&abreve;&#x21B;ii p&abreve;durilor &#x219;i mun&#x21B;ilor. Temperatura medie anual&abreve; a aerului este de 11,5&deg;C, media anual&abreve; a
+                                    | precipita&#x21B;iilor este de cca 600 mm, avand cele mai bune conditii pentru obtinerea strugurilor de calitate
+                                    | superioara. Plantarea vi&#x21B;ei de vie este executata de la nord la sud pentru a ob&#x21B;ine o expunere c&acirc;t mai
+                                    | lung&abreve; la lumina &#x219;i c&abreve;ldura soarelui.
+                                p
+                                    | Profitand de exceptionala pozitionare de-a lungul paralelei 45, podgoria noastra beneficiaza de conditii
+                                    | de expunere solara identice cu cele mai renumite reginui viticole din lume: Nordul Italiei si sudul Frantei,
+                                    | rezultand vinuri de calitate si complexitate asemanatoare, strugurii ajungand la maturitate in cel mai
+                                    | echilibrat ecosistem din Europa.
+                                p
+                                    | Aflandu-se la jumatatea distantei intre Ecuator si Polul Nord, podgoria noastra situata de-a lungul
+                                    | Paralelei 45 este insorita mai mult de 15 ore/zi vara si aproape 9 ore/zi in timpul iernii.
+                                p
+                                    | Expunerea solara speciala a domeniului, conditiile mineralogice deosebite specifice Podisului Getic si
+                                    | experienta viticultorilor nostri conduc catre vinuri biodinamice de cea mai inalta calitate.
+    include pug_includes/footer
+
+
+include pug_includes/generic_imports
+script(src='js/custom.js')

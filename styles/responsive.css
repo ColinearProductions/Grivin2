@@ -86,7 +86,7 @@
 		-o-transform: none;
 		transform: none;
 		right: auto;
-		margin-bottom: 102px;
+		/*margin-bottom: 102px;*/
 		width: 100%;
 	}
 	.dish_price
@@ -144,7 +144,7 @@
 		transform: none;
 		width: 100%;
 		z-index: 1;
-		margin-bottom: 102px;
+		/*margin-bottom: 102px;*/
 	}
 	.sig_image
 	{
@@ -164,7 +164,7 @@
 	}
 	.footer_col:not(:last-child)
 	{
-		margin-bottom: 80px;
+		margin-bottom: 20px;
 	}
 }
 

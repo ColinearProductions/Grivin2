@@ -1,0 +1,126 @@
+doctype html
+head
+    title Acasa | Grivin House
+    meta(name='description' content='Grivin House')
+    include pug_includes/css_imports
+- var headerStyle= ''
+
+
+mixin image-portrait(image_name, extension)
+    .col-md-3.p-0.grivin-border.galery_image_wrapper.portrait
+        .galery_image_container
+            a(href=image_name+extension, title='The Cleanerzzz')
+                img.galery_image(src=image_name+' (Custom)'+extension alt='Avatar')
+                .galery_overlay.d-flex.flex-column.align-items-center.justify-content-center
+                    .galery_text
+                        i.fa.fa-search-plus(aria-hidden='true')
+
+
+mixin image-landscape-large(image_name, extension)
+    .col-md-6.p-0.grivin-border.galery_image_wrapper.landscape.large
+        .galery_image_container
+            a(href=image_name+extension title='The Cleaner')
+                img.galery_image(src=image_name+' (Custom)'+extension alt='Avatar')
+                .galery_overlay.d-flex.flex-column.align-items-center.justify-content-center
+                    .galery_text
+                        i.fa.fa-search-plus(aria-hidden='true')
+
+mixin image-landscape(image_name, extension)
+    .col-md-6.p-0.grivin-border.galery_image_wrapper.landscape
+        .galery_image_container
+            a(href=image_name+extension title='The Cleaner')
+                img.galery_image(src=image_name+' (Custom)'+extension alt='Avatar')
+                .galery_overlay.d-flex.flex-column.align-items-center.justify-content-center
+                    .galery_text
+                        i.fa.fa-search-plus(aria-hidden='true')
+
+body(style='background: #272425')
+    .super_container
+        include pug_includes/header
+        // Home
+        // Home
+        // Intro
+
+        .text-center(style='margin-top:15vh')
+            .clip-text.clip-text_one.w-100.hidden-md-down Galerie
+            h1.hidden-lg-up.text-white Galerie
+        .intro(style=';margin-bottom: 10vh;')
+            .col-md-10.offset-md-1
+                .col-md-12.p-0
+                    .popup-gallery.row
+                        +image-portrait('img/galery/p1','.jpg')
+                        +image-portrait('img/galery/p2','.jpg')
+                        +image-portrait('img/galery/p3','.jpg')
+                        +image-portrait('img/galery/p4','.jpg')
+                    .popup-gallery.row
+                        +image-landscape-large('img/galery/l1','.jpg')
+                        .col-md-6
+                            .popup-gallery.row
+                                +image-landscape('img/galery/l2','.jpg')
+                                +image-landscape('img/galery/l3','.jpg')
+                                +image-landscape('img/galery/l4','.jpg')
+                                +image-landscape('img/galery/l5','.jpg')
+                    .popup-gallery.row
+                        +image-portrait('img/galery/p5','.jpg')
+                        +image-portrait('img/galery/p6','.jpg')
+                        +image-portrait('img/galery/p7','.jpg')
+                        +image-portrait('img/galery/p8','.jpg')
+                    .popup-gallery.row
+                        .col-md-6
+                            .popup-gallery.row
+                                +image-landscape('img/galery/l6','.jpg')
+                                +image-landscape('img/galery/l7','.jpg')
+                                +image-landscape('img/galery/l8','.jpg')
+                                +image-landscape('img/galery/l9','.jpg')
+                        +image-landscape-large('img/galery/l10','.jpg')
+                    .popup-gallery.row
+                        +image-portrait('img/galery/p9','.jpg')
+                        +image-portrait('img/galery/p10','.jpg')
+                        +image-portrait('img/galery/p11','.jpg')
+                        +image-portrait('img/galery/p12','.jpg')
+                    .popup-gallery.row
+                        +image-landscape-large('img/galery/l11','.jpg')
+                        .col-md-6
+                            .popup-gallery.row
+                                +image-landscape('img/galery/l12','.jpg')
+                                +image-landscape('img/galery/l13','.jpg')
+                                +image-landscape('img/galery/l14','.jpg')
+                                +image-landscape('img/galery/l15','.jpg')
+                    .popup-gallery.row
+                        .col-md-6
+                            .popup-gallery.row
+                                +image-landscape('img/galery/l16','.jpg')
+                                +image-landscape('img/galery/l17','.jpg')
+                                +image-landscape('img/galery/l18','.jpg')
+                                +image-landscape('img/galery/l19','.jpg')
+                        +image-landscape-large('img/galery/l20','.jpg')
+
+
+    include pug_includes/footer
+
+
+include pug_includes/generic_imports
+
+script(src='https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.js')
+script(src='js/custom.js')
+
+script.
+    $(document).ready(function () {
+        $('.popup-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function (item) {
+                    return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+                }
+            }
+        });
+    });

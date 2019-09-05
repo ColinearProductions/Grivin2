@@ -146,10 +146,7 @@ h6::selection
 {
 	
 }
-.form-control
-{
-	color: #db5246;
-}
+
 section
 {
 	display: block;
@@ -687,18 +684,9 @@ section
 {
 	font-size: 36px;
 }
-.intro_title
-{
-	margin-top: 6px;
-}
-.intro_title h2
-{
-	font-size: 48px;
-}
-.intro_text
-{
-	margin-top: 32px;
-}
+
+
+
 
 /*********************************
 7. Video
@@ -843,7 +831,7 @@ section
 .rating_r_5 i:nth-child(5)::before{content: "\f005";}
 .sig_name
 {
-	font-size: 24px;
+	font-size: 17px;
 	color: #232323;
 	padding-left: 9px;
 	margin-top: 1px;
@@ -1106,11 +1094,11 @@ section
 11. Footer
 *********************************/
 
-.copyright
+.copyright>p
 {
-	font-size: 13px;
-	color: rgba(255,255,255,0.41);
+	font-size: 13px !important;
+	color: rgba(0, 0, 0, 0.77);
 	line-height: 0.75;
-	margin-top: 22px;
+	margin-top: 10px;
 }
 

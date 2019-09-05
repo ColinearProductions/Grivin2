@@ -1,0 +1,64 @@
+doctype html
+head
+    title Despre noi | Grivin House
+    meta(name='description' content='Grivin House')
+    include pug_includes/css_imports
+
+- var headerStyle= 'background: rgba(0,0,0,0.65)'
+.super_container
+    include pug_includes/header
+    // Home
+
+
+    .intro(style='margin-top:20vh;margin-bottom: 0;')
+        .container
+            .row
+                .col-md-12
+                    h1.text-center.font-weight-bold.my-3
+                        | Contact
+                .col-md-7.my-5
+                    .row
+                        .col-md-6.p-2
+                            input.form-control.p-2(type='name' placeholder='Nume')
+                        .col-md-6.p-2
+                            input.form-control.p-2(type='text' placeholder='Subiect')
+                        .col-md-6.p-2
+                            input.form-control.p-2(type='email' placeholder='Adresa de email')
+                        .col-md-6.p-2
+                            input.form-control.p-2(type='phone' placeholder='Numar de telefon')
+                        .col-md-12.p-2
+                            textarea.form-control.p-2(placeholder='Mesajul dumneavoastra')
+                        .col-md-12.p-2
+                            .text-center
+                                .g-recaptcha.d-inline-block(data-sitekey='6LfZSzMUAAAAALtmC0ZC7BmtwN-eEw3Fs8LjwwSV' data-callback='correctCaptcha')
+                        .col-md-12.p-2
+                            .button.red.w-100
+                                a(href='#') Trimite
+                .col-md-4.offset-md-1.my-5.d-flex.flex-column.align-items-center.justify-content-center
+                    div
+                        h3.font-weight-bold
+                            | Adresa
+                        h4
+                            | Strada Tipografilor 11-15 Bucure&#x219;ti 013714
+                        h3.font-weight-bold
+                            | Telefon
+                        h4
+                            | +0721 234 567
+                        h3.font-weight-bold
+                            | Email
+                        h4
+                            | contact@grivin.com
+                        h3.font-weight-bold
+                            | Social
+                        h4
+                            a(href='#')
+                                i.fa.fa-facebook-square.social-icon(aria-hidden='true')
+                            a(href='#')
+                                i.fa.fa-instagram.social-icon(aria-hidden='true')
+                            a(href='#')
+                                i.fa.fa-linkedin-square.social-icon(aria-hidden='true')
+    include pug_includes/footer
+
+
+include pug_includes/generic_imports
+script(src='js/custom.js')

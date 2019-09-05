@@ -7,9 +7,7 @@
 1. Vars and Inits
 2. Set Header
 3. Init Menu
-4. Init Video
-5. Init Date Picker
-6. Init Time Picker
+
 
 
 ******************************/
@@ -46,9 +44,7 @@ $(document).ready(function()
 		setHeader();
 	});
 
-	initVideo();
-	initDatePicker();
-	initTimePicker();
+
 	initMenu();
 	initAccordions()
 
@@ -95,61 +91,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
 
-	4. Init Video
-
-	*/
-
-	function initVideo()
-	{
-		$(".vimeo").colorbox(
-		{
-			iframe:true,
-			innerWidth:640,
-			innerHeight:409,
-			maxWidth: '90%'
-		});
-	}
-
-	/* 
-
-	5. Init Date Picker
-
-	*/
-
-	function initDatePicker()
-	{
-		var dp = $('#datepicker');
-		var date = new Date();
-		var dateM = date.getMonth() + 1;
-		var dateD = date.getDate();
-		var dateY = date.getFullYear();
-		var dateFinal = dateM + '/' + dateD + '/' + dateY;
-		dp.val(dateFinal);
-		dp.datepicker();
-	}
-
-	/* 
-
-	6. Init Time Picker
-
-	*/
-
-	function initTimePicker()
-	{
-		$('.timepicker').timepicker(
-		{
-		    interval: 60,
-		    minTime: '10',
-		    maxTime: '6:00pm',
-		    defaultTime: '11',
-		    startTime: '10:00',
-		    dynamic:  true,
-		    dropdown: true,
-		    scrollbar: true
-		});
-	}
 
 	function initAccordions()
 	{

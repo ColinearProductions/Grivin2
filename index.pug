@@ -1,0 +1,172 @@
+doctype html
+head
+    title Acasa | Grivin House
+    meta(name='description' content='Grivin House')
+    include pug_includes/css_imports
+- var headerStyle= ''
+.super_container
+    include pug_includes/header
+    // Home
+    .home
+        .parallax_background.parallax-window(data-parallax='scroll' data-image-src='img/home_bg.jpg' data-speed='0.8')
+        div.w-100.h-100.position-absolute(style=' background: black; opacity: .5')
+        .home_container
+            .container
+                .row
+                    .col
+                        .home_content.text-center
+                            .home_subtitle.grivin-font(style='color:#CE9042') Grivin House
+                            .home_title.grivin-font
+                                h1 An Extraordinery Experience
+
+                            //-.home_text.ml-auto.mr-auto
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem
+                                    | maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse
+                                    | cursus faucibus finibus.
+                                //
+        .scroll_icon
+    // Intro
+    .intro(style='margin-top: 10vh;')
+        .container
+            .row
+                .col
+                    .intro_content.grivin-border
+                        .intro_subtitle.page_subtitle Despre Magazin
+                        .intro_title
+                            h2 Vinuri &amp; Arta
+                        .intro_text
+                            p
+                                | Un concept unic de magazin deschis recent intr-o cladire de birouri reprezentativa in care combinam
+                                | intr-un mod elegant pasiunea pentru vin, arta si muzica buna.<br>
+                                | Va oferim o selectie speciala de vinuri, pictura, sculptura, fotografie, grafica, sticlarie, toate produse
+                                | unicat realizate de artisti recunoscuti din Romania.
+
+
+                    .row.hidden-lg-down
+                        .col-lg-8
+                            .intro_image
+                                img(src='img/home_grivin_experience.jpg' alt='https://unsplash.com/@quanle2819')
+    .intro.mb-0.mt-10vh-xl
+        .container
+            .row
+                .col
+                    .themenu_title_bar_container
+                        .themenu_stars.text-center.grivin-emblem(style='z-index:2') Grivin
+                        .themenu_rating.text-center(style='z-index:2')
+                            .rating_r.rating_r_5
+                                i
+                                i
+                                i
+                                i
+                                i
+                        .grivin-border.d-flex.flex-column.align-items-center.justify-content-center
+                            .themenu_title.text-black-50(style='padding: 15px') Vinurile noastre
+    .container.pb-5
+        .row
+            .col-lg-4.my-3
+                .grivin-border(style='padding:10px;	z-index: 1; padding-top:30px; padding-bottom:30px;')
+                    h1.text-center.text-classic.yellow.m-0 Ceva clasic
+                    h3.text-center.font-weight-bold Rosu
+                    .text-center
+                        img.img-fluid(src='img/produse/grivin_red.png' alt='' style='max-height: 30vh')
+
+                    h4.mt-2.mx-3.text-center  Un cupaj nobil de Merlot, Cabernet Sauvignon și Syrah
+                    h3.mt-1.text-center  100.00 lei
+                    .button.red(style='width:100%')
+                            a(href='#') Adauga in cos
+            .col-lg-4.my-3
+                .grivin-border(style='padding:10px;	z-index: 1; padding-top:30px; padding-bottom:30px;')
+                    h1.text-center.text-classic.yellow.m-0 Ceva nou
+                    h3.text-center.font-weight-bold Rose
+                    .text-center
+                        img.img-fluid(src='img/produse/grivin_rose.png' alt='' style='max-height: 30vh')
+
+                    h4.mt-2.mx-2.text-center  Un buchet intens de fructe cu o nota predominantă clară de capsuni.
+                    h3.mt-1.text-center  100.00 lei
+                    .button.red(style='width:100%')
+                        a(href='#') Adauga in cos
+            .col-lg-4.my-3
+                .grivin-border(style='padding:10px;	z-index: 1; padding-top:30px; padding-bottom:30px;')
+                    h1.text-center.text-classic.yellow.m-0 Ceva fresh
+                    h3.text-center.font-weight-bold Alb
+                    .text-center
+                        img.img-fluid(src='img/produse/grivin_white.png' alt='' style='max-height: 30vh')
+
+                    h4.mt-2.mx-3.text-center  puternic floral, cu note de tei, salcâm și caprifoi. Gurmand si plin
+                    h3.mt-1.text-center  100.00 lei
+                    .button.red(style='width:100%')
+                        a(href='#') Adauga in cos
+
+
+    .intro(style='margin-bottom: 0;')
+        .container
+            .row
+                .col-md-4.p-0(style='background-color: black')
+                    .grivin-border.d-flex.flex-column.align-items-center.justify-content-center(style='padding: 50px; height:100%; background: #272425')
+                        .intro_subtitle.page_subtitle Instagram
+                        .intro_title.text-center.my-3
+                            h3.text-white 500
+                            h3.text-white Followers
+                        .button.trans_200
+                            a(href='#') Follow
+                .col-md-8.p-0.d-none.d-lg-block
+                    .popup-gallery.row
+                        .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
+                            a(href='img/instagram/1.jpg' title='The Cleaner')
+                                img.img-fluid(src='img/instagram/1.jpg')
+                        .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
+                            a(href='img/instagram/2.jpg' title='The Cleaner')
+                                img.img-fluid(src='img/instagram/2.jpg')
+                        .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
+                            a(href='img/instagram/3.jpg' title='The Cleaner')
+                                img.img-fluid(src='img/instagram/3.jpg')
+                        .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
+                            a(href='img/instagram/4.jpg' title='The Cleaner')
+                                img.img-fluid(src='img/instagram/4.jpg')
+                        .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
+                            a(href='img/instagram/5.jpg' title='The Cleaner')
+                                img.img-fluid(src='img/instagram/5.jpg')
+                        .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
+                            a(href='img/instagram/6.jpg' title='The Cleaner')
+                                img.img-fluid(src='img/instagram/6.jpg')
+    .intro(style='margin-top:1vh;margin-bottom: 1vh')
+        .container
+            .row.text-center
+                .col-sm-6.offset-md-3
+                    .single
+                        h3 Abonativa la noutatile grivin
+                        .col-md-12
+                            input.form-control.p-2(type='email' placeholder='Adresa de email')
+                        .col-md-4.offset-md-4.col-xs-12.py-4
+                            .button.round5.red.trans_200.w-100
+                                a(href='#') Abonare
+    include pug_includes/footer
+
+
+include pug_includes/generic_imports
+
+script(src='plugins/parallax-js-master/parallax.min.js')
+script(src='https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.js')
+script(src='js/custom.js')
+
+script.
+    $(document).ready(function () {
+        $('.popup-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function (item) {
+                    return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+                }
+            }
+        });
+    });
