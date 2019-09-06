@@ -131,61 +131,19 @@
                                 <th scope="col">Sterge</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <tr class="" style="border-bottom:1px solid #c3c3c3">
-                                <td class="hidden-sm-down text-center">
-                                    <img class="img-fluid" src="img/RoseWine.png" alt="" style="max-height: 150px">
-                                </td>
-                                <td style="width:40%" class="hidden-sm-up text-center">
-                                    <img class="img-fluid" src="img/RoseWine.png" alt="" style="max-height: 150px">
-                                </td>
-                                <td class="hidden-sm-up">
-                                    <div class=" ">
-                                        <h4>Grivin Classic - Rosu</h4>
-                                        <h4>100.00 Lei</h4>
-                                        <label>
-                                            Cantitate
-                                            <input type="number" class="quantity_picker my-2" name="quantity" min="1" max="5" value="1" style=" font-size: 1rem; line-height:2rem;text-align: center ">
+                            <tbody id="cart_item_container">
 
-                                        </label>
-                                        <h4>100.00 Lei</h4>
-                                    </div>
-
-                                </td>
-
-
-                                <td style="vertical-align: middle" class="hidden-sm-down text-center">
-                                    <h4>Grivin Classic - Rosu</h4>
-
-                                </td>
-
-                                <td style="vertical-align: middle" class="hidden-sm-down text-center" >
-                                    <h3>100.00 Lei</h3>
-
-                                </td>
-                                <td style="vertical-align: middle" class="hidden-sm-down text-center">
-                                    <input type="number" class="quantity_picker" name="quantity" min="1" max="5" value="1">
-
-                                </td>
-                                <td style="vertical-align: middle" class="hidden-sm-down text-center">
-                                    <h3>100.00 Lei</h3>
-
-                                </td>
-                                <td style="vertical-align: middle" class="hidden-sm-down text-center">
-                                    <a href="#">
-                                        <i class="fa fa-trash-o" style="font-size:1.7rem" aria-hidden="true"></i>
-                                    </a>
-
-                                </td>
-
-                            </tr>
                             </tbody>
+
 
                         </table>
 
                     </div>
-
+                    <div class="col-md-12" id="empty_cart" style="display: none">
+                        <h2 class="text-center text-gray">Nu aveti nici-un produs in cos</h2>
+                    </div>
                 </div>
+
                 <div class="col-md-7">
                     <h2>
                         Nota
@@ -195,13 +153,18 @@
                     </h4>
 
                     <textarea class="form-control p-2" style="border:1px solid rgba(168,42,49,0.57); font-size:1rem" rows="5"
-                              placeholder="Mesajul dumneavoastra"></textarea>
+                              placeholder="Mesajul dumneavoastra" id="cart-note-textarea">
+
+
+                    </textarea>
 
                 </div>
                 <div class="col-md-5 pt-5 text-center">
 
                     <table class="table borderless text-left">
                         <tbody>
+
+                        <!--
                             <tr>
                                 <td>
                                     <h4>
@@ -226,21 +189,34 @@
                                     </h4>
                                 </td>
                             </tr>
+                            -->
                             <tr>
                                 <td>
-                                    <h4>
+                                    <h2 class="font-weight-bold m-0">
                                         Total
+                                    </h2>
+                                </td>
+                                <td class="text-right">
+                                    <h2 id="cart-total"  class="font-weight-bold m-0">
+                                        100.00 Lei
+                                    </h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4 class="">
+                                        Transport
                                     </h4>
                                 </td>
                                 <td class="text-right">
-                                    <h4>
-                                        100.00 Lei
+                                    <h4  class="">
+                                        Calculat in pasul umrator
                                     </h4>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <button class="btn">
+                    <button class="btn" onclick="continueToCheckout()">
                         Continua
                     </button>
 
@@ -335,32 +311,18 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.3/mustache.js"></script>
 
 
 <script src="js/custom.js"></script>
->
+<script src="js/magazin.js"></script>
 
 <script>
 
 
     $(document).ready(function () {
-        $('.popup-gallery').magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            tLoading: 'Loading image #%curr%...',
-            mainClass: 'mfp-img-mobile',
-            gallery: {
-                enabled: true,
-                navigateByImgClick: true,
-                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-            },
-            image: {
-                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-                titleSrc: function (item) {
-                    return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
-                }
-            }
-        });
+       initCart()
     });
 </script>
 

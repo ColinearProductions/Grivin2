@@ -22,9 +22,6 @@
     <script src='https://www.google.com/recaptcha/api.js'></script>
 
 
-
-
-
 </head>
 <body>
 <div class="super_container">
@@ -114,45 +111,45 @@
     <!-- Home -->
 
 
-    <div class="intro " style="margin-top:20vh;margin-bottom: 20vh;">
+    <div class="intro " style="margin-top:20vh;">
         <div class="container">
             <div class="row">
 
                 <div class="col-md-6 text-center">
-                    <img src="img/RoseWine.png" class="img-fluid " style="max-height: 70vh">
+                    <img src="img/produse/grivin_red.png" id="product_image" class="img-fluid blur-5" style="max-height: 70vh">
 
                 </div>
                 <div class="col-md-6">
-                    <div style="border-bottom:1px solid gray" class="pb-4">
-                        <h1 class="font-weight-bold">Vin Rosu Grivin</h1>
-                        <h3 style="color:gray">Demisec <small style="font-weight: normal">|</small> 75 cl <small
-                                style="font-weight: normal">|</small> Dealu Mare, Romania</h3>
-                        <h3 style="color:gray"> 13.5%</h3>
+                    <div style="border-bottom:1px solid gray " class="pb-4">
+                        <h1 class="font-weight-bold blur-5" id="product_name" >Vin Rosu Grivin</h1>
+                        <h3 class="text-gray blur-5" id="short_description">Demisec | 75 cl | Dealu Mare, Romania</h3>
+                        <h3 class="text-gray blur-5" id="subdescription"> 13.5%</h3>
                     </div>
                     <div style="border-bottom:1px solid gray" class="py-4">
-                        <h2 class="font-weight-bold">75.00 lei <small
-                                style="color:gray;text-decoration: line-through;margin-left: 15px;"> 100.00 lei</small>
+                        <h2 class="font-weight-bold blur-5" ><span id="price">75.00 </span> <small
+                                style="color:gray;text-decoration: line-through;margin-left: 15px;"
+                                id="discounted_from"> 100.00 lei</small>
                         </h2>
 
 
-                        <input type="number" class="quantity_picker" name="quantity" min="1" max="5" value="1">
+                        <input type="number" class="product_quantity_picker" name="quantity" min="1" max="5" value="1">
 
 
                         <div class="button red  trans_200  "
                              style=" border-radius: 5px; display: inline-block; margin-bottom:2px;">
-                            <a href="#">Adauga in cos</a>
+                            <a href="javascript:void(0);" id="add_product_to_cart_button">Adauga in cos</a>
                         </div>
 
 
                     </div>
 
                     <div class="my-3">
-                        <h4 class="font-weight-bold">
+                        <h4 class="font-weight-bold blur-5"  id="long_description">
                             Acest vin roșu este un cupaj nobil de Merlot, Cabernet Sauvignon și
                             Syrah, fiind rezultatul unei meticuloase imbinari a muncii în podgorie
                             și în crama.
-                        </h4>
-                        <h4 class="font-weight-bold">
+                            <br>
+                            <br>
                             Acest vin este bogat, fervent și elegant. Cu o culoare intensa, mirosul
                             este complex, cu indicii de fructe coapte si condimente, ardei, cuișoare
                             și un strop de vanilie dulce, are un gust plin și bine structurat cu
@@ -219,8 +216,8 @@
                     <h4 class="font-weight-bold">Plata</h4>
                     <ul class="dotted">
                         <li>
-                    <h5 class="">Momentan singurul mod de plata pe care il oferim este prin ramburs - plata la
-                        livrare</h5>
+                            <h5 class="">Momentan singurul mod de plata pe care il oferim este prin ramburs - plata la
+                                livrare</h5>
                         </li>
                     </ul>
 
@@ -311,35 +308,18 @@
 <script src="plugins/colorbox/jquery.colorbox-min.js"></script>
 
 
-
 <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.3/mustache.js"></script>
 
 
 <script src="js/custom.js"></script>
->
+<script src="js/magazin.js"></script>
+
 
 <script>
 
-
-    $(document).ready(function () {
-        $('.popup-gallery').magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            tLoading: 'Loading image #%curr%...',
-            mainClass: 'mfp-img-mobile',
-            gallery: {
-                enabled: true,
-                navigateByImgClick: true,
-                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-            },
-            image: {
-                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-                titleSrc: function (item) {
-                    return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
-                }
-            }
-        });
-    });
+initProductPage();
 </script>
 
 
