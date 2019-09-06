@@ -329,6 +329,10 @@ function initShopPage() {
 
 function initProductPage(){
     let productCode = getParameterByName('product_code');
+    if(productCode===null){
+        alert("Produs inexistent");
+        return;
+    }
     let currentProduct = productsData.products.filter((product)=>product.product_code.toString()===productCode.toString())[0];
     if(currentProduct===undefined){
         alert("Produs inexistent");
@@ -397,8 +401,6 @@ function addItemToCart(productCode, quantity) {
 
 
 function removeItemFromCart(productCode){
-
-
 
 
     let currentCart = getCart();
@@ -517,6 +519,7 @@ function initCart(){
 }
 
 function updateNoteInCookie(){
+    //alert("UPDATE")
     Cookies.set('note',$("#cart-note-textarea").val());
 }
 

@@ -1,0 +1,63 @@
+doctype html
+head
+    title Despre noi | Grivin House
+    meta(name='description' content='Grivin House')
+    include pug_includes/css_imports
+
+- var headerStyle= 'background: rgba(0,0,0,0.65)'
+.super_container
+    include pug_includes/header
+    // Home
+    .intro(style='margin-top:20vh;margin-bottom: 20vh;')
+        .container
+            .row
+                .col-md-12.mb-5
+                    .table-responsive
+                        table.table.borderless
+                            thead
+                                tr.text-center.hidden-sm-down
+                                    th(scope='col') #
+                                    th(scope='col') Nume
+                                    th(scope='col') Pret buc
+                                    th(scope='col') Cantitate
+                                    th(scope='col') Pret total
+                                    th(scope='col') Sterge
+                            tbody#cart_item_container
+                    #empty_cart.col-md-12(style='display: none')
+                        h2.text-center.text-gray Nu aveti nici-un produs in cos
+                .col-md-7
+                    h2
+                        | Nota
+                    h4
+                        | Adauga instructiuni speciale
+                    textarea#cart-note-textarea.form-control.p-2(style='border:1px solid rgba(168,42,49,0.57); font-size:1rem' rows='5' placeholder='Mesajul dumneavoastra')
+                .col-md-5.pt-5.text-center
+                    table.table.borderless.text-left
+                        tbody
+                            tr
+                                td
+                                    h2.font-weight-bold.m-0
+                                        | Total
+                                td.text-right
+                                    h2#cart-total.font-weight-bold.m-0
+                                        | 100.00 Lei
+                            tr
+                                td
+                                    h4
+                                        | Transport
+                                td.text-right
+                                    h4
+                                        | Calculat in pasul umrator
+                    button.btn(onclick='continueToCheckout()')
+                        | Continua
+    include pug_includes/footer
+
+
+include pug_includes/generic_imports
+script(src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.3/mustache.js')
+script(src='js/custom.js')
+script(src='js/magazin.js')
+script.
+    $(document).ready(function () {
+        initCart()
+    });
