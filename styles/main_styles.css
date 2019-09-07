@@ -263,6 +263,32 @@ section
 {
 	padding: 0px !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .page_subtitle
 {
 
@@ -289,11 +315,24 @@ section
 	color:#9C2A30 !important;
 	border: solid 2px #9C2A30;
 }
+
+.button.red:disabled{
+	color: rgba(156, 42, 48, 0.23) !important;
+	border: solid 2px rgba(156, 42, 48, 0.23);
+}
+button.red:disabled:hover{
+	color: rgba(156, 42, 48, 0.23) !important;
+	background-color: transparent;
+	border: solid 2px rgba(156, 42, 48, 0.23);
+}
+
+
 .button.red a{
 	color: #9C2A30;
 }
 .button.red:hover{
 	background: #9C2A30;
+	color:white !important;
 }
 
 .button:hover
@@ -359,7 +398,8 @@ section
 }
 .main_nav ul li a:hover
 {
-	color: #9E3C3F;
+	color: #c22834 !important;
+	font-weight: bold !important;
 }
 .reservations_phone
 {

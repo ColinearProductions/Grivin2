@@ -304,7 +304,11 @@ a.h4 > i {
 
 
 label {
-    color: #9C2A30;
+    color: black;
+    font-weight: bold;
+}
+label.error {
+    color: #ff4751;
     font-weight: bold;
 }
 

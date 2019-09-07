@@ -3,13 +3,12 @@ head
     title Despre noi | Grivin House
     meta(name='description' content='Grivin House')
     include pug_includes/css_imports
+    script(src='https://www.google.com/recaptcha/api.js')
 
 - var headerStyle= 'background: rgba(0,0,0,0.65)'
 .super_container
     include pug_includes/header
     // Home
-
-
     .intro(style='margin-top:20vh;margin-bottom: 0;')
         .container
             .row
@@ -17,23 +16,26 @@ head
                     h1.text-center.font-weight-bold.my-3
                         | Contact
                 .col-md-7.my-5
-                    .row
-                        .col-md-6.p-2
-                            input.form-control.p-2(type='name' placeholder='Nume')
-                        .col-md-6.p-2
-                            input.form-control.p-2(type='text' placeholder='Subiect')
-                        .col-md-6.p-2
-                            input.form-control.p-2(type='email' placeholder='Adresa de email')
-                        .col-md-6.p-2
-                            input.form-control.p-2(type='phone' placeholder='Numar de telefon')
-                        .col-md-12.p-2
-                            textarea.form-control.p-2(placeholder='Mesajul dumneavoastra')
-                        .col-md-12.p-2
-                            .text-center
-                                .g-recaptcha.d-inline-block(data-sitekey='6LfZSzMUAAAAALtmC0ZC7BmtwN-eEw3Fs8LjwwSV' data-callback='correctCaptcha')
-                        .col-md-12.p-2
-                            .button.red.w-100
-                                a(href='#') Trimite
+                    form#contact_form(action="https://stormy-fortress-08530.herokuapp.com/message", method='post')
+                        .row
+                            .col-md-6.p-2
+                                input.form-control.p-2(name='name' placeholder='Nume')
+                            .col-md-6.p-2
+                                input.form-control.p-2(name='subject' placeholder='Subiect')
+                            .col-md-6.p-2
+                                input.form-control.p-2(name='email' placeholder='Adresa de email')
+                            .col-md-6.p-2
+                                input.form-control.p-2(name='phone' placeholder='Numar de telefon')
+                            .col-md-12.p-2
+                                textarea.form-control.p-2(name='message' placeholder='Mesajul dumneavoastra')
+                            .col-md-12.p-2
+                                .text-center
+                                    label.error#recaptcha_error(for="recaptcha", style="display:none") Bifati "I'm not a robot"
+                                    br
+                                    .g-recaptcha.d-inline-block#recaptcha(data-sitekey='6Lf8MLcUAAAAALWNcgvJHjtzuyQIbZdxjO_VXNFD' data-callback='correctCaptcha')
+                            .col-md-12.p-2
+                                button.button.red.w-100(type="submit")
+                                    |Trimite
                 .col-md-4.offset-md-1.my-5.d-flex.flex-column.align-items-center.justify-content-center
                     div
                         h3.font-weight-bold
@@ -62,3 +64,8 @@ head
 
 include pug_includes/generic_imports
 script(src='js/custom.js')
+script(src='js/magazin.js')
+script.
+    $(document).ready(function() {
+        initContactPage()
+    });

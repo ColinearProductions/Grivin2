@@ -25,10 +25,9 @@
     <script src='https://www.google.com/recaptcha/api.js'></script>
 
 
-
 </head>
 <body>
-<!-- Header -->;
+<!-- Header -->
 
 
 <div class="intro p-0 ">
@@ -36,201 +35,191 @@
 
         <div class="row">
 
+            <div class="col-md-12 order-first hidden-sm-down">
+                <div class="col-md-12 p-0 mt-3">
+                    <h5>
+
+                        <a href="index.html">
+                            Acasa
+                        </a>/
+                        <a href="magazin.html">
+                            Magazin
+                        </a>/
+                        <a href="cos.html">
+                            Cos de cumparaturi
+                        </a>
+                    </h5>
+                </div>
+            </div>
             <div class="col-md-6 px-5 pt-5" style="border-right:1px solid rgba(128,128,128,0.36); height:95vh;">
 
-                <div class="" style="height:100%;">
-                    <div class="row">
+                <div class="h-100">
+                    <form action="" id="address_form">
+                        <div class="row">
 
-                        <div class="col-md-12">
-                            <img src="img/logo_complet.png" style="max-height:3vh;">
-                            <h2 class="my-4">Date de contact</h2>
-
-                        </div>
-
-                        <div class="col-md-12 p-2">
-                            <input type="email" class="form-control"
-                                   style="border:1px solid rgba(156,42,48,0.52); font-size:1.4rem" placeholder="Email">
-                        </div>
-                        <div class="col-md-6 p-2">
-                            <input type="email" class="form-control"
-                                   style="border:1px solid rgba(156,42,48,0.52); font-size:1.4rem" placeholder="Nume">
-                        </div>
-                        <div class="col-md-6 p-2">
-                            <input type="email" class="form-control"
-                                   style="border:1px solid rgba(156,42,48,0.52); font-size:1.4rem"
-                                   placeholder="Prenume">
-                        </div>
-                        <div class="col-md-12 p-2">
-                            <input type="email" class="form-control"
-                                   style="border:1px solid rgba(156,42,48,0.52); font-size:1.4rem" placeholder="Adresa">
-                        </div>
-                        <div class="col-md-12 p-2">
-                            <input type="email" class="form-control"
-                                   style="border:1px solid rgba(156,42,48,0.52); font-size:1.4rem" placeholder="Oras">
-                        </div>
-
-
-                        <div class="col-md-12 p-2">
-                            <label for="judet">
-                                Judet
-                            </label>
-                            <select id="judet" class="js-example-basic-single form-control" name="state">
-
-                                <option value="0">Alege Judet</option>
-                                <option value="Alba">Alba</option>
-                                <option value="Arad">Arad</option>
-                                <option value="Arges">Arges</option>
-                                <option value="Bacau">Bacau</option>
-                                <option value="Bihor">Bihor</option>
-                                <option value="Bistrita Nasaud">Bistrita Nasaud</option>
-                                <option value="Botosani">Botosani</option>
-                                <option value="Brasov">Brasov</option>
-                                <option value="Braila">Braila</option>
-                                <option value="Bucuresti">Bucuresti</option>
-                                <option value="Buzau">Buzau</option>
-                                <option value="Caras Severin">Caras Severin</option>
-                                <option value="Calarasi">Calarasi</option>
-                                <option value="Cluj">Cluj</option>
-                                <option value="Constanta">Constanta</option>
-                                <option value="Covasna">Covasna</option>
-                                <option value="Dambovita">Dambovita</option>
-                                <option value="Dolj">Dolj</option>
-                                <option value="Galati">Galati</option>
-                                <option value="Giurgiu">Giurgiu</option>
-                                <option value="Gorj">Gorj</option>
-                                <option value="Harghita">Harghita</option>
-                                <option value="Hunedoara">Hunedoara</option>
-                                <option value="Ialomita">Ialomita</option>
-                                <option value="Iasi">Iasi</option>
-                                <option value="Ilfov">Ilfov</option>
-                                <option value="Maramures">Maramures</option>
-                                <option value="Mehedinti">Mehedinti</option>
-                                <option value="Mures">Mures</option>
-                                <option value="Neamt">Neamt</option>
-                                <option value="Olt">Olt</option>
-                                <option value="Prahova">Prahova</option>
-                                <option value="Satu Mare">Satu Mare</option>
-                                <option value="Salaj">Salaj</option>
-                                <option value="Sibiu">Sibiu</option>
-                                <option value="Suceava">Suceava</option>
-                                <option value="Teleorman">Teleorman</option>
-                                <option value="Timis">Timis</option>
-                                <option value="Tulcea">Tulcea</option>
-                                <option value="Vaslui">Vaslui</option>
-                                <option value="Valcea">Valcea</option>
-                                <option value="Vrancea">Vrancea</option>
-
-                            </select>
-
-
-                        </div>
-                        <div class="col-md-6 p-2">
-                            <input type="email" class="form-control"
-                                   style="border:1px solid rgba(156,42,48,0.52); font-size:1.4rem" placeholder="Oras">
-                        </div>
-                        <div class="col-md-6 p-2">
-                            <input type="email" class="form-control"
-                                   style="border:1px solid rgba(156,42,48,0.52); font-size:1.4rem"
-                                   placeholder="Cod postal">
-                        </div>
-
-
-                        <div class="col-md-12 p-2">
-
-                            <input type="email" class="form-control"
-                                   style="border:1px solid rgba(156,42,48,0.52); font-size:1.4rem"
-                                   placeholder="Numar de telefon">
-
-                        </div>
-
-                        <!--
-                        <div class="col-md-12 p-2">
-                            <div class="text-center">
-                                <div class="g-recaptcha" style=" display: inline-block;"
-                                     data-sitekey="6LfZSzMUAAAAALtmC0ZC7BmtwN-eEw3Fs8LjwwSV"
-                                     data-callback="correctCaptcha">
-                                    <div style="width: 304px; height: 78px;">
-                                        <div>
-                                            <iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfZSzMUAAAAALtmC0ZC7BmtwN-eEw3Fs8LjwwSV&amp;co=aHR0cDovL2xvY2FsaG9zdDo2MzM0Mg..&amp;hl=en-GB&amp;v=v1565591531251&amp;size=normal&amp;cb=7og3svp9f0b2"
-                                                    width="304" height="78" role="presentation" name="a-20cgp79l0ws"
-                                                    frameborder="0" scrolling="no"
-                                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
-                                        </div>
-                                        <textarea id="g-recaptcha-response" name="g-recaptcha-response"
-                                                  class="g-recaptcha-response"
-                                                  style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
-                                    </div>
-                                </div>
+                            <div class="col-md-12">
+                                <a href="index.html">
+                                    <img src="img/logo_complet.png" style="max-height:3vh;">
+                                    <h2 class="my-4">Date de contact</h2>
+                                </a>
                             </div>
-                        </div>
-                        -->
 
-                    </div>
+                            <div class="col-md-12 p-2">
+                                <label for="email">
+                                    Email *
+                                </label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="col-md-6 p-2">
+                                <label for="nume">
+                                    Nume *
+                                </label>
+                                <input type="text" class="form-control" id="nume" name="nume" placeholder="Nume">
+                            </div>
+                            <div class="col-md-6 p-2">
+                                <label for="prenume">
+                                    Prenume
+                                </label>
+                                <input type="text" class="form-control" id="prenume" name="prenume"
+                                       placeholder="Prenume">
+                            </div>
+                            <div class="col-md-12 p-2">
+                                <label for="adresa">
+                                    Adresa *
+                                </label>
+                                <input type="text" class="form-control" id="adresa" name="adresa" placeholder="Adresa">
+                            </div>
+
+
+                            <div class="col-md-12 p-2">
+                                <label for="judet">
+                                    Judet *
+                                </label>
+                                <select id="judet" class="form-control" name="judet">
+                                    <option value="">Alege Judet</option>
+                                    <option value="Alba">Alba</option>
+                                    <option value="Arad">Arad</option>
+                                    <option value="Arges">Arges</option>
+                                    <option value="Bacau">Bacau</option>
+                                    <option value="Bihor">Bihor</option>
+                                    <option value="Bistrita Nasaud">Bistrita Nasaud</option>
+                                    <option value="Botosani">Botosani</option>
+                                    <option value="Brasov">Brasov</option>
+                                    <option value="Braila">Braila</option>
+                                    <option value="Bucuresti">Bucuresti</option>
+                                    <option value="Buzau">Buzau</option>
+                                    <option value="Caras Severin">Caras Severin</option>
+                                    <option value="Calarasi">Calarasi</option>
+                                    <option value="Cluj">Cluj</option>
+                                    <option value="Constanta">Constanta</option>
+                                    <option value="Covasna">Covasna</option>
+                                    <option value="Dambovita">Dambovita</option>
+                                    <option value="Dolj">Dolj</option>
+                                    <option value="Galati">Galati</option>
+                                    <option value="Giurgiu">Giurgiu</option>
+                                    <option value="Gorj">Gorj</option>
+                                    <option value="Harghita">Harghita</option>
+                                    <option value="Hunedoara">Hunedoara</option>
+                                    <option value="Ialomita">Ialomita</option>
+                                    <option value="Iasi">Iasi</option>
+                                    <option value="Ilfov">Ilfov</option>
+                                    <option value="Maramures">Maramures</option>
+                                    <option value="Mehedinti">Mehedinti</option>
+                                    <option value="Mures">Mures</option>
+                                    <option value="Neamt">Neamt</option>
+                                    <option value="Olt">Olt</option>
+                                    <option value="Prahova">Prahova</option>
+                                    <option value="Satu Mare">Satu Mare</option>
+                                    <option value="Salaj">Salaj</option>
+                                    <option value="Sibiu">Sibiu</option>
+                                    <option value="Suceava">Suceava</option>
+                                    <option value="Teleorman">Teleorman</option>
+                                    <option value="Timis">Timis</option>
+                                    <option value="Tulcea">Tulcea</option>
+                                    <option value="Vaslui">Vaslui</option>
+                                    <option value="Valcea">Valcea</option>
+                                    <option value="Vrancea">Vrancea</option>
+
+                                </select>
+
+
+                            </div>
+
+                            <div class="col-md-6 p-2">
+                                <label for="oras">
+                                    Oras *
+                                </label>
+                                <input type="text" class="form-control" id="oras" name="oras" placeholder="Oras">
+                            </div>
+                            <div class="col-md-6 p-2">
+                                <label for="cod_postal">
+                                    Cod postal
+                                </label>
+                                <input type="text" class="form-control" name="cod_postal" id="cod_postal"
+                                       placeholder="Cod postal">
+                            </div>
+
+
+                            <div class="col-md-12 p-2">
+                                <label for="telefon">
+                                    Numar de telefon *
+                                </label>
+                                <input type="text" class="form-control" id="telefon" name="telefon"
+                                       placeholder="Numar de telefon">
+
+                            </div>
+
+                            <div class="col-md-12 p-2 mb-5 mt-3 hidden-md-up">
+                                <div class="button red" style="width:100%"><a href="#">Plaseaza Comanda</a></div>
+                            </div>
+
+
+                        </div>
+                    </form>
                 </div>
 
             </div>
-            <div class="col-md-6 px-5 pt-5">
+            <div class="col-md-12 order-first order-md-last hidden-md-up">
+                <div class="col-md-12 p-0 mt-3">
+                    <h4>
+                        <a href="magazin.html">
+                            < Inapoi la magazin
+                        </a>
+                    </h4>
+                </div>
+            </div>
+            <div class="col-md-6 px-5 pt-5 order-first order-md-last">
 
 
                 <div class="row">
-                    <div class="col-md-12">
-                        <h2 class="text-center">
-                            Continut cos
-                        </h2>
-                        <table class="table borderless ">
-
-                            <tbody>
-                            <tr class="" style="border-bottom:1px solid #eeeeee">
-                                <td class="hidden-sm-down text-center">
-                                    <img class="img-fluid" src="img/RoseWine.png" alt="" style="max-height: 70px">
-                                </td>
-                                <td style="width:40%" class="hidden-sm-up text-center">
-                                    <img class="img-fluid" src="img/RoseWine.png" alt="" style="max-height: 70px">
-                                </td>
-                                <td class="hidden-sm-up">
-                                    <div class=" ">
-                                        <h5>Grivin Classic - Rosu</h5>
-                                        <h5>x3</h5>
-                                        <h5>100.00 Lei</h5>
-                                    </div>
-
-                                </td>
-
-
-                                <td style="vertical-align: middle" class="hidden-sm-down text-center">
-                                    <h4>Grivin Classic - Rosu</h4>
-                                </td>
-                                <td style="vertical-align: middle" class="hidden-sm-down text-center">
-                                    <h4>x3</h4>
-                                </td>
-
-                                <td style="vertical-align: middle" class="hidden-sm-down text-right">
-                                    <h4>300.00 Lei</h4>
-
-                                </td>
-
-
-
-
-                            </tr>
-                            </tbody>
-
-                        </table>
-
+                    <div class="col-md-12" id="checkout-basket-container">
                     </div>
+
                     <div class="col-md-12">
 
                         <table class="table borderless text-left">
                             <tbody>
                             <tr>
                                 <td class="p-0">
-                                    <h5 >
+
+                                </td>
+                                <td class="text-right p-0">
+                                    <a href="cos.html">
+                                        <h4 class="text-red">
+                                            Modifica comanda
+                                        </h4>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p-0">
+                                    <h5>
                                         Subtotal
                                     </h5>
                                 </td>
                                 <td class="text-right p-0">
                                     <h4>
-                                        300.00 Lei
+                                        <span id="subtotal"> 0.00 </span> Lei
                                     </h4>
                                 </td>
                             </tr>
@@ -242,22 +231,22 @@
                                 </td>
                                 <td class="text-right p-0">
                                     <h4>
-                                        20.00 lei
+                                        <span id="shipping"> 0.00 </span> lei
                                     </h4>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="p-0">
-                                    <h4 >
+                                    <h4>
                                         Total
                                     </h4>
                                     <small>
-                                        Include 60.85 lei TVA (19%)
+                                        Include <span id="vat"> 0.00 </span> lei TVA (19%)
                                     </small>
                                 </td>
                                 <td class="text-right p-0">
                                     <h3 style="font-weight: bold">
-                                        320.00 Lei
+                                        <span id="total"> 0.00 </span>Lei
                                     </h3>
                                 </td>
                             </tr>
@@ -265,10 +254,11 @@
                         </table>
                     </div>
 
-                        <div class="col-md-12 p-2 mb-5 mt-3">
-                            <div class="button red" style="width:100%"><a href="#">Plaseaza Comanda</a></div>
+                    <div class="col-md-12 p-2 mb-5 mt-3 hidden-sm-down">
+                        <div class="button red" style="width:100%">
+                            <a href="javascript:void(0);" onclick="MAKE_ORDER()">Plaseaza Comanda</a>
                         </div>
-
+                    </div>
 
                 </div>
 
@@ -296,42 +286,19 @@
 <script src="plugins/colorbox/jquery.colorbox-min.js"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.3/mustache.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
 
 
 <script src="js/custom.js"></script>
-
-
+<script src="js/magazin.js"></script>
 <script>
-
-
     $(document).ready(function () {
-        $('.popup-gallery').magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            tLoading: 'Loading image #%curr%...',
-            mainClass: 'mfp-img-mobile',
-            gallery: {
-                enabled: true,
-                navigateByImgClick: true,
-                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-            },
-            image: {
-                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-                titleSrc: function (item) {
-                    return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
-                }
-            }
-        });
-
-
+        initCheckout()
     });
-
-
 </script>
-
 
 </body>
 </html>
