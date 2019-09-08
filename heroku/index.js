@@ -20,7 +20,7 @@ app.use(cookieParser());
 
 
 const server = app.listen(PORT, function () {
-    console.log('Node server is running..');
+    console.log('Node server is running on port' + PORT);
 });
 
 app.get('/',(req,res)=>{
