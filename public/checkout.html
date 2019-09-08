@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Venue</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="The Venue template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+
+
+    <link rel="stylesheet" type="text/css" href="styles/mine.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+</head>
+<body>
+<!-- Header -->
+
+
+<!-- The Modal -->
+<div class="modal" id="received_order_modal">
+    <div class="modal-dialog grivin-border">
+        <div class="modal-content p-4">
+
+            <!-- Modal Header -->
+            <div class="modal-header border-0">
+                <img src="img/logo_complet.webp" style="max-height:5vh;margin:auto">
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body text-center" >
+                <h2>
+                Comanda dumneavoastra a fost inregistrata cu succes.
+                </h2>
+                <h3>
+                    Veti fi contactat de unul dintre operatorii nostri
+                    pentru confirmarea adresei.
+                    <br>
+                    O zi buna!
+                </h3>
+                <h6 class="text-gray">
+                    Veti fi redirectionat catre magazin in <span id="countdown">10</span> secunde
+                </h6>
+
+
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer border-0">
+                <div class="button red" style="width:100%">
+                    <a href="javascript:void(0);" onclick="window.location.href='magazin.html'">Okay</a>
+                </div>            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="intro p-0 "  style="margin-top:0vh;">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-12 order-first hidden-sm-down">
+                <div class="col-md-12 p-0 mt-3">
+                    <h5>
+
+                        <a href="index.html">
+                            Acasa
+                        </a>/
+                        <a href="magazin.html">
+                            Magazin
+                        </a>/
+                        <a href="cos.html">
+                            Cos de cumparaturi
+                        </a>
+                    </h5>
+                </div>
+            </div>
+            <div class="col-md-6 px-5 pt-5" style="border-right:1px solid rgba(128,128,128,0.36); height:95vh;">
+
+                <div class="h-100">
+                    <form action="" id="address_form">
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <a href="index.html">
+                                    <img src="img/logo_complet.webp" style="max-height:3vh;">
+                                    <h2 class="my-4">Date de contact</h2>
+                                </a>
+                            </div>
+
+                            <div class="col-md-12 p-2">
+                                <label for="email">
+                                    Email *
+                                </label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="col-md-6 p-2">
+                                <label for="nume">
+                                    Nume *
+                                </label>
+                                <input type="text" class="form-control" id="nume" name="nume" placeholder="Nume">
+                            </div>
+                            <div class="col-md-6 p-2">
+                                <label for="prenume">
+                                    Prenume
+                                </label>
+                                <input type="text" class="form-control" id="prenume" name="prenume"
+                                       placeholder="Prenume">
+                            </div>
+                            <div class="col-md-12 p-2">
+                                <label for="adresa">
+                                    Adresa *
+                                </label>
+                                <input type="text" class="form-control" id="adresa" name="adresa" placeholder="Adresa">
+                            </div>
+
+
+                            <div class="col-md-12 p-2">
+                                <label for="judet">
+                                    Judet *
+                                </label>
+                                <select id="judet" class="form-control" name="judet">
+                                    <option value="">Alege Judet</option>
+                                    <option value="Alba">Alba</option>
+                                    <option value="Arad">Arad</option>
+                                    <option value="Arges">Arges</option>
+                                    <option value="Bacau">Bacau</option>
+                                    <option value="Bihor">Bihor</option>
+                                    <option value="Bistrita Nasaud">Bistrita Nasaud</option>
+                                    <option value="Botosani">Botosani</option>
+                                    <option value="Brasov">Brasov</option>
+                                    <option value="Braila">Braila</option>
+                                    <option value="Bucuresti">Bucuresti</option>
+                                    <option value="Buzau">Buzau</option>
+                                    <option value="Caras Severin">Caras Severin</option>
+                                    <option value="Calarasi">Calarasi</option>
+                                    <option value="Cluj">Cluj</option>
+                                    <option value="Constanta">Constanta</option>
+                                    <option value="Covasna">Covasna</option>
+                                    <option value="Dambovita">Dambovita</option>
+                                    <option value="Dolj">Dolj</option>
+                                    <option value="Galati">Galati</option>
+                                    <option value="Giurgiu">Giurgiu</option>
+                                    <option value="Gorj">Gorj</option>
+                                    <option value="Harghita">Harghita</option>
+                                    <option value="Hunedoara">Hunedoara</option>
+                                    <option value="Ialomita">Ialomita</option>
+                                    <option value="Iasi">Iasi</option>
+                                    <option value="Ilfov">Ilfov</option>
+                                    <option value="Maramures">Maramures</option>
+                                    <option value="Mehedinti">Mehedinti</option>
+                                    <option value="Mures">Mures</option>
+                                    <option value="Neamt">Neamt</option>
+                                    <option value="Olt">Olt</option>
+                                    <option value="Prahova">Prahova</option>
+                                    <option value="Satu Mare">Satu Mare</option>
+                                    <option value="Salaj">Salaj</option>
+                                    <option value="Sibiu">Sibiu</option>
+                                    <option value="Suceava">Suceava</option>
+                                    <option value="Teleorman">Teleorman</option>
+                                    <option value="Timis">Timis</option>
+                                    <option value="Tulcea">Tulcea</option>
+                                    <option value="Vaslui">Vaslui</option>
+                                    <option value="Valcea">Valcea</option>
+                                    <option value="Vrancea">Vrancea</option>
+
+                                </select>
+
+
+                            </div>
+
+                            <div class="col-md-6 p-2">
+                                <label for="oras">
+                                    Oras *
+                                </label>
+                                <input type="text" class="form-control" id="oras" name="oras" placeholder="Oras">
+                            </div>
+                            <div class="col-md-6 p-2">
+                                <label for="cod_postal">
+                                    Cod postal
+                                </label>
+                                <input type="text" class="form-control" name="cod_postal" id="cod_postal"
+                                       placeholder="Cod postal">
+                            </div>
+
+
+                            <div class="col-md-12 p-2">
+                                <label for="telefon">
+                                    Numar de telefon *
+                                </label>
+                                <input type="text" class="form-control" id="telefon" name="telefon"
+                                       placeholder="Numar de telefon">
+
+                            </div>
+
+                            <div class="col-md-12 p-2 mb-5 mt-3 hidden-md-up">
+                                <div class="button red" style="width:100%"><a href="#">Plaseaza Comanda</a></div>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="col-md-12 order-first order-md-last hidden-md-up">
+                <div class="col-md-12 p-0 mt-3">
+                    <h4>
+                        <a href="magazin.html">
+                            < Inapoi la magazin
+                        </a>
+                    </h4>
+                </div>
+            </div>
+            <div class="col-md-6 px-5 pt-5 order-first order-md-last">
+
+
+                <div class="row">
+                    <div class="col-md-12" id="checkout-basket-container">
+                    </div>
+
+                    <div class="col-md-12">
+
+                        <table class="table borderless text-left">
+                            <tbody>
+                            <tr>
+                                <td class="p-0">
+
+                                </td>
+                                <td class="text-right p-0">
+                                    <a href="cos.html">
+                                        <h4 class="text-red">
+                                            Modifica comanda
+                                        </h4>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p-0">
+                                    <h5>
+                                        Subtotal
+                                    </h5>
+                                </td>
+                                <td class="text-right p-0">
+                                    <h4>
+                                        <span id="subtotal"> 0.00 </span> Lei
+                                    </h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p-0">
+                                    <h5>
+                                        Transport
+                                    </h5>
+                                </td>
+                                <td class="text-right p-0">
+                                    <h4>
+                                        <span id="shipping"> 0.00 </span> lei
+                                    </h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p-0">
+                                    <h4>
+                                        Total
+                                    </h4>
+                                    <small>
+                                        Include <span id="vat"> 0.00 </span> lei TVA (19%)
+                                    </small>
+                                </td>
+                                <td class="text-right p-0">
+                                    <h3 style="font-weight: bold">
+                                        <span id="total"> 0.00 </span>Lei
+                                    </h3>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-md-12 p-2 mb-5 mt-3 hidden-sm-down">
+                        <div class="button red" style="width:100%">
+                            <a href="javascript:void(0);" onclick="MAKE_ORDER()">Plaseaza Comanda</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="styles/popper.min.js"></script>
+<script src="styles/bootstrap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.3/mustache.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+
+<script src="js/custom.js"></script>
+<script src="js/magazin.js"></script>
+<script>
+    $(document).ready(function () {
+        initCheckout()
+    });
+</script>
+
+<!--
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "image": [
+            "https://grivin.com/img/galery_webp/p1.webp",
+            "https://grivin.com/img/galery_webp/l14.webp",
+            "https://grivin.com/img/galery_webp/l18.webp"
+        ],
+        "@id": "https://grivin.com/",
+        "name": "Grivin House",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Strada Tipografilor 11-15 București",
+            "addressLocality": "Bucuresti",
+            "addressRegion": "B",
+            "postalCode": "013714",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.4834592,
+            "longitude": 26.0727477
+        },
+        "url": "https://grivin.com/",
+        "telephone": "+40721 234 567",
+        "servesCuisine": "Romanian",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                ],
+                "opens": "10:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "14:00"
+            }
+        ],
+        "menu": "https://grivin.com/menu.pdf",
+        "acceptsReservations": "True"
+
+    }
+</script>
+-->
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Vin Grivin Rosu",
+        "image": [
+            "https://grivin.com/img/produse/grivin_red.webp",
+            "https://grivin.com/img/produse/grivin_rose.webp",
+            "https://grivin.com/img/produse/grivin_white.webp"
+        ],
+        "description": "Acest vin roșu este un cupaj nobil de Merlot, Cabernet Sauvignon și Syrah, fiind rezultatul unei meticuloase imbinari a muncii în podgorie și în crama. Acest vin este bogat, fervent și elegant. Cu o culoare intensa, mirosul este complex, cu indicii de fructe coapte si condimente, ardei, cuișoare și un strop de vanilie dulce, are un gust plin și bine structurat cu taninuri usor mătăsoase. Se recomanda savurarea lui la o temperatura intre 18 si 20 de grade Celsius.",
+        "sku": "100001",
+        "mpn": "100000",
+        "brand": {
+            "@type": "Thing",
+            "name": "Grivin House"
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": "https://grivin.com",
+            "priceCurrency": "RON",
+            "price": "75.00",
+            "priceValidUntil": "2019-09-20",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+                "@type": "Organization",
+                "name": "Grivin House SRL"
+            }
+        }
+    }
+</script>
+
+
+</body>
+</html>

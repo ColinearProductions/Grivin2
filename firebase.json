@@ -1,0 +1,28 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "redirects":[
+      {
+        "source":"email",
+        "destination":"https://pro03.octosquid.com:2096",
+        "type":301
+      }
+    ],
+    "headers":[
+      {
+        "source":"**/*.@(html,css,js,jpg|jpeg|gif|png)",
+        "headers":[
+          {
+            "key":"Cache-Control",
+            "value":"max-age=3600"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+doctype html
+head
+    title Despre noi | Grivin House
+    meta(name='description' content='Grivin House')
+    include pug_includes/css_imports
+
+- var headerStyle= 'background: rgba(0,0,0,0.65)'
+.super_container
+    include pug_includes/header
+    // Home
+    .intro(style='margin-bottom: 20vh;')
+        .container
+            .row
+                #filters_container.col-md-3.my-5
+                .col-md-9
+                    #products_container.row(style='border-left:1px solid rgba(156,42,48,0.13)')
+    include pug_includes/footer
+
+
+include pug_includes/generic_imports
+script.
+    $(document).ready(function() {
+        initShopPage()
+    });
