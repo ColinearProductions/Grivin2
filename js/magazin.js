@@ -30,14 +30,14 @@ const productsTemplate = `
     </a>
 
     <div class=" row pt-1">
-        <div class="col-md-9 pr-0">
+        <div class="col-md-12 col-lg-9 pr-lg-0">
             <div class="button red font-weight-bold" style="width:100%">
                 <a href="produs.html?product_code={{product_code}}">
                     Vizualizeaza
                 </a>
             </div>
         </div>
-        <div class="col-md-3 pl-1">
+        <div class="col-md-3 pl-lg-1  hidden-md-down">
             <div class="button red font-weight-bold" style="width:100%">
                 <a href="javascript:void(0);" onclick="addItemToCart({{product_code}},1)">
                     <i class="fa fa-cart-plus" aria-hidden="true"></i>
@@ -62,10 +62,21 @@ const filtersTemplate = `
         <div class="accordion_container">
 
             {{#categories}}
+            {{#active}}
             <div class="accordion d-flex flex-row align-items-center active">
+            {{/active}}
+            {{^active}}
+            <div class="accordion d-flex flex-row align-items-center ">
+            {{/active}}
+
                 {{name}}
             </div>
+            {{#active}}
             <div class="accordion_panel pl-4 pt-2 ml-3" style="max-height: 260px;display: block">
+            {{/active}}
+            {{^active}}
+            <div class="accordion_panel pl-4 pt-2 ml-3" style="max-height: 260px;display: none">
+            {{/active}}
                 <div class="row">
                     <a href="javascript:void(0);" onclick="onSelectSubcategory(this,-1,{{category_id}})"
                        class="col-md-12">
@@ -249,16 +260,13 @@ let productsData = {
             subcategory_id: 1002,
             name: "Vin Rose Grivin",
             shortDescription: "Demisec | 75 cl | Dealu Mare, Romania",
-            longDescription: `Acest vin roșu este un cupaj nobil de Merlot, Cabernet Sauvignon și
-                            Syrah, fiind rezultatul unei meticuloase imbinari a muncii în podgorie
-                            și în crama.
-                            <br>
-                            <br>
-                            Acest vin este bogat, fervent și elegant. Cu o culoare intensa, mirosul
-                            este complex, cu indicii de fructe coapte si condimente, ardei, cuișoare
-                            și un strop de vanilie dulce, are un gust plin și bine structurat cu
-                            taninuri usor mătăsoase. Se recomanda savurarea lui la o temperatura
-                            intre 18 si 20 de grade Celsius.`,
+            longDescription: `Cu o culoare roz deschis, vinul nostru oferă un buchet intens de fructe
+                                roșii și fructe de pădure, cu o nota predominantă clară de capsuni.
+                                <br>
+                                Aroma este proaspata, cu o aciditate plăcută și un finisaj aromatic
+                                fructat.
+                                <br>
+                                Se recomanda savurarea lui la o temperatura intre 10 si 14 grade Celsius.`,
             priceBeforeDiscount: '100.00',
             price: '75.00',
             subdescription: "13.5%",
@@ -271,16 +279,12 @@ let productsData = {
             subcategory_id: 1003,
             name: "Vin Alb Grivin",
             shortDescription: "Demisec | 75 cl | Dealu Mare, Romania",
-            longDescription: `Acest vin roșu este un cupaj nobil de Merlot, Cabernet Sauvignon și
-                            Syrah, fiind rezultatul unei meticuloase imbinari a muncii în podgorie
-                            și în crama.
-                            <br>
-                            <br>
-                            Acest vin este bogat, fervent și elegant. Cu o culoare intensa, mirosul
-                            este complex, cu indicii de fructe coapte si condimente, ardei, cuișoare
-                            și un strop de vanilie dulce, are un gust plin și bine structurat cu
-                            taninuri usor mătăsoase. Se recomanda savurarea lui la o temperatura
-                            intre 18 si 20 de grade Celsius.`,
+            longDescription: `
+                            Este un vin puternic floral, cu note de tei, salcâm și caprifoi.
+                            Gurmand și plin, lasa o savoare unica, cu o aciditate plăcută si usoara,
+                            îți va oferi toată bogăția sa aromată dacă il savurezi la o temperatura
+                            între 10 și 14 grade Celsius.
+                            `,
             priceBeforeDiscount: '100.00',
             price: '75.00',
             subdescription: "13.5%",
@@ -353,6 +357,7 @@ function populateProductList() {
 }
 
 function populateFilters() {
+    categoriesData.categories[0].active=true;
     let template = filtersTemplate;
     Mustache.parse(template);
     let rendered = Mustache.render(template, categoriesData);
@@ -447,18 +452,13 @@ $(document).ready(function () {
 
 
 function addItemToCart(productCode, quantity) {
-
-
-    let shoppingCartBadgeWrapper = $("#shoping_cart_badge_wrapper");
-
-    loadCartBadge();
     //alert("ADDINT ITEM TO CART " + productCode + "x" + quantity);
     let currentCart = getCart();
 
     let itemExists = false;
     currentCart.items.forEach(itemInCart => {
         if (itemInCart.product_code === productCode) {
-            let newQuantity = itemInCart.quantity + parseInt(itemInCart.quantity) + parseInt(quantity);
+            let newQuantity = parseInt(itemInCart.quantity) + parseInt(quantity);
             if (newQuantity > 99)
                 newQuantity = 99;
             itemInCart.quantity = newQuantity;
@@ -471,7 +471,7 @@ function addItemToCart(productCode, quantity) {
         currentCart.items.push({product_code: productCode, quantity: quantity});
 
     Cookies.set('cart', currentCart);
-
+    loadCartBadge();
 }
 
 
@@ -776,18 +776,42 @@ function MAKE_ORDER() {
                 console.log(JSON.stringify(data));
                 Cookies.set('cart', {items: []});
                 Cookies.set('note', '');
-                alert("Comanda dumneavoastra a fost inregistrata cu success");
+                showOrderCompleteModal();
             })
 
 
-
-    }else{
-        alert('Data is not filled completely')
+    } else {
+        alert("Datele nu au fost completate corect");
     }
 
 
+}
 
 
+let orderCompleteTimer = 10;
+
+function showOrderCompleteModal() {
+    let orderCompleteModal = $("#received_order_modal");
+
+    $(orderCompleteModal).modal({
+        backdrop: 'static',
+        keyboard: false
+    });
+    $(orderCompleteModal).modal('show');
+
+
+    let countdown = $("#countdown");
+
+    setInterval(function () {
+        {
+            $(countdown).html(orderCompleteTimer);
+
+            orderCompleteTimer--;
+            if (orderCompleteTimer < 0) {
+                window.location.href = 'magazin.html';
+            }
+        }
+    }, 1000);
 
 }
 
@@ -795,7 +819,99 @@ function MAKE_ORDER() {
 //</editor-fold>
 
 
-function postData(url,data) {
+//<editor-fold desc="Contact">
+
+let recaptchaFilled = false;
+
+function correctCaptcha() {
+    recaptchaFilled = true;
+}
+
+
+function initContactPage() {
+
+
+    $('#contact_form').validate({
+        // Specify validation rules
+        rules: {
+            name: "required",
+            subject: "required",
+            message: "required",
+            phone: {
+                required: true,
+                min: 9
+            },
+            email: {
+                required: true,
+                email: true
+            },
+        },
+        messages: {
+            name: "Introduceti un nume",
+            subject: "Trebuie sa mentionati un subiect",
+            message: "Trebuie sa mentionati un mesaj",
+            email: "Introduceti o adresa de email valida",
+            telefon: "Introduceti un numar de telefon valid"
+        }
+    });
+
+
+    $("#contact_form").submit(function (event) {
+        event.preventDefault();
+        console.log('THIS');
+        if (!recaptchaFilled) {
+            $("#recaptcha_error").html("Bifati \"I'm not a robot\"");
+            $("#recaptcha_error").show();
+        } else if (!$('#contact_form').valid()) {
+            console.log("FORM NOT VALID");
+        } else {
+
+            let data = {};
+            let tmp = $("#contact_form").serializeArray();
+            tmp.forEach(item => {
+                data[item.name] = item.value;
+            });
+
+            postData('https://stormy-fortress-08530.herokuapp.com/message', data).then(data => {
+                console.log(JSON.stringify(data));
+
+                showMessageReceivedModal();
+            })
+        }
+    });
+}
+
+let messageReceivedTimer = 10;
+
+
+function showMessageReceivedModal() {
+    let messageReceivedModal = $("#received_message_modal");
+
+    $(messageReceivedModal).modal({
+        backdrop: 'static',
+        keyboard: false
+    });
+    $(messageReceivedModal).modal('show');
+
+
+    let countdown = $("#countdown");
+
+    setInterval(function () {
+        {
+            $(countdown).html(messageReceivedTimer);
+
+            messageReceivedTimer--;
+            if (messageReceivedTimer < 0) {
+                window.location.reload();
+            }
+        }
+    }, 1000);
+
+}
+
+//</editor-fold>
+
+function postData(url, data) {
     // Default options are marked with *
     return fetch(url, {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.

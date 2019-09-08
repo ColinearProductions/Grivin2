@@ -8,11 +8,12 @@ head
 .super_container
     include pug_includes/header
     // Home
-    .intro(style='margin-top:18vh;margin-bottom: 20vh;')
+    .intro(style='margin-bottom: 20vh;')
         .container
             .row
                 #filters_container.col-md-3.my-5
-                #products_container.col-md-9.row(style='border-left:1px solid rgba(156,42,48,0.13)')
+                .col-md-9
+                    #products_container.row(style='border-left:1px solid rgba(156,42,48,0.13)')
     include pug_includes/footer
 
 

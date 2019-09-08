@@ -8,15 +8,43 @@ head
 - var headerStyle= 'background: rgba(0,0,0,0.65)'
 .super_container
     include pug_includes/header
+
+
+
+
     // Home
     .intro(style='margin-top:20vh;margin-bottom: 0;')
         .container
+            // The Modal
+            #received_message_modal.modal
+                .modal-dialog.grivin-border
+                    .modal-content.p-4
+                        // Modal Header
+                        .modal-header.border-0
+                            img(src='img/logo_complet.png' style='max-height:5vh;margin:auto')
+                        // Modal body
+                        .modal-body.text-center
+                            h2
+                                | Am receptionat mesajul dumneavoastra!
+                            h3
+                                | Vom procesa mesajul dumneavoastra si vom reveni cu un raspuns
+                                br
+                                |O zi buna!
+                            h6.text-gray
+                                | Veti fi redirectionat catre magazin in
+                                span#countdown.mx-1 10
+                                |secunde
+                        // Modal footer
+                        .modal-footer.border-0
+                            .button.red(style='width:100%')
+                                a(href='javascript:void(0);' onclick="window.location.href='magazin.html'") Okay
+
             .row
                 .col-md-12
                     h1.text-center.font-weight-bold.my-3
                         | Contact
                 .col-md-7.my-5
-                    form#contact_form(action="https://stormy-fortress-08530.herokuapp.com/message", method='post')
+                    form#contact_form(action="", method='post')
                         .row
                             .col-md-6.p-2
                                 input.form-control.p-2(name='name' placeholder='Nume')
@@ -30,7 +58,7 @@ head
                                 textarea.form-control.p-2(name='message' placeholder='Mesajul dumneavoastra')
                             .col-md-12.p-2
                                 .text-center
-                                    label.error#recaptcha_error(for="recaptcha", style="display:none") Bifati "I'm not a robot"
+                                    label.error#recaptcha_error(for="recaptcha", style="display:none")
                                     br
                                     .g-recaptcha.d-inline-block#recaptcha(data-sitekey='6Lf8MLcUAAAAALWNcgvJHjtzuyQIbZdxjO_VXNFD' data-callback='correctCaptcha')
                             .col-md-12.p-2
@@ -41,7 +69,7 @@ head
                         h3.font-weight-bold
                             | Adresa
                         h4
-                            | Strada Tipografilor 11-15 Bucure&#x219;ti 013714
+                            | Strada Tipografilor 11-15 Bucuresti 013714
                         h3.font-weight-bold
                             | Telefon
                         h4
@@ -63,8 +91,10 @@ head
 
 
 include pug_includes/generic_imports
+script(src='https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js')
 script(src='js/custom.js')
 script(src='js/magazin.js')
+
 script.
     $(document).ready(function() {
         initContactPage()

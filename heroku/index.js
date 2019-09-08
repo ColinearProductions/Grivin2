@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser');
 const requestPromise = require('request-promise');
 
 const recaptchaValidationURL = "https://recaptcha.google.com/recaptcha/api/siteverify";
-const secret = "6Lf8MLcUAAAAAFKg2FzPK_W2oeriV6o65mQ683IF";
+const secret = process.env.RECAPTCHA_SECRET;
 
 const app = express();
 app.use(cors());
@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.text());
 app.use(cookieParser());
 
-const targetEmails = ['oana.dragulanescu@grivin.com','razvan.becheru@conicdesign.ro'];
+
 
 
 const server = app.listen(PORT, function () {
@@ -25,6 +25,24 @@ const server = app.listen(PORT, function () {
 
 app.get('/',(req,res)=>{
     res.send("Deploy successful");
+});
+
+app.get('/test_email',(req,res)=>{
+    sendEmail("This is a test","test").then(()=>res.send('Message sent to ' + targetEmails));
+});
+
+
+app.get('/keepalive',(req,res)=>{
+    let repeat = parseInt(req.query.repeat);
+    if(!repeat)
+        repeat=100;
+    if(repeat>1000)
+        repeat=1000;
+    console.log(repeat);
+    for(let i=0;i<req.query.repeat;i++){
+        console.log([...Array(Math.floor(Math.random()*100)).keys()]);
+    }
+    res.send("200")
 });
 
 app.post('/message', (req, res) => {
@@ -71,13 +89,14 @@ function validateRecaptcha(payload){
 
 
 const nodemailer = require('nodemailer');
-const gmailEmail = "notifications@conicdesign.ro";
-const gmailPassword = "Gy42X7CYDk5h";
+const gmailEmail = process.env.EMAIL_USERNAME;
+const gmailPassword = process.env.EMAIL_PASSWORD;
+const targetEmails =process.env.TARGET_EMAILS.split(",");
 
 
 
 const mailtransport = nodemailer.createTransport(
-    `smtps://notifications%40conicdesign.ro:Gy42X7CYDk5h@smtp.gmail.com`);
+    `smtps://notifications%40conicdesign.ro:${gmailPassword}@smtp.gmail.com`);
 
 
 function sendEmail(message, subject) {
@@ -96,6 +115,6 @@ function sendEmail(message, subject) {
     mailOptions.subject = subject;
     mailOptions.text = message;
     return mailtransport.sendMail(mailOptions).then(() => {
-        console.log('New welcome email sent to:', target);
+        console.log('New welcome email sent to:', targetEmails);
     });
 }

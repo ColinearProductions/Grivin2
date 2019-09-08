@@ -125,20 +125,3 @@ function getParameterByName(name) {
 	return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-
-let recaptchaFilled = false;
-function correctCaptcha(){
-	recaptchaFilled=true;
-}
-
-function initContactPage(){
-	$("#contact_form").submit(function(event) {
-		if(!recaptchaFilled){
-			$("#recaptcha_error").show();
-			event.preventDefault();
-		}else{
-
-		}
-
-	});
-}
