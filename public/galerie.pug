@@ -9,7 +9,7 @@ head
 mixin image-portrait(image_name, extension)
     .col-md-3.p-0.grivin-border.galery_image_wrapper.portrait
         .galery_image_container
-            a(href=image_name+extension, title='The Cleanerzzz')
+            a(href=image_name+extension, title='Grivin')
                 img.galery_image(src=image_name+' (Custom)'+extension alt='Avatar')
                 .galery_overlay.d-flex.flex-column.align-items-center.justify-content-center
                     .galery_text
@@ -47,52 +47,52 @@ body(style='background: #272425')
             .col-md-10.offset-md-1
                 .col-md-12.p-0
                     .popup-gallery.row
-                        +image-portrait('img/galery_webp/p1','.webp')
-                        +image-portrait('img/galery_webp/p2','.webp')
-                        +image-portrait('img/galery_webp/p3','.webp')
-                        +image-portrait('img/galery_webp/p4','.webp')
+                        +image-portrait('img/galery/p1','.jpg')
+                        +image-portrait('img/galery/p2','.jpg')
+                        +image-portrait('img/galery/p3','.jpg')
+                        +image-portrait('img/galery/p4','.jpg')
                     .popup-gallery.row
-                        +image-landscape-large('img/galery_webp/l1','.webp')
+                        +image-landscape-large('img/galery/l1','.jpg')
                         .col-md-6
                             .popup-gallery.row
-                                +image-landscape('img/galery_webp/l2','.webp')
-                                +image-landscape('img/galery_webp/l3','.webp')
-                                +image-landscape('img/galery_webp/l4','.webp')
-                                +image-landscape('img/galery_webp/l5','.webp')
+                                +image-landscape('img/galery/l2','.jpg')
+                                +image-landscape('img/galery/l3','.jpg')
+                                +image-landscape('img/galery/l4','.jpg')
+                                +image-landscape('img/galery/l5','.jpg')
                     .popup-gallery.row
-                        +image-portrait('img/galery_webp/p5','.webp')
-                        +image-portrait('img/galery_webp/p6','.webp')
-                        +image-portrait('img/galery_webp/p7','.webp')
-                        +image-portrait('img/galery_webp/p8','.webp')
-                    .popup-gallery.row
-                        .col-md-6
-                            .popup-gallery.row
-                                +image-landscape('img/galery_webp/l6','.webp')
-                                +image-landscape('img/galery_webp/l7','.webp')
-                                +image-landscape('img/galery_webp/l8','.webp')
-                                +image-landscape('img/galery_webp/l9','.webp')
-                        +image-landscape-large('img/galery_webp/l10','.webp')
-                    .popup-gallery.row
-                        +image-portrait('img/galery_webp/p9','.webp')
-                        +image-portrait('img/galery_webp/p10','.webp')
-                        +image-portrait('img/galery_webp/p11','.webp')
-                        +image-portrait('img/galery_webp/p12','.webp')
-                    .popup-gallery.row
-                        +image-landscape-large('img/galery_webp/l11','.webp')
-                        .col-md-6
-                            .popup-gallery.row
-                                +image-landscape('img/galery_webp/l12','.webp')
-                                +image-landscape('img/galery_webp/l13','.webp')
-                                +image-landscape('img/galery_webp/l14','.webp')
-                                +image-landscape('img/galery_webp/l15','.webp')
+                        +image-portrait('img/galery/p5','.jpg')
+                        +image-portrait('img/galery/p6','.jpg')
+                        +image-portrait('img/galery/p7','.jpg')
+                        +image-portrait('img/galery/p8','.jpg')
                     .popup-gallery.row
                         .col-md-6
                             .popup-gallery.row
-                                +image-landscape('img/galery_webp/l16','.webp')
-                                +image-landscape('img/galery_webp/l17','.webp')
-                                +image-landscape('img/galery_webp/l18','.webp')
-                                +image-landscape('img/galery_webp/l19','.webp')
-                        +image-landscape-large('img/galery_webp/l20','.webp')
+                                +image-landscape('img/galery/l6','.jpg')
+                                +image-landscape('img/galery/l7','.jpg')
+                                +image-landscape('img/galery/l8','.jpg')
+                                +image-landscape('img/galery/l9','.jpg')
+                        +image-landscape-large('img/galery/l10','.jpg')
+                    .popup-gallery.row
+                        +image-portrait('img/galery/p9','.jpg')
+                        +image-portrait('img/galery/p10','.jpg')
+                        +image-portrait('img/galery/p11','.jpg')
+                        +image-portrait('img/galery/p12','.jpg')
+                    .popup-gallery.row
+                        +image-landscape-large('img/galery/l11','.jpg')
+                        .col-md-6
+                            .popup-gallery.row
+                                +image-landscape('img/galery/l12','.jpg')
+                                +image-landscape('img/galery/l13','.jpg')
+                                +image-landscape('img/galery/l14','.jpg')
+                                +image-landscape('img/galery/l15','.jpg')
+                    .popup-gallery.row
+                        .col-md-6
+                            .popup-gallery.row
+                                +image-landscape('img/galery/l16','.jpg')
+                                +image-landscape('img/galery/l17','.jpg')
+                                +image-landscape('img/galery/l18','.jpg')
+                                +image-landscape('img/galery/l19','.jpg')
+                        +image-landscape-large('img/galery/l20','.jpg')
 
 
     include pug_includes/footer

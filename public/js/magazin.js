@@ -249,7 +249,7 @@ let productsData = {
             product_code: 100001,
             category_id: 1000,
             subcategory_id: 1001,
-            name: "Vin Rosu Grivin",
+            name: "GRIVIN Rosu",
             shortDescription: "Sec | 75 cl | Mehedinti, Romania",
             longDescription: `Acest vin rosu este un cupaj nobil de Merlot, Cabernet Sauvignon si
                             Syrah, fiind rezultatul unei meticuloase imbinari a muncii in podgorie
@@ -265,13 +265,13 @@ let productsData = {
             price: '64.00',
             subdescription: "13.5%",
             in_stock: true,
-            image: "img/produse/grivin_red.webp"
+            image: "img/produse/grivin_red.png"
         },
         {
             product_code: 100002,
             category_id: 1000,
             subcategory_id: 1002,
-            name: "Vin Rose Grivin",
+            name: "GRIVIN Rose",
             shortDescription: "Sec | 75 cl | Mehedinti, Romania",
             longDescription: `Cu o culoare roz deschis, vinul nostru ofera un buchet intens de fructe
                                 rosii si fructe de padure, cu o nota predominanta clara de capsuni.
@@ -284,13 +284,13 @@ let productsData = {
             price: '54.00',
             subdescription: "13.5%",
             in_stock: true,
-            image: "img/produse/grivin_rose.webp"
+            image: "img/produse/grivin_rose.png"
         },
         {
             product_code: 100003,
             category_id: 1000,
             subcategory_id: 1003,
-            name: "Vin Alb Grivin",
+            name: "GRIVIN Alb",
             shortDescription: "Sec | 75 cl | Mehedinti, Romania",
             longDescription: `
                             Este un vin floral, cu note de tei, salcam si caprifoi.
@@ -302,7 +302,7 @@ let productsData = {
             price: '54.00',
             subdescription: "13.5%",
             in_stock: true,
-            image: "img/produse/grivin_white.webp"
+            image: "img/produse/grivin_white.png"
         },
     ]
 };
@@ -889,6 +889,8 @@ function initContactPage() {
                 data[item.name] = item.value;
             });
 
+            //https://glacial-stream-75477.herokuapp.com/message
+            //http://localhost:5000/message
             postData('https://glacial-stream-75477.herokuapp.com/message', data).then(data => {
                 console.log(JSON.stringify(data));
 
