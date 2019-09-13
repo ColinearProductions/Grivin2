@@ -12,7 +12,7 @@ html(lang="ro")
 
         // Home
         .home
-            .parallax_background.parallax-window(data-parallax='scroll' data-image-src='https://grivinhouse-23381.firebaseapp.com/img/home_bg.webp' data-speed='0.8')
+            .parallax_background.parallax-window(data-parallax='scroll' data-image-src='img/home_bg.webp' data-speed='0.8')
             div.w-100.h-100.position-absolute(style=' background: black; opacity: .5')
             .home_container
                 .container
@@ -23,12 +23,6 @@ html(lang="ro")
                                 .home_title.grivin-font
                                     h1 An Extraordinery Experience
 
-                                //-.home_text.ml-auto.mr-auto
-                                    p
-                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem
-                                        | maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse
-                                        | cursus faucibus finibus.
-                                    //
             .scroll_icon
         // Intro
         .intro.mt-5.pt-5
@@ -100,37 +94,81 @@ html(lang="ro")
                             a(href='produs.html?product_code=100003') Detalii
 
 
-        .intro(style='margin-bottom: 0;margin-top:0')
+        //
+            .intro(style='margin-bottom: 0;margin-top:0')
+                .container
+                    .row
+                        .col-md-4.p-0(style='background-color: black')
+                            .grivin-border.d-flex.flex-column.align-items-center.justify-content-center(style='padding: 50px; height:100%; background: #272425')
+                                .intro_subtitle.page_subtitle Instagram
+                                .intro_title.text-center.my-3
+                                    h3.text-white 500
+                                    h3.text-white Followers
+                                .button.trans_200
+                                    a(href='#') Follow
+                        .col-md-8.p-0.d-none.d-lg-block
+                            .popup-gallery.row
+                                .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
+                                    a(href='img/galery_webp/p1.webp' title='The Cleaner')
+                                        img.img-fluid(alt="instagram image" src='img/galery_webp/p1 (Custom).webp')
+                                .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
+                                    a(href='img/galery_webp/p2.webp' title='The Cleaner')
+                                        img.img-fluid(alt="instagram image" src='img/galery_webp/p2 (Custom).webp')
+                                .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
+                                    a(href='img/galery_webp/p3.webp' title='The Cleaner')
+                                        img.img-fluid(alt="instagram image" src='img/galery_webp/p3 (Custom).webp')
+                                .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
+                                    a(href='img/galery_webp/p4.webp' title='The Cleaner')
+                                        img.img-fluid(alt="instagram image" src='img/galery_webp/p4 (Custom).webp')
+                                .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
+                                    a(href='img/galery_webp/p5.webp' title='The Cleaner')
+                                        img.img-fluid(alt="instagram image" src='img/galery_webp/p5 (Custom).webp')
+                                .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
+                                    a(href='img/galery_webp/p6.webp' title='The Cleaner')
+                                        img.img-fluid(alt="instagram image" src='img/galery_webp/p6 (Custom).webp')
+
+        .intro
             .container
                 .row
-                    .col-md-4.p-0(style='background-color: black')
-                        .grivin-border.d-flex.flex-column.align-items-center.justify-content-center(style='padding: 50px; height:100%; background: #272425')
-                            .intro_subtitle.page_subtitle Instagram
-                            .intro_title.text-center.my-3
-                                h3.text-white 500
-                                h3.text-white Followers
-                            .button.trans_200
-                                a(href='#') Follow
-                    .col-md-8.p-0.d-none.d-lg-block
-                        .popup-gallery.row
-                            .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
-                                a(href='img/galery_webp/p1.webp' title='The Cleaner')
-                                    img.img-fluid(alt="instagram image" src='img/galery_webp/p1 (Custom).webp')
-                            .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
-                                a(href='img/galery_webp/p2.webp' title='The Cleaner')
-                                    img.img-fluid(alt="instagram image" src='img/galery_webp/p2 (Custom).webp')
-                            .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
-                                a(href='img/galery_webp/p3.webp' title='The Cleaner')
-                                    img.img-fluid(alt="instagram image" src='img/galery_webp/p3 (Custom).webp')
-                            .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
-                                a(href='img/galery_webp/p4.webp' title='The Cleaner')
-                                    img.img-fluid(alt="instagram image" src='img/galery_webp/p4 (Custom).webp')
-                            .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
-                                a(href='img/galery_webp/p5.webp' title='The Cleaner')
-                                    img.img-fluid(alt="instagram image" src='img/galery_webp/p5 (Custom).webp')
-                            .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
-                                a(href='img/galery_webp/p6.webp' title='The Cleaner')
-                                    img.img-fluid(alt="instagram image" src='img/galery_webp/p6 (Custom).webp')
+                    .col
+                        .themenu_title_bar_container
+                            .themenu_stars.text-center.grivin-emblem(style='z-index:2') Grivin
+                            .grivin-border.d-flex.flex-column.align-items-center.justify-content-center
+                                .themenu_title(style='padding: 15px; color:black') Degustari si organizare evenimente corporate
+                                .intro_text.pl-5.pr-5.pb-5
+                                    p
+                                        | O echipa unita este unul dintre factorii cheie care asigura succesul tuturor
+                                        | companiilor. Activitatile de team building sunt benefice oricarei companii,
+                                        | indiferent de numarul de angajati, deoarece incurajeaza munca in echipa,
+                                        | imbunatateste comunicarea si dezvolta relatiile interpersonale.
+                                    p
+                                        | Venim in intampinarea acestei idei cu toata energia si experienta noastra,
+                                        | va ajutam sa va organizati un team building de 1 zi sau un weekend in
+                                        | Bucuresti sau in tara incluzand si o degustare de vinuri. Lucram in
+                                        | parteneriat cu clientii nostri pentru a propune locatii atractive,
+                                        | adecvate tematicii evenimentului si numarului de participanti, pentru a
+                                        | rezerva spatii de cazare si pentru a selecta toate serviciile pe care
+                                        | specificul evenimentului le implica.
+
+                                .row.px-4.pb-2
+                                    .col-lg-2.p-1
+                                        .intro_image
+                                            img(src='img/galery/p13.jpg' alt='Grivin')
+                                    .col-lg-2.p-1
+                                        .intro_image
+                                            img(src='img/galery/p14.jpg' alt='Grivin')
+                                    .col-lg-2.p-1
+                                        .intro_image
+                                            img(src='img/galery/p4.jpg' alt='Grivin')
+                                    .col-lg-2.p-1
+                                        .intro_image
+                                            img(src='img/galery/p1.jpg' alt='Grivin')
+                                    .col-lg-2.p-1
+                                        .intro_image
+                                            img(src='img/galery/p2.jpg' alt='Grivin')
+                                    .col-lg-2.p-1
+                                        .intro_image
+                                            img(src='img/galery/p3.jpg' alt='Grivin')
         .intro(style='margin-bottom: 1vh; margin-top:0')
             .container
                 .row.text-center

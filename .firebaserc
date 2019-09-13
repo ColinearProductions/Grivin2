@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "grivin-6172b"
+    "default": "grivin-6172b",
+    "new_grivin": "grivin-6172b"
   }
 }
