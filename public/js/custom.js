@@ -12,9 +12,41 @@
 
 ******************************/
 
+/*
+function onConfirmAgeClicked(){
+	let ageCheckModal = $("#age_check_modal");
+
+	let YOB = parseInt($("#age-check-input").val());
+	if(new Date().getFullYear()-YOB<18){
+		window.location.href="https://ro.wikipedia.org/wiki/Pagina_principal%C4%83"
+	}else{
+		$(ageCheckModal).modal('hide');
+		Cookies.set('YOB',YOB);
+	}
+}*/
+
 $(document).ready(function()
 {
+
 	"use strict";
+
+		/*
+	if(!Cookies.get('YOB')){
+
+
+		let ageCheckModal = $("#age_check_modal");
+
+		$(ageCheckModal).modal({
+			backdrop: 'static',
+			keyboard: false
+		});
+		$(ageCheckModal).modal('show');
+
+		$("#confirm-age-button").on('click',function(){
+			onConfirmAgeClicked()
+		});
+	}
+	*/
 
 	/* 
 
@@ -125,3 +157,40 @@ function getParameterByName(name) {
 	return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
+
+
+
+function onRequestDataDelete(){
+	let email = $("#data_delete_email").val();
+	if(!email)
+		alert("Va rog sa introduceti o adresa de email valida");
+	else{
+		postData('https://glacial-stream-75477.herokuapp.com/delete_data_request',{email:email}).then(data => {
+			alert("Am inregistrat cererea. Informatiile dumneavoastra vor fi sterse de pe serverul nostru in interval de 30 de zile");
+			Cookies.remove('cookieconsent_status');
+			window.location.reload()
+		})
+	}
+
+}
+
+
+window.cookieconsent.initialise({
+	"palette": {
+		"popup": {
+			"background": "#9c2a30",
+			"text": "#ffffff"
+		},
+		"button": {
+			"background": "transparent",
+			"text": "#ffffff",
+			"border": "#ffffff"
+		}
+	},
+	"content": {
+		"message": "Site-ul nostru foloseste cookie-uri pentru a imbunatatii experienta dumneavoastra. ",
+		"dismiss": "Am inteles!",
+		"link": "Afla cum folosim cookie-urile",
+		"href": "politica_de_confedintialitate.html"
+	}
+});

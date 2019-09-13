@@ -1,0 +1,22 @@
+#age_check_modal.modal
+    .modal-dialog.grivin-border
+        .modal-content.p-4
+            // Modal Header
+            .modal-header.border-0
+                img(src='img/logo_complet.webp' style='max-height:5vh;margin:auto')
+            // Modal body
+            .modal-body.text-center
+                h2
+                    | Bine ati venit be Grivin.com
+                h3
+                    | Pentru a accesa continutul acestui site,
+                    | trebuie sa ai peste 18 ani.
+                    br
+                .col-md-6.offset-md-3.p-2
+                    label(for='age-check-input')
+                        | Va rugam sa introduceti anul nasterii
+                    input#age-check-input.form-control(type='text' name='adresa' placeholder='2001' value='2019')
+            // Modal footer
+            .modal-footer.border-0
+                .button.red(style='width:100%')
+                    a#confirm-age-button(href='javascript:void(0);') Intra

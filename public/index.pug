@@ -7,6 +7,9 @@ html(lang="ro")
     - var headerStyle= ''
     .super_container
         include pug_includes/header
+
+
+
         // Home
         .home
             .parallax_background.parallax-window(data-parallax='scroll' data-image-src='https://grivinhouse-23381.firebaseapp.com/img/home_bg.webp' data-speed='0.8')
@@ -28,7 +31,7 @@ html(lang="ro")
                                     //
             .scroll_icon
         // Intro
-        .intro
+        .intro.mt-5.pt-5
             .container
                 .row
                     .col
@@ -48,7 +51,7 @@ html(lang="ro")
                             .col-lg-8
                                 .intro_image
                                     img(src='img/home_grivin_experience.webp' alt='Ciocolata Grivin' )
-        .intro.mb-0.mt-10vh-xl
+        .intro.mb-0(style="margin-top:5vh")
             .container
                 .row
                     .col
@@ -67,40 +70,37 @@ html(lang="ro")
             .row
                 .col-lg-4.my-3
                     .grivin-border(style='padding:10px;	z-index: 1; padding-top:30px; padding-bottom:30px;')
-                        h1.text-center.text-classic.yellow.m-0 Ceva clasic
                         h3.text-center.font-weight-bold Rosu
                         .text-center
                             img.img-fluid(src='img/produse/grivin_red.webp' alt='Vin Grivin Rosu'  style='max-height: 30vh')
 
-                        h4.mt-2.mx-3.text-center  Un cupaj nobil de Merlot, Cabernet Sauvignon și Syrah
-                        h3.mt-1.text-center  100.00 lei
+                        h4.mt-2.mx-3.text-center  Un cupaj nobil de Merlot, Cabernet Sauvignon si Syrah
+                        h3.mt-1.text-center  64.00 lei
                         .button.red(style='width:100%')
                                 a(href='produs.html?product_code=100001') Detalii
                 .col-lg-4.my-3
                     .grivin-border(style='padding:10px;	z-index: 1; padding-top:30px; padding-bottom:30px;')
-                        h1.text-center.text-classic.yellow.m-0 Ceva nou
                         h3.text-center.font-weight-bold Rose
                         .text-center
                             img.img-fluid(src='img/produse/grivin_rose.webp' alt='Vin Grivin Rose' style='max-height: 30vh')
 
-                        h4.mt-2.mx-2.text-center  Un buchet intens de fructe cu o nota predominantă clară de capsuni.
-                        h3.mt-1.text-center  100.00 lei
+                        h4.mt-2.mx-2.text-center  Un buchet intens de fructe cu o nota predominanta clara de capsuni
+                        h3.mt-1.text-center  54.00 lei
                         .button.red(style='width:100%')
                             a(href='produs.html?product_code=100002') Detalii
                 .col-lg-4.my-3
                     .grivin-border(style='padding:10px;	z-index: 1; padding-top:30px; padding-bottom:30px;')
-                        h1.text-center.text-classic.yellow.m-0 Ceva fresh
                         h3.text-center.font-weight-bold Alb
                         .text-center
                             img.img-fluid(src='img/produse/grivin_white.webp' alt='Vin Grivin Alb' style='max-height: 30vh')
 
-                        h4.mt-2.mx-3.text-center  puternic floral, cu note de tei, salcâm și caprifoi. Gurmand si plin
-                        h3.mt-1.text-center  100.00 lei
+                        h4.mt-2.mx-3.text-center  puternic floral, cu note de tei, salcam si caprifoi. Gurmand si plin
+                        h3.mt-1.text-center  54.00 lei
                         .button.red(style='width:100%')
                             a(href='produs.html?product_code=100003') Detalii
 
 
-        .intro(style='margin-bottom: 0;')
+        .intro(style='margin-bottom: 0;margin-top:0')
             .container
                 .row
                     .col-md-4.p-0(style='background-color: black')
@@ -131,12 +131,12 @@ html(lang="ro")
                             .col-md-4.p-0(style='overflow:hidden; max-height: 250px')
                                 a(href='img/galery_webp/p6.webp' title='The Cleaner')
                                     img.img-fluid(alt="instagram image" src='img/galery_webp/p6 (Custom).webp')
-        .intro(style='margin-bottom: 1vh')
+        .intro(style='margin-bottom: 1vh; margin-top:0')
             .container
                 .row.text-center
                     .col-sm-6.offset-md-3
                         .single
-                            h3 Abonativa la noutatile grivin
+                            h3 Abonati-va la noutatile grivin
                             .col-md-12
                                 label(for='subscribe_email') Adresa de email
                                 input#subscribe_email.form-control.p-2(type='email' placeholder='Adresa de email')

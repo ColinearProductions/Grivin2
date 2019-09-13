@@ -1,5 +1,5 @@
-const costTransportBucuresti = 20;
-const costTransportTara = 30;
+const costTransportBucuresti = 14.99;
+const costTransportTara = 19.99;
 
 
 //<editor-fold desc="productsTemplate">
@@ -24,7 +24,7 @@ const productsTemplate = `
         </h3>
         <h3 class="font-weight-bold text-center" style="color:#9C2A30">
             
-            {{price}} <small class="text-gray" style="text-decoration: line-through">{{priceBeforeDiscount}}</small>
+            {{priceFormatted}} <small class="text-gray" style="text-decoration: line-through">{{priceBeforeDiscount}}</small>
         </h3>
        
     </a>
@@ -123,8 +123,21 @@ const cartItemTemplate = `
             <h4>{{productDetail.price}} Lei</h4>
             <label>
                 Cantitate
-                <input type="number" data-product-code="{{product_code}}" class="product_quantity_picker my-2" name="quantity" min="1" max="100" value="{{quantity}}" style=" font-size: 1rem; line-height:2rem;text-align: center ">
+                   <select data-product-code="{{product_code}}"   class="js-example-basic-single form-control quantity_picker" name="state">
+                                {{#helper}}
+                                      
+                                {{#selected}} 
+                                <option selected value="{{value}}">{{value}}</option>
+                                {{/selected}}
+                                
+                                
+                                {{^selected}} 
+                                 <option value="{{value}}">{{value}}</option>
+                                {{/selected}}
+                                
+                                {{/helper}}
 
+                            </select>
             </label>
             <h4>{{total}} Lei</h4>
         </div>
@@ -237,19 +250,19 @@ let productsData = {
             category_id: 1000,
             subcategory_id: 1001,
             name: "Vin Rosu Grivin",
-            shortDescription: "Demisec | 75 cl | Dealu Mare, Romania",
-            longDescription: `Acest vin roșu este un cupaj nobil de Merlot, Cabernet Sauvignon și
-                            Syrah, fiind rezultatul unei meticuloase imbinari a muncii în podgorie
-                            și în crama.
+            shortDescription: "Sec | 75 cl | Mehedinti, Romania",
+            longDescription: `Acest vin rosu este un cupaj nobil de Merlot, Cabernet Sauvignon si
+                            Syrah, fiind rezultatul unei meticuloase imbinari a muncii in podgorie
+                            si in crama.
                             <br>
                             <br>
-                            Acest vin este bogat, fervent și elegant. Cu o culoare intensa, mirosul
-                            este complex, cu indicii de fructe coapte si condimente, ardei, cuișoare
-                            și un strop de vanilie dulce, are un gust plin și bine structurat cu
-                            taninuri usor mătăsoase. Se recomanda savurarea lui la o temperatura
+                            Acest vin este bogat, fervent si elegant. Cu o culoare intensa, mirosul
+                            este complex, cu indicii de fructe coapte si condimente, ardei, cuisoare
+                            si un strop de vanilie dulce, are un gust plin si bine structurat cu
+                            taninuri usor matasoase. Se recomanda savurarea lui la o temperatura
                             intre 18 si 20 de grade Celsius.`,
-            priceBeforeDiscount: '100.00',
-            price: '75.00',
+            priceBeforeDiscount: '',
+            price: '64.00',
             subdescription: "13.5%",
             in_stock: true,
             image: "img/produse/grivin_red.webp"
@@ -259,16 +272,16 @@ let productsData = {
             category_id: 1000,
             subcategory_id: 1002,
             name: "Vin Rose Grivin",
-            shortDescription: "Demisec | 75 cl | Dealu Mare, Romania",
-            longDescription: `Cu o culoare roz deschis, vinul nostru oferă un buchet intens de fructe
-                                roșii și fructe de pădure, cu o nota predominantă clară de capsuni.
+            shortDescription: "Sec | 75 cl | Mehedinti, Romania",
+            longDescription: `Cu o culoare roz deschis, vinul nostru ofera un buchet intens de fructe
+                                rosii si fructe de padure, cu o nota predominanta clara de capsuni.
                                 <br>
-                                Aroma este proaspata, cu o aciditate plăcută și un finisaj aromatic
+                                Aroma este proaspata, cu o aciditate placuta si un finisaj aromatic
                                 fructat.
                                 <br>
                                 Se recomanda savurarea lui la o temperatura intre 10 si 14 grade Celsius.`,
-            priceBeforeDiscount: '100.00',
-            price: '75.00',
+            priceBeforeDiscount: '',
+            price: '54.00',
             subdescription: "13.5%",
             in_stock: true,
             image: "img/produse/grivin_rose.webp"
@@ -278,15 +291,15 @@ let productsData = {
             category_id: 1000,
             subcategory_id: 1003,
             name: "Vin Alb Grivin",
-            shortDescription: "Demisec | 75 cl | Dealu Mare, Romania",
+            shortDescription: "Sec | 75 cl | Mehedinti, Romania",
             longDescription: `
-                            Este un vin puternic floral, cu note de tei, salcâm și caprifoi.
-                            Gurmand și plin, lasa o savoare unica, cu o aciditate plăcută si usoara,
-                            îți va oferi toată bogăția sa aromată dacă il savurezi la o temperatura
-                            între 10 și 14 grade Celsius.
+                            Este un vin floral, cu note de tei, salcam si caprifoi.
+                            Gurmand si plin, lasa o savoare unica, cu o aciditate placuta si usoara,
+                            iti va oferi toata bogatia sa aromata daca il savurezi la o temperatura
+                            intre 10 si 14 grade Celsius.
                             `,
-            priceBeforeDiscount: '100.00',
-            price: '75.00',
+            priceBeforeDiscount: '',
+            price: '54.00',
             subdescription: "13.5%",
             in_stock: true,
             image: "img/produse/grivin_white.webp"
@@ -324,7 +337,7 @@ const categoriesData = {
             },
             {
                 id: 2002,
-                subcategory: "Fotografii Vintage"
+                subcategory: "Fotografie Vintage"
             },
             {
                 id: 2003,
@@ -332,7 +345,7 @@ const categoriesData = {
             },
             {
                 id: 2004,
-                subcategory: "Sculpturi"
+                subcategory: "Sculptura"
             },
         ]
     }
@@ -351,6 +364,10 @@ function loadCartBadge() {
 
 function populateProductList() {
     let template = productsTemplate;
+
+    productsData.products.forEach(product=>{
+        product.priceFormatted = parseInt(product.price).toFixed(2)+" Lei";
+   });
     Mustache.parse(template);
     let rendered = Mustache.render(template, productsData);
     $('#products_container').html(rendered);
@@ -425,7 +442,7 @@ function initProductPage() {
     $(shortDescription).text(currentProduct.shortDescription);
     $(longDescription).html(currentProduct.longDescription);
     $(subdescription).html(currentProduct.subdescription);
-    $(price).html(currentProduct.price);
+    $(price).html(parseInt(currentProduct.price).toFixed(2)+" Lei");
     $(discountedFrom).html(currentProduct.priceBeforeDiscount);
     $(productImage).attr('src', currentProduct.image);
     $('.blur-5').removeClass('blur-5');
