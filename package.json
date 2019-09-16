@@ -1,0 +1,22 @@
+{
+  "name": "grivin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "excel_parser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ColinearProductions/Grivin2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ColinearProductions/Grivin2/issues"
+  },
+  "homepage": "https://github.com/ColinearProductions/Grivin2#readme",
+  "dependencies": {
+    "convert-excel-to-json": "^1.6.1"
+  }
+}

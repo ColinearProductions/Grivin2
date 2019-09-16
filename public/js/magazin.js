@@ -2,12 +2,129 @@ const costTransportBucuresti = 14.99;
 const costTransportTara = 19.99;
 
 
+
+
+
+
+const categoriesData = {
+    categories: [{
+        name: "Vinuri",
+        category_id: 1000,
+        subcategories: [
+            {
+                id: 1001,
+                subcategory: "Rosu"
+            },
+            {
+                id: 1002,
+                subcategory: "Rose"
+            },
+            {
+                id: 1003,
+                subcategory: "Alb"
+            },
+        ]
+    }, {
+        name: "Arta",
+        category_id: 2000,
+        subcategories: [
+            {
+                id: 2001,
+                subcategory: "Pictura"
+            },
+            {
+                id: 2002,
+                subcategory: "Fotografie Vintage"
+            },
+            {
+                id: 2003,
+                subcategory: "Muzica"
+            },
+            {
+                id: 2004,
+                subcategory: "Sculptura"
+            },
+        ]
+    }
+    ]
+};
+
+/*
+let productsData = {
+    products: [
+        {
+            product_code: 100001,
+            category_id: 1000,
+            subcategory_id: 1001,
+            name: "GRIVIN Rosu",
+            shortDescription: "Sec | 75 cl | Mehedinti, Romania",
+            longDescription: `Acest vin rosu este un cupaj nobil de Merlot, Cabernet Sauvignon si
+                            Syrah, fiind rezultatul unei meticuloase imbinari a muncii in podgorie
+                            si in crama.
+                            <br>
+                            <br>
+                            Acest vin este bogat, fervent si elegant. Cu o culoare intensa, mirosul
+                            este complex, cu indicii de fructe coapte si condimente, ardei, cuisoare
+                            si un strop de vanilie dulce, are un gust plin si bine structurat cu
+                            taninuri usor matasoase. Se recomanda savurarea lui la o temperatura
+                            intre 18 si 20 de grade Celsius.`,
+            priceBeforeDiscount: '',
+            price: '64.00',
+            subdescription: "13.5%",
+            in_stock: true,
+            image: "img/produse/grivin_red.png"
+        },
+        {
+            product_code: 100002,
+            category_id: 1000,
+            subcategory_id: 1002,
+            name: "GRIVIN Rose",
+            shortDescription: "Sec | 75 cl | Mehedinti, Romania",
+            longDescription: `Cu o culoare roz deschis, vinul nostru ofera un buchet intens de fructe
+                                rosii si fructe de padure, cu o nota predominanta clara de capsuni.
+                                <br>
+                                Aroma este proaspata, cu o aciditate placuta si un finisaj aromatic
+                                fructat.
+                                <br>
+                                Se recomanda savurarea lui la o temperatura intre 10 si 14 grade Celsius.`,
+            priceBeforeDiscount: '',
+            price: '54.00',
+            subdescription: "13.5%",
+            in_stock: true,
+            image: "img/produse/grivin_rose.png"
+        },
+        {
+            product_code: 100003,
+            category_id: 1000,
+            subcategory_id: 1003,
+            name: "GRIVIN Alb",
+            shortDescription: "Sec | 75 cl | Mehedinti, Romania",
+            longDescription: `
+                            Este un vin floral, cu note de tei, salcam si caprifoi.
+                            Gurmand si plin, lasa o savoare unica, cu o aciditate placuta si usoara,
+                            iti va oferi toata bogatia sa aromata daca il savurezi la o temperatura
+                            intre 10 si 14 grade Celsius.
+                            `,
+            priceBeforeDiscount: '',
+            price: '54.00',
+            subdescription: "13.5%",
+            in_stock: true,
+            image: "img/produse/grivin_white.png"
+        },
+    ]
+};
+*/
+
+let productsData = PRODUSE;
+
+
+
+
+
 //<editor-fold desc="productsTemplate">
 const productsTemplate = `
 <div class="col-md-12">
-        <h1 class="text-center font-weight-bold mb-5">
-            Vinuri
-        </h1>
+    
 
         <h2 class="text-center font-weight-bold mb-5" id="no_products_label" style="display: none">
             Nici-un produs in aceasta categorie
@@ -16,12 +133,15 @@ const productsTemplate = `
 {{#products}}
 <div class="col-md-4 p-3 shop_item" data-category-id="{{category_id}}" data-subcategory-id="{{subcategory_id}}">
     <a href="produs.html?product_code={{product_code}}" class="">
-        <div class="text-center ">
-            <img class="img-fluid" src="{{image}}" alt="" style="max-height: 300px">
+        <div class="text-center" style="min-height:250px">
+            <img class="img-fluid" src="img/produse/{{image}}" alt="" style="max-height:250px;">
         </div>
-        <h3 class="font-weight-bold text-center pt-3">
-            {{name}}
-        </h3>
+        <div  style="min-height:120px">
+                <h3 class="font-weight-bold text-center pt-3">
+                    {{name}}
+                </h3>
+        </div>
+        
         <h3 class="font-weight-bold text-center" style="color:#9C2A30">
             
             {{priceFormatted}} <small class="text-gray" style="text-decoration: line-through">{{priceBeforeDiscount}}</small>
@@ -38,12 +158,20 @@ const productsTemplate = `
             </div>
         </div>
         <div class="col-md-3 pl-lg-1  hidden-md-down">
-            <div class="button red font-weight-bold" style="width:100%">
-                <a href="javascript:void(0);" onclick="addItemToCart({{product_code}},1)">
-                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
-
-                </a>
-            </div>
+             {{#inStock}}
+                <div class="button red font-weight-bold" style="width:100%">
+                     <a href="javascript:void(0);" onclick="addItemToCart('{{product_code}}',1)">
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                     </a>
+                </div>
+             {{/inStock}}
+             {{^inStock}}
+                <div class="button gray font-weight-bold" style="width:100%">
+                     <a href="javascript:void(0);" >
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                     </a>
+                </div>
+             {{/inStock}}
         </div>
 
     </div>
@@ -61,39 +189,43 @@ const filtersTemplate = `
         <!-- Accordion -->
         <div class="accordion_container">
 
+            <h3>Filtre</h3>
+            
+            
+            
             {{#categories}}
-            {{#active}}
-            <div class="accordion d-flex flex-row align-items-center active">
-            {{/active}}
-            {{^active}}
-            <div class="accordion d-flex flex-row align-items-center ">
-            {{/active}}
-
-                {{name}}
-            </div>
-            {{#active}}
-            <div class="accordion_panel pl-4 pt-2 ml-3" style="max-height: 260px;display: block">
-            {{/active}}
-            {{^active}}
-            <div class="accordion_panel pl-4 pt-2 ml-3" style="max-height: 260px;display: none">
-            {{/active}}
-                <div class="row">
-                    <a href="javascript:void(0);" onclick="onSelectSubcategory(this,-1,{{category_id}})"
-                       class="col-md-12">
-                        <h4 class="hover-red accordion-option">Toate</h4>
-                    </a>
+                {{#active}}
+                <div class="accordion d-flex flex-row align-items-center active">
+                {{/active}}
+                {{^active}}
+                <div class="accordion d-flex flex-row align-items-center ">
+                {{/active}}
+    
+                    {{name}}
                 </div>
-                {{#subcategories}}
-                <div class="row  ">
-                    <a href="javascript:void(0);" onclick="onSelectSubcategory(this,{{id}},{{category_id}})"
-                       class="col-md-12 ">
-                        <h4 class=" hover-red accordion-option">{{subcategory}}</h4>
-                    </a>
+                {{#active}}
+                <div class="accordion_panel pl-4 pt-2 ml-3" style="max-height: 260px;display: block">
+                {{/active}}
+                {{^active}}
+                <div class="accordion_panel pl-4 pt-2 ml-3" style="max-height: 260px;display: none">
+                {{/active}}
+                    <div class="row">
+                        <a href="javascript:void(0);" onclick="onSelectSubcategory(this,-1,{{category_id}})"
+                           class="col-md-12">
+                            <h4 class="hover-red accordion-option">Toate</h4>
+                        </a>
+                    </div>
+                    {{#subcategories}}
+                    <div class="row  ">
+                        <a href="javascript:void(0);" onclick="onSelectSubcategory(this,{{id}},{{category_id}})"
+                           class="col-md-12 ">
+                            <h4 class=" hover-red accordion-option">{{subcategory}}</h4>
+                        </a>
+                    </div>
+                    {{/subcategories}}
                 </div>
-                {{/subcategories}}
             </div>
-        </div>
-        {{/categories}}
+            {{/categories}}
 
     </div>
 `;
@@ -106,11 +238,11 @@ const cartItemTemplate = `
 <tr class="" style="border-bottom:1px solid #c3c3c3">
     <td class="hidden-sm-down text-center">
          <a href="produs.html?product_code={{product_code}}">
-            <img class="img-fluid" src="{{productDetail.image}}" alt="" style="max-height: 100px">
+            <img class="img-fluid" src="img/produse/{{productDetail.image}}" alt="" style="max-height: 100px">
         </a>
     </td>
     <td style="width:40%" class="hidden-md-up text-center">
-        <img class="img-fluid" src="{{productDetail.image}}" alt="" style="max-height: 150px">
+        <img class="img-fluid" src="img/produse/{{productDetail.image}}" alt="" style="max-height: 150px">
     </td>
     <td class="hidden-md-up">
         <div class=" ">
@@ -180,7 +312,7 @@ const cartItemTemplate = `
 
     </td>
     <td style="vertical-align: middle" class="hidden-sm-down text-center">
-        <a href="javascript:void(0)" onclick="removeItemFromCart({{product_code}})">
+        <a href="javascript:void(0)" onclick="removeItemFromCart('{{product_code}}')">
             <i class="fa fa-trash-o" style="font-size:1.7rem" aria-hidden="true"></i>
         </a>
 
@@ -205,10 +337,10 @@ const checkoutBasketItemTemplate = `
         {{#items}}
         <tr class="" style="border-bottom:1px solid #eeeeee">
             <td class="hidden-sm-down text-center">
-                <img class="img-fluid" src="{{productDetail.image}}" alt="" style="max-height: 70px">
+                <img class="img-fluid" src="img/produse/{{productDetail.image}}" alt="" style="max-height: 70px">
             </td>
             <td style="width:40%" class="hidden-md-up text-center">
-                <img class="img-fluid" src="{{productDetail.image}}" alt="" style="max-height: 70px">
+                <img class="img-fluid" src="img/produse/{{productDetail.image}}" alt="" style="max-height: 70px">
             </td>
             <td class="hidden-md-up">
                 <div class=" ">
@@ -243,115 +375,12 @@ const checkoutBasketItemTemplate = `
 //</editor-fold>
 
 
-let productsData = {
-    products: [
-        {
-            product_code: 100001,
-            category_id: 1000,
-            subcategory_id: 1001,
-            name: "GRIVIN Rosu",
-            shortDescription: "Sec | 75 cl | Mehedinti, Romania",
-            longDescription: `Acest vin rosu este un cupaj nobil de Merlot, Cabernet Sauvignon si
-                            Syrah, fiind rezultatul unei meticuloase imbinari a muncii in podgorie
-                            si in crama.
-                            <br>
-                            <br>
-                            Acest vin este bogat, fervent si elegant. Cu o culoare intensa, mirosul
-                            este complex, cu indicii de fructe coapte si condimente, ardei, cuisoare
-                            si un strop de vanilie dulce, are un gust plin si bine structurat cu
-                            taninuri usor matasoase. Se recomanda savurarea lui la o temperatura
-                            intre 18 si 20 de grade Celsius.`,
-            priceBeforeDiscount: '',
-            price: '64.00',
-            subdescription: "13.5%",
-            in_stock: true,
-            image: "img/produse/grivin_red.png"
-        },
-        {
-            product_code: 100002,
-            category_id: 1000,
-            subcategory_id: 1002,
-            name: "GRIVIN Rose",
-            shortDescription: "Sec | 75 cl | Mehedinti, Romania",
-            longDescription: `Cu o culoare roz deschis, vinul nostru ofera un buchet intens de fructe
-                                rosii si fructe de padure, cu o nota predominanta clara de capsuni.
-                                <br>
-                                Aroma este proaspata, cu o aciditate placuta si un finisaj aromatic
-                                fructat.
-                                <br>
-                                Se recomanda savurarea lui la o temperatura intre 10 si 14 grade Celsius.`,
-            priceBeforeDiscount: '',
-            price: '54.00',
-            subdescription: "13.5%",
-            in_stock: true,
-            image: "img/produse/grivin_rose.png"
-        },
-        {
-            product_code: 100003,
-            category_id: 1000,
-            subcategory_id: 1003,
-            name: "GRIVIN Alb",
-            shortDescription: "Sec | 75 cl | Mehedinti, Romania",
-            longDescription: `
-                            Este un vin floral, cu note de tei, salcam si caprifoi.
-                            Gurmand si plin, lasa o savoare unica, cu o aciditate placuta si usoara,
-                            iti va oferi toata bogatia sa aromata daca il savurezi la o temperatura
-                            intre 10 si 14 grade Celsius.
-                            `,
-            priceBeforeDiscount: '',
-            price: '54.00',
-            subdescription: "13.5%",
-            in_stock: true,
-            image: "img/produse/grivin_white.png"
-        },
-    ]
-};
 
 
 //<editor-fold desc="Shop region">
-const categoriesData = {
-    categories: [{
-        name: "Vinuri",
-        category_id: 1000,
-        subcategories: [
-            {
-                id: 1001,
-                subcategory: "Rosu"
-            },
-            {
-                id: 1002,
-                subcategory: "Rose"
-            },
-            {
-                id: 1003,
-                subcategory: "Alb"
-            },
-        ]
-    }, {
-        name: "Arta",
-        category_id: 2000,
-        subcategories: [
-            {
-                id: 2001,
-                subcategory: "Pictura"
-            },
-            {
-                id: 2002,
-                subcategory: "Fotografie Vintage"
-            },
-            {
-                id: 2003,
-                subcategory: "Muzica"
-            },
-            {
-                id: 2004,
-                subcategory: "Sculptura"
-            },
-        ]
-    }
-    ]
-};
 
+let currentCategory;
+let currentSubcategory;
 
 function loadCartBadge() {
     let value = 0;
@@ -366,15 +395,23 @@ function populateProductList() {
     let template = productsTemplate;
 
     productsData.products.forEach(product=>{
-        product.priceFormatted = parseInt(product.price).toFixed(2)+" Lei";
+
+        product.inStock = product.stoc>0;
+        if(!product.inStock)
+            product.priceFormatted = "Out of stock";
+        else
+            product.priceFormatted = parseInt(product.price).toFixed(2)+" Lei";
+
    });
     Mustache.parse(template);
+
+    productsData.currentCategory = currentCategory;
     let rendered = Mustache.render(template, productsData);
     $('#products_container').html(rendered);
 }
 
 function populateFilters() {
-    categoriesData.categories[0].active=true;
+    //categoriesData.categories[0].active=true;
     let template = filtersTemplate;
     Mustache.parse(template);
     let rendered = Mustache.render(template, categoriesData);
@@ -383,7 +420,12 @@ function populateFilters() {
 
 function onSelectSubcategory(button, subcategory_id, category_id) {
 
-    let noProductsLabel = $("#no_products_label");
+    currentCategory=categoriesData.categories.filter((category)=>category.category_id===category_id)[0];
+
+
+
+
+        let noProductsLabel = $("#no_products_label");
     $(noProductsLabel).hide();
     $(".according_active").removeClass("according_active");
 
@@ -432,6 +474,7 @@ function initProductPage() {
     let shortDescription = $("#short_description");
     let subdescription = $("#subdescription");
     let price = $("#price");
+    let priceWithoutVat = $("#price_without_vat");
     let discountedFrom = $("#discounted_from");
     let longDescription = $("#long_description");
     let productImage = $("#product_image");
@@ -443,8 +486,13 @@ function initProductPage() {
     $(longDescription).html(currentProduct.longDescription);
     $(subdescription).html(currentProduct.subdescription);
     $(price).html(parseInt(currentProduct.price).toFixed(2)+" Lei");
+    $(priceWithoutVat).html("("+parseInt(currentProduct.price_before_tva).toFixed(2)+" Lei fara TVA)");
+
+
     $(discountedFrom).html(currentProduct.priceBeforeDiscount);
-    $(productImage).attr('src', currentProduct.image);
+
+
+    $(productImage).attr('src', 'img/produse/'+currentProduct.image);
     $('.blur-5').removeClass('blur-5');
 
     $(addProductToCart).on('click', function () {
@@ -470,6 +518,10 @@ $(document).ready(function () {
 
 function addItemToCart(productCode, quantity) {
     //alert("ADDINT ITEM TO CART " + productCode + "x" + quantity);
+
+
+
+
     let currentCart = getCart();
 
     let itemExists = false;
@@ -556,8 +608,11 @@ function redrawCart() {
         if (product !== undefined) {
             item.total = (parseInt(product.price) * item.quantity).toFixed(2);
             item.productDetail = product;
+            console.log(product);
 
-            item.helper = [...Array(100).keys()];
+            item.helper = [...Array(Math.min(product.stoc+1,100)).keys()];
+
+
             item.helper.splice(0, 1);
             item.helper = item.helper.map(x => {
                 return {value: x, selected: x == item.quantity}

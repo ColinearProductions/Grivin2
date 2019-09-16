@@ -1,0 +1,1301 @@
+[
+  {
+    "cod": "00000001",
+    "denumire": "PLATOU STICLA 12353",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 151.2605,
+    "pret_cu_tva": 180
+  },
+  {
+    "cod": "00000002",
+    "denumire": "VAS STICLA 12318",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000003",
+    "denumire": "VASE DECORATIVE STICLA 12396",
+    "den_tip": "Marfuri",
+    "stoc": 2,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000004",
+    "denumire": "VAS DECORATIV STICLA 12425",
+    "den_tip": "Marfuri",
+    "stoc": 2,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000005",
+    "denumire": "VASE STICLA 12316",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 151.2605,
+    "pret_cu_tva": 180
+  },
+  {
+    "cod": "00000006",
+    "denumire": "VASE STICLA 12319",
+    "den_tip": "Marfuri",
+    "stoc": 0,
+    "pret": 100.8403,
+    "pret_cu_tva": 120
+  },
+  {
+    "cod": "00000007",
+    "denumire": "VASE STICLA 12355",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000008",
+    "denumire": "VASE STICLA 12272",
+    "den_tip": "Marfuri",
+    "stoc": -1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000009",
+    "denumire": "VASE STICLA 12357",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000010",
+    "denumire": "VASE STICLA 12271",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000011",
+    "denumire": "VASE STICLA 12356",
+    "den_tip": "Marfuri",
+    "stoc": 3,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000012",
+    "denumire": "VASE STICLA 12293",
+    "den_tip": "Marfuri",
+    "stoc": 0,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000013",
+    "denumire": "VASE STICLA 12268",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000014",
+    "denumire": "VAS DECORATIV STICLA 12421",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000015",
+    "denumire": "VAS DECORATIV STICLA 12419",
+    "den_tip": "Marfuri",
+    "stoc": 0,
+    "pret": 25.2101,
+    "pret_cu_tva": 30
+  },
+  {
+    "cod": "00000016",
+    "denumire": "VAS DECORATIV STICLA 12496",
+    "den_tip": "Marfuri",
+    "stoc": 2,
+    "pret": 151.2605,
+    "pret_cu_tva": 180
+  },
+  {
+    "cod": "00000017",
+    "denumire": "VASE DIFERITE STICLA 12382",
+    "den_tip": "Marfuri",
+    "stoc": 2,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000018",
+    "denumire": "VAS STICLA 12266",
+    "den_tip": "Marfuri",
+    "stoc": 3,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000019",
+    "denumire": "VAS DECORATIV STICLA 12498",
+    "den_tip": "Marfuri",
+    "stoc": 2,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000020",
+    "denumire": "VAS DECORATIV STICLA 12499",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000021",
+    "denumire": "VAS DE STICLA 12267",
+    "den_tip": "Marfuri",
+    "stoc": 2,
+    "pret": 117.6471,
+    "pret_cu_tva": 140
+  },
+  {
+    "cod": "00000022",
+    "denumire": "VAS DE STICLA 12272",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000023",
+    "denumire": "VAS DE STICLA 12291",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 100.8403,
+    "pret_cu_tva": 120
+  },
+  {
+    "cod": "00000024",
+    "denumire": "DETALII TEHNICA FLAMATA LEMN 12205",
+    "den_tip": "Marfuri",
+    "stoc": 2,
+    "pret": 151.2605,
+    "pret_cu_tva": 180
+  },
+  {
+    "cod": "00000025",
+    "denumire": "DETALII TEHNICA FLAMATA LEMN 12389",
+    "den_tip": "Marfuri",
+    "stoc": 2,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000026",
+    "denumire": "DETALII TEHNICA FLAMANDA PANZA 12394",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000027",
+    "denumire": "VAS DECORATIV STICLA 12495",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 151.2605,
+    "pret_cu_tva": 180
+  },
+  {
+    "cod": "00000028",
+    "denumire": "DETALII TEHNICA FLAMATA LEMN 12206",
+    "den_tip": "Marfuri",
+    "stoc": 2,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000029",
+    "denumire": "DETALII TEHNICA FLAMATA LEMN 12207",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000030",
+    "denumire": "DETALII TEHNICA FLAMANDA LEMN 12387",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000031",
+    "denumire": "VAS DE STICLA 12356",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000032",
+    "denumire": "GRIVIN CLASIC ALB 2018",
+    "den_tip": "Marfuri",
+    "stoc": 156,
+    "pret": 46.2185,
+    "pret_cu_tva": 55
+  },
+  {
+    "cod": "00000033",
+    "denumire": "GRIVIN CLASIC ROSE 2018",
+    "den_tip": "Marfuri",
+    "stoc": 140,
+    "pret": 46.2185,
+    "pret_cu_tva": 55
+  },
+  {
+    "cod": 34,
+    "denumire": "GRIVIN CLASIC ROSU 2016",
+    "den_tip": "Marfuri",
+    "stoc": 136,
+    "pret": 54.6218,
+    "pret_cu_tva": 65,
+    "descriere_scurta": "Sec | 75 cl | Mehedinti, Romania",
+    "descriere_lunga": "Acest vin rosu este un cupaj nobil de Merlot, Cabernet Sauvignon si Syrah, fiind rezultatul unei meticuloase imbinari a muncii in podgorie in crama. <br> <br> Acest vin este bogat, fervent si elegant. Cu o culoare intensa, mirosul este complex, cu indicii de fructe coapte si condimente, ardei, cuisoare  si un strop de vanilie dulce, are un gust plin si bine structurat cu  taninuri usor matasoase. Se recomanda savurarea lui la o temperatura intre 18 si 20 de grade Celsius.",
+    "sub_nume": 0.135
+  },
+  {
+    "cod": "00000035",
+    "denumire": "PAHARE DIVERSE",
+    "den_tip": "Marfuri",
+    "stoc": 48,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000036",
+    "denumire": "PAHARE COGNIAK",
+    "den_tip": "Marfuri",
+    "stoc": 11,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000037",
+    "denumire": "BATON CIOCOLATA BARON",
+    "den_tip": "Alte mat. consumabile",
+    "stoc": 200,
+    "pret": 0,
+    "pret_cu_tva": 0
+  },
+  {
+    "cod": "00000038",
+    "denumire": "CIOCOLATA DE CASA DAVINIA",
+    "den_tip": "Alte mat. consumabile",
+    "stoc": 210,
+    "pret": 0,
+    "pret_cu_tva": 0
+  },
+  {
+    "cod": "00000039",
+    "denumire": "AMBALAJ BARON",
+    "den_tip": "Ambalaje",
+    "stoc": 200,
+    "pret": 0,
+    "pret_cu_tva": 0
+  },
+  {
+    "cod": "00000040",
+    "denumire": "AMBALAJ DAVINIA",
+    "den_tip": "Ambalaje",
+    "stoc": 210,
+    "pret": 0,
+    "pret_cu_tva": 0
+  },
+  {
+    "cod": "00000041",
+    "denumire": "VL OASIS - BE HERE NOW (REMASTERED)",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000042",
+    "denumire": "VL JOPLIN JANIS - JANIS JOPLIN GREATEST HITS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000043",
+    "denumire": "VL JACKSON - MICHAEL - THRILLER (PICTURE VINIL)",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 92.437,
+    "pret_cu_tva": 110
+  },
+  {
+    "cod": "00000044",
+    "denumire": "VL JACKSON MICHAEL - DANGEROUS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 92.437,
+    "pret_cu_tva": 110
+  },
+  {
+    "cod": "00000045",
+    "denumire": "VL JACKSON MICHAEL - BAD (PICTURE VINYL)",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 92.437,
+    "pret_cu_tva": 110
+  },
+  {
+    "cod": "00000046",
+    "denumire": "VL HARRIS CALVIN, DUA LIPA - ONE KISS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000047",
+    "denumire": "VL G-EAZY - THE BEAUTIFUL & DAMNED",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000048",
+    "denumire": "VL ZIMMER HANS - HANS ZIMMER THE CLASSICS",
+    "den_tip": "Marfuri",
+    "stoc": 0,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000049",
+    "denumire": "VL EVORA CESARIA - CESARIA",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000050",
+    "denumire": "VL VARIOUS - FOR THE THRONE",
+    "den_tip": "Marfuri",
+    "stoc": 2,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000051",
+    "denumire": "VL VARIOUS MUSIC INSPIRED BY THE FILM ROMA",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000052",
+    "denumire": "VL VARIOUS DIRTY DANCING",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000053",
+    "denumire": "VL VARIOUS TOP GUN",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000054",
+    "denumire": "VL VARIOUS CHRISTMAS CLASSICS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 100.8403,
+    "pret_cu_tva": 120
+  },
+  {
+    "cod": "00000055",
+    "denumire": "VL TIMBERLAKE JUSTIN - JUSTIFIED",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 100.8403,
+    "pret_cu_tva": 120
+  },
+  {
+    "cod": "00000056",
+    "denumire": "VL SCRIPT - THE #3",
+    "den_tip": "Marfuri",
+    "stoc": 0,
+    "pret": 100.8403,
+    "pret_cu_tva": 120
+  },
+  {
+    "cod": "00000057",
+    "denumire": "VL SADE - THE BEST OF SADE",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000058",
+    "denumire": "VL PRINCE - RAVE IN2 THE JOY FANTASTIC",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000059",
+    "denumire": "VL PRESLEY ELVIS - MERRY CHRISTMAS BABY",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000060",
+    "denumire": "VL PINK - THE TRUTH ABOUT LOVE",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 100.8403,
+    "pret_cu_tva": 120
+  },
+  {
+    "cod": "00000061",
+    "denumire": "VL PINK - CAN'T TAKE ME HOME",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 100.8403,
+    "pret_cu_tva": 120
+  },
+  {
+    "cod": "00000062",
+    "denumire": "VL EURYTMICS - GREATEST HITS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000063",
+    "denumire": "VL DEPECHE MODE - BLACK CELEBRATION",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 100.8403,
+    "pret_cu_tva": 120
+  },
+  {
+    "cod": "00000064",
+    "denumire": "VL DEPECHE MODE - VIOLATOR",
+    "den_tip": "Marfuri",
+    "stoc": 2,
+    "pret": 100.8403,
+    "pret_cu_tva": 120
+  },
+  {
+    "cod": "00000065",
+    "denumire": "VL DAVIS MILES - IN A SILENT WAY (50TH ANNIVERSARY)",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000066",
+    "denumire": "VL DAVIS MILES - KIND OF BLUE",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000067",
+    "denumire": "VL COHEN LEONARD - GREATEST HITS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000068",
+    "denumire": "VL CALVIN HARRIS, SAM SMITH - RPOMISES",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000069",
+    "denumire": "VL BOWIE DAVID - HEATHEN",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000070",
+    "denumire": "VL BOWIE DAVID - NO PLAN EP",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000071",
+    "denumire": "VL BOWIE DAVID - BLACKSTAR",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000072",
+    "denumire": "VL ALLE FARBEN - STICKER ON MY SUITCASE",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000073",
+    "denumire": "VL AEROSMITH - AEROSMITH'S GREATEST HITS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000074",
+    "denumire": "VL ZIMMER HANS - THE WORLD OF HANS ZIMMER",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 100.8403,
+    "pret_cu_tva": 120
+  },
+  {
+    "cod": "00000075",
+    "denumire": "VL CAREY MARIAH - ALL I WANT FOR CHRISTMAS IS YOU",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000076",
+    "denumire": "CD ZIMMER HANS INFERNO (ORIGINAL MOTION PICTURES SONG)",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 29.4118,
+    "pret_cu_tva": 35
+  },
+  {
+    "cod": "00000077",
+    "denumire": "CD WONG SEE SANG - PIANO MOVIE LOUNGE VOL I",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 29.4118,
+    "pret_cu_tva": 35
+  },
+  {
+    "cod": "00000078",
+    "denumire": "CD VARIOUS - THE BEST YEAR OF Y LIFE 1977",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 21.0084,
+    "pret_cu_tva": 25
+  },
+  {
+    "cod": "00000079",
+    "denumire": "CD TIMBERLAKE JUSTIN - MAN OF THE WOODS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 50.4202,
+    "pret_cu_tva": 60
+  },
+  {
+    "cod": "00000080",
+    "denumire": "CD SIA WE ARE BORN",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 29.4118,
+    "pret_cu_tva": 35
+  },
+  {
+    "cod": "00000081",
+    "denumire": "CD SIMPLE MINDS - BIG MUSIC",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 29.4118,
+    "pret_cu_tva": 35
+  },
+  {
+    "cod": "00000082",
+    "denumire": "CD R KELLY BACK PANTIES",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 50.4202,
+    "pret_cu_tva": 60
+  },
+  {
+    "cod": "00000083",
+    "denumire": "CD R KELLY 12 NIGHTS OF CHRISTMAS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 25.2101,
+    "pret_cu_tva": 30
+  },
+  {
+    "cod": "00000084",
+    "denumire": "CD JARRE JEAN MICHAEL - OXYGENE 3",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 29.4118,
+    "pret_cu_tva": 35
+  },
+  {
+    "cod": "00000085",
+    "denumire": "CD IMBRUGLIA NATALE - GLORIOUS THE SINGLES97",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 21.0084,
+    "pret_cu_tva": 25
+  },
+  {
+    "cod": "00000086",
+    "denumire": "CD JARRE JEAN MICHAEL - OXYGENE",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 29.4118,
+    "pret_cu_tva": 35
+  },
+  {
+    "cod": "00000087",
+    "denumire": "CD HARNONCOURT NIKOLAUS - NIKOLAUS HARNONCOURT",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 50.4202,
+    "pret_cu_tva": 60
+  },
+  {
+    "cod": "00000088",
+    "denumire": "CD GIPSY KINGS - SOMOS GITANOS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 46.2185,
+    "pret_cu_tva": 55
+  },
+  {
+    "cod": "00000089",
+    "denumire": "CD GIPSY KINGS - PASAJERO",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 46.2185,
+    "pret_cu_tva": 55
+  },
+  {
+    "cod": "00000090",
+    "denumire": "CD GAHAN DAVE&SOULSAVERS - ANGELS&GOHSTS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 33.6134,
+    "pret_cu_tva": 40
+  },
+  {
+    "cod": "00000091",
+    "denumire": "CD FAITHLESS - FOREVER FAITHLESS - THE GREATEST HITS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 29.4118,
+    "pret_cu_tva": 35
+  },
+  {
+    "cod": "00000092",
+    "denumire": "CD EVORA CESARIA VOZ D'AMOR",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 33.6134,
+    "pret_cu_tva": 40
+  },
+  {
+    "cod": "00000093",
+    "denumire": "CD EVORA CESARIA SAO VICENTE D'LONGE",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 33.6134,
+    "pret_cu_tva": 40
+  },
+  {
+    "cod": "00000094",
+    "denumire": "CD EVORA CESARIA RADIN MINDELO",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 33.6134,
+    "pret_cu_tva": 40
+  },
+  {
+    "cod": "00000095",
+    "denumire": "CD EVORA CESARIA BEST OF",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 33.6134,
+    "pret_cu_tva": 40
+  },
+  {
+    "cod": "00000096",
+    "denumire": "CD ELECTRIC LIGHT ORCHESTRA THE COLLECTION",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 21.0084,
+    "pret_cu_tva": 25
+  },
+  {
+    "cod": "00000097",
+    "denumire": "CD DEPECHE MODE - SPIRIT (STANDARD CD)",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 50.4202,
+    "pret_cu_tva": 60
+  },
+  {
+    "cod": "00000098",
+    "denumire": "CD DAIVS MILES - THE REAL MILES DAVIS",
+    "den_tip": "Marfuri",
+    "stoc": 0,
+    "pret": 29.4118,
+    "pret_cu_tva": 35
+  },
+  {
+    "cod": "00000099",
+    "denumire": "VL SPRINGSTEEN BRUCE - WRECKING BALL (CD + 2VL)",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 100.8403,
+    "pret_cu_tva": 120
+  },
+  {
+    "cod": "00000100",
+    "denumire": "VL SPRINGSTEEN BRUCE - THE WILD, THE INNOCENT",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 84.0336,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000101",
+    "denumire": "VL SPRINGSTEEN PRINCE - THE RIVER",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 151.2605,
+    "pret_cu_tva": 180
+  },
+  {
+    "cod": "00000102",
+    "denumire": "CD DAVIS MILES - KIND OF BLUE DELUXE 50TH ANYVERSARY",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 50.4202,
+    "pret_cu_tva": 60
+  },
+  {
+    "cod": "00000103",
+    "denumire": "CD VARIOUS - THE BEST YEAR OF MY LIFE 1976",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 21.0084,
+    "pret_cu_tva": 25
+  },
+  {
+    "cod": "00000104",
+    "denumire": "CD VARIOUS - THE BEST CHRISTMAS HITS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 50.4202,
+    "pret_cu_tva": 60
+  },
+  {
+    "cod": "00000105",
+    "denumire": "CD VARIOUS  - I LOVE ROSSINI",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 21.0084,
+    "pret_cu_tva": 25
+  },
+  {
+    "cod": "00000106",
+    "denumire": "CD VARIOUS - I LOVE PIANO",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 21.0084,
+    "pret_cu_tva": 25
+  },
+  {
+    "cod": "00000107",
+    "denumire": "CD TIMBERLAKE JUSTIN - THE 20/20 EXPERIENCE 2OF2",
+    "den_tip": "Marfuri",
+    "stoc": 3,
+    "pret": 67.2269,
+    "pret_cu_tva": 80
+  },
+  {
+    "cod": "00000108",
+    "denumire": "CD TIMBERLAKE JUSTIN - THE 20/20 EXPERIENCE - THE",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 54.6218,
+    "pret_cu_tva": 65
+  },
+  {
+    "cod": "00000109",
+    "denumire": "CD PINK - THE TRUTH ABOUT LOVE (ROW EXPLICITDELUX)",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 54.6218,
+    "pret_cu_tva": 65
+  },
+  {
+    "cod": "00000110",
+    "denumire": "CD OFFSPRING THE GREATEST HITS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 50.4202,
+    "pret_cu_tva": 60
+  },
+  {
+    "cod": "00000112",
+    "denumire": "CD COHEN LEONARD CAN'T FORGET A SOUVENIR OF THE",
+    "den_tip": "Marfuri",
+    "stoc": 0,
+    "pret": 29.4118,
+    "pret_cu_tva": 35
+  },
+  {
+    "cod": "00000113",
+    "denumire": "CD COCKER JOE THE LIFE OF A MAN - THE ULTIMATE HITS",
+    "den_tip": "Marfuri",
+    "stoc": 0,
+    "pret": 29.4118,
+    "pret_cu_tva": 35
+  },
+  {
+    "cod": "00000114",
+    "denumire": "CD COCKER JOE - FIRE IT UP",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 29.4118,
+    "pret_cu_tva": 35
+  },
+  {
+    "cod": "00000115",
+    "denumire": "CD CARRERAS JOSE A LIFE IN MUSIC",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 33.6134,
+    "pret_cu_tva": 40
+  },
+  {
+    "cod": "00000116",
+    "denumire": "CD BROWN JAMES - BEST OF",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 21.0084,
+    "pret_cu_tva": 25
+  },
+  {
+    "cod": "00000117",
+    "denumire": "CD BOYLE SUSAN HOME FOR CHRISTMAS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 46.2185,
+    "pret_cu_tva": 55
+  },
+  {
+    "cod": "00000118",
+    "denumire": "CD BANGLES THE ETERNAL FLAME THE BEST OF",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 21.0084,
+    "pret_cu_tva": 25
+  },
+  {
+    "cod": "00000119",
+    "denumire": "CD ANASTACIA - PIECES OF A DREAM",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 29.4118,
+    "pret_cu_tva": 35
+  },
+  {
+    "cod": "00000120",
+    "denumire": "CD ALICE IN CHAINS LIVE",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 29.4118,
+    "pret_cu_tva": 35
+  },
+  {
+    "cod": "00000121",
+    "denumire": "CD ALAN PARSONS PROJECT THE PYRAMID",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 25.2101,
+    "pret_cu_tva": 30
+  },
+  {
+    "cod": "00000122",
+    "denumire": "CD 2CELLOS - SCORE (EE VERSION)",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 29.4118,
+    "pret_cu_tva": 35
+  },
+  {
+    "cod": "00000123",
+    "denumire": "CD 2CELLOS (SULIC&HAUSEN) - IN2ITION",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 29.4118,
+    "pret_cu_tva": 35
+  },
+  {
+    "cod": "00000124",
+    "denumire": "CD DAVIS MILES - THE REAL MILES DAVIS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 29.4118,
+    "pret_cu_tva": 35
+  },
+  {
+    "cod": "00000125",
+    "denumire": "CD COHEN LEONARD NEW SKIN FOR THE OLD CEREMONY",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 29.4118,
+    "pret_cu_tva": 35
+  },
+  {
+    "cod": "00000126",
+    "denumire": "CD BRAXTON TONI BREATH AGAIN THE BEST OF",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 21.0084,
+    "pret_cu_tva": 25
+  },
+  {
+    "cod": "00000127",
+    "denumire": "KANDISKY",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 76.1905,
+    "pret_cu_tva": 80
+  },
+  {
+    "cod": "00000128",
+    "denumire": "100 YEARS OF FASHION ILLUSTRATION",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 95.2381,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000129",
+    "denumire": "STREET ART",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 95.2381,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000130",
+    "denumire": "LEONARDO",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 76.1905,
+    "pret_cu_tva": 80
+  },
+  {
+    "cod": "00000131",
+    "denumire": "VAN GOGH",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 76.1905,
+    "pret_cu_tva": 80
+  },
+  {
+    "cod": "00000132",
+    "denumire": "GAUDI",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 76.1905,
+    "pret_cu_tva": 80
+  },
+  {
+    "cod": "00000133",
+    "denumire": "RODIN",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 76.1905,
+    "pret_cu_tva": 80
+  },
+  {
+    "cod": "00000134",
+    "denumire": "GAUGUIN",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 76.1905,
+    "pret_cu_tva": 80
+  },
+  {
+    "cod": "00000135",
+    "denumire": "REMBRANDT",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 76.1905,
+    "pret_cu_tva": 80
+  },
+  {
+    "cod": "00000136",
+    "denumire": "PREFAB ARHITECTURE",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 95.2381,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000137",
+    "denumire": "LIVING WITH WOOD",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 95.2381,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000138",
+    "denumire": "MODERN BATHROOMS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 95.2381,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000139",
+    "denumire": "HOME BOOK",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 95.2381,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000140",
+    "denumire": "MODERN CONTRY HOMES",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 95.2381,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000141",
+    "denumire": "LOFTS 21ST CENTURY",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 76.1905,
+    "pret_cu_tva": 80
+  },
+  {
+    "cod": "00000142",
+    "denumire": "NEW WOOD KITCHENS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 95.2381,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000143",
+    "denumire": "COOL APARTEMENTS",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 95.2381,
+    "pret_cu_tva": 100
+  },
+  {
+    "cod": "00000144",
+    "denumire": "HOUSES RESIDENTIAL",
+    "den_tip": "Marfuri",
+    "stoc": 1,
+    "pret": 76.1905,
+    "pret_cu_tva": 80
+  },
+  {
+    "cod": "00000145",
+    "denumire": "RAMA FOTO MARO",
+    "den_tip": "Marfuri",
+    "stoc": 3,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000146",
+    "denumire": "RAMA FOTO MARO INCHIS",
+    "den_tip": "Marfuri",
+    "stoc": 4,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000147",
+    "denumire": "RAMA FOTO MESTEACAN",
+    "den_tip": "Marfuri",
+    "stoc": 3,
+    "pret": 126.0504,
+    "pret_cu_tva": 150
+  },
+  {
+    "cod": "00000148",
+    "denumire": "PAHARE DECANTOARE",
+    "den_tip": "Marfuri",
+    "stoc": 2,
+    "pret": 336.1345,
+    "pret_cu_tva": 400
+  },
+  {
+    "cod": "00000149",
+    "denumire": "APARAT ETICHETAT EVOFFICE MX5500",
+    "den_tip": "Obiecte de inventar",
+    "stoc": 0,
+    "pret": 0,
+    "pret_cu_tva": 0
+  },
+  {
+    "cod": "00000150",
+    "denumire": "HARTIE IMPACHETAT MATASE",
+    "den_tip": "Alte mat. consumabile",
+    "stoc": 10,
+    "pret": 0,
+    "pret_cu_tva": 0
+  },
+  {
+    "cod": "00000151",
+    "denumire": "MOBILIER",
+    "den_tip": "Obiecte de inventar",
+    "stoc": 0,
+    "pret": 0,
+    "pret_cu_tva": 0
+  },
+  {
+    "cod": "00000152",
+    "denumire": "CMDTV 100*36*53 NEGRU-MARO/STICLA",
+    "den_tip": "Obiecte de inventar",
+    "stoc": 0,
+    "pret": 0,
+    "pret_cu_tva": 0
+  },
+  {
+    "cod": "00000153",
+    "denumire": "ETAJERA 100*175 NEGRU MARO/STICLA",
+    "den_tip": "Obiecte de inventar",
+    "stoc": 0,
+    "pret": 0,
+    "pret_cu_tva": 0
+  },
+  {
+    "cod": "00000154",
+    "denumire": "SACOSA HARTIE 14*8*39",
+    "den_tip": "Alte mat. consumabile",
+    "stoc": 300,
+    "pret": 0,
+    "pret_cu_tva": 0
+  },
+  {
+    "cod": "00000155",
+    "denumire": "SACOSA HARTIE 18*8*38",
+    "den_tip": "Alte mat. consumabile",
+    "stoc": 300,
+    "pret": 0,
+    "pret_cu_tva": 0
+  },
+  {
+    "cod": "00000156",
+    "denumire": "SACOSA HARTIE 32*12*41",
+    "den_tip": "Alte mat. consumabile",
+    "stoc": 300,
+    "pret": 0,
+    "pret_cu_tva": 0
+  },
+  {
+    "cod": "00000157",
+    "denumire": "SUPORT ETICHETE PLEXI 40*25MM",
+    "den_tip": "Alte mat. consumabile",
+    "stoc": 0,
+    "pret": 0,
+    "pret_cu_tva": 0
+  },
+  {
+    "cod": "00000158",
+    "denumire": "CASA DE MARCAT TREMOL M20 ACTIVA GALAXY PLUS LAN AC90017684",
+    "den_tip": "Obiecte de inventar",
+    "stoc": 0,
+    "pret": 0,
+    "pret_cu_tva": 0
+  },
+  {
+    "cod": "00000159",
+    "denumire": "ROLL-UP",
+    "den_tip": "Obiecte de inventar",
+    "stoc": 0,
+    "pret": 0,
+    "pret_cu_tva": 0
+  },
+  {
+    "cod": "00000160",
+    "denumire": "GRATAR STICLE 83*30 GRI",
+    "den_tip": "Obiecte de inventar",
+    "stoc": 0,
+    "pret": 0,
+    "pret_cu_tva": 0
+  },
+  {
+    "cod": "00000161",
+    "denumire": "STAMPILA PRINTER P40",
+    "den_tip": "Obiecte de inventar",
+    "stoc": 0,
+    "pret": 0,
+    "pret_cu_tva": 0
+  },
+  {
+    "cod": "00000162",
+    "denumire": "RAMA FOTO DIGITALA SERIOUX SMARTART SA702LED",
+    "den_tip": "Obiecte de inventar",
+    "stoc": 0,
+    "pret": 0,
+    "pret_cu_tva": 0
+  },
+  {
+    "cod": "00000163",
+    "denumire": "SACOSE HARTIE GRIVIN 41*32*13",
+    "den_tip": "Ambalaje",
+    "stoc": 300,
+    "pret": 0,
+    "pret_cu_tva": 0
+  }
+]

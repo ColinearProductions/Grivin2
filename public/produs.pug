@@ -12,31 +12,25 @@ head
         .container
             .row
                 .col-md-6.text-center
-                    img#product_image.img-fluid.blur-5(src='img/produse/grivin_transparent.png' style='max-height: 70vh')
+                    img#product_image.img-fluid.blur-5(src='#' style='max-height: 70vh')
                 .col-md-6
                     .pb-4(style='border-bottom:1px solid gray ')
-                        h1#product_name.font-weight-bold.blur-5 Vin Rosu Grivin
-                        h3#short_description.text-gray.blur-5 Sec | 75 cl | Mehedinti, Romania
-                        h3#subdescription.text-gray.blur-5  13.5%
+                        h1#product_name.font-weight-bold.blur-5
+                        h3#short_description.text-gray.blur-5
+                        h3#subdescription.text-gray.blur-5
                     .py-4(style='border-bottom:1px solid gray')
                         h2.font-weight-bold.blur-5
                             span#price 75.00
-                            small#discounted_from(style='color:gray;text-decoration: line-through;margin-left: 15px;')  100.00 lei
+                            small.text-gray.mr-2  (TVA inclus)
+                            small#discounted_from(style='color:gray;text-decoration: line-through;margin-left: 15px;')
+                        h3.font-weight-bold.blur-5
+                            small#price_without_vat.text-gray.mr-2  (TVA inclus)
+
                         input.product_quantity_picker(type='number' name='quantity' min='1' max='5' value='1')
                         .button.red.trans_200.ml-1(style=' border-radius: 5px; display: inline-block; margin-bottom:2px;')
                             a#add_product_to_cart_button(href='javascript:void(0);') Adauga in cos
                     .my-3
                         h4#long_description.font-weight-bold.blur-5
-                            | Acest vin rosu este un cupaj nobil de Merlot, Cabernet Sauvignon si
-                            | Syrah, fiind rezultatul unei meticuloase imbinari a muncii in podgorie
-                            | si in crama.
-                            br
-                            br
-                            | Acest vin este bogat, fervent si elegant. Cu o culoare intensa, mirosul
-                            | este complex, cu indicii de fructe coapte si condimente, ardei, cuisoare
-                            | si un strop de vanilie dulce, are un gust plin si bine structurat cu
-                            | taninuri usor matasoase. Se recomanda savurarea lui la o temperatura
-                            | intre 18 si 20 de grade Celsius.
                         .row
                             .col-md-12.my-2.font-weight-bold(style='font-size: 16px;line-height: 19px;')
                                 img(src='img/icons/livrare_rapida.svg')

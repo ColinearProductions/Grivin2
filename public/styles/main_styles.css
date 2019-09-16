@@ -311,6 +311,21 @@ section
 	line-height: 44px;
 }
 
+.button.gray{
+	color: #616161 !important;
+	border: solid 2px #616161;
+}
+.button.gray a{
+	color: #616161;
+}
+.button.gray:hover{
+	color: #616161 !important;
+	background-color: transparent !important;
+	border: solid 2px #616161;
+}
+
+
+
 .button.red{
 	color:#9C2A30 !important;
 	border: solid 2px #9C2A30;
