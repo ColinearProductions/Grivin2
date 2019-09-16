@@ -770,7 +770,7 @@ function updateCheckoutTotals() {
     $(subtotalText).html(subtotal.toFixed(2));
 
     $(totalText).html((subtotal + costTransport).toFixed(2));
-    $(vatText).html(((subtotal + costTransport) * (19/119)).toFixed(2));
+    $(vatText).html(((subtotal + costTransport) /1.19).toFixed(2));
 
 
     $(shippingText).html(costTransport.toFixed(2));
