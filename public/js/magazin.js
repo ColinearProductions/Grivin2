@@ -2,10 +2,6 @@ const costTransportBucuresti = 14.99;
 const costTransportTara = 19.99;
 
 
-
-
-
-
 const categoriesData = {
     categories: [{
         name: "Vinuri",
@@ -80,13 +76,7 @@ let productsData = {
             subcategory_id: 1002,
             name: "GRIVIN Rose",
             shortDescription: "Sec | 75 cl | Mehedinti, Romania",
-            longDescription: `Cu o culoare roz deschis, vinul nostru ofera un buchet intens de fructe
-                                rosii si fructe de padure, cu o nota predominanta clara de capsuni.
-                                <br>
-                                Aroma este proaspata, cu o aciditate placuta si un finisaj aromatic
-                                fructat.
-                                <br>
-                                Se recomanda savurarea lui la o temperatura intre 10 si 14 grade Celsius.`,
+            longDescription: `Cu o culoare roz deschis, vinul nostru ofera un buchet intens de fructe rosii si fructe de padure, cu o nota predominanta clara de capsuni.<br>Aroma este proaspata, cu o aciditate placuta si un finisaj aromatic fructat.<br>Se recomanda savurarea lui la o temperatura intre 10 si 14 grade Celsius.`,
             priceBeforeDiscount: '',
             price: '54.00',
             subdescription: "13.5%",
@@ -99,11 +89,7 @@ let productsData = {
             subcategory_id: 1003,
             name: "GRIVIN Alb",
             shortDescription: "Sec | 75 cl | Mehedinti, Romania",
-            longDescription: `
-                            Este un vin floral, cu note de tei, salcam si caprifoi.
-                            Gurmand si plin, lasa o savoare unica, cu o aciditate placuta si usoara,
-                            iti va oferi toata bogatia sa aromata daca il savurezi la o temperatura
-                            intre 10 si 14 grade Celsius.
+            longDescription: `Este un vin floral, cu note de tei, salcam si caprifoi. Gurmand si plin, lasa o savoare unica, cu o aciditate placuta si usoara, iti va oferi toata bogatia sa aromata daca il savurezi la o temperatura intre 10 si 14 grade Celsius.
                             `,
             priceBeforeDiscount: '',
             price: '54.00',
@@ -116,9 +102,6 @@ let productsData = {
 */
 
 let productsData = PRODUSE;
-
-
-
 
 
 //<editor-fold desc="productsTemplate">
@@ -375,8 +358,6 @@ const checkoutBasketItemTemplate = `
 //</editor-fold>
 
 
-
-
 //<editor-fold desc="Shop region">
 
 let currentCategory;
@@ -394,15 +375,15 @@ function loadCartBadge() {
 function populateProductList() {
     let template = productsTemplate;
 
-    productsData.products.forEach(product=>{
+    productsData.products.forEach(product => {
 
-        product.inStock = product.stoc>0;
-        if(!product.inStock)
+        product.inStock = product.stoc > 0;
+        if (!product.inStock)
             product.priceFormatted = "Out of stock";
         else
-            product.priceFormatted = parseInt(product.price).toFixed(2)+" Lei";
+            product.priceFormatted = parseInt(product.price).toFixed(2) + " Lei";
 
-   });
+    });
     Mustache.parse(template);
 
     productsData.currentCategory = currentCategory;
@@ -420,12 +401,10 @@ function populateFilters() {
 
 function onSelectSubcategory(button, subcategory_id, category_id) {
 
-    currentCategory=categoriesData.categories.filter((category)=>category.category_id===category_id)[0];
+    currentCategory = categoriesData.categories.filter((category) => category.category_id === category_id)[0];
 
 
-
-
-        let noProductsLabel = $("#no_products_label");
+    let noProductsLabel = $("#no_products_label");
     $(noProductsLabel).hide();
     $(".according_active").removeClass("according_active");
 
@@ -485,14 +464,14 @@ function initProductPage() {
     $(shortDescription).text(currentProduct.shortDescription);
     $(longDescription).html(currentProduct.longDescription);
     $(subdescription).html(currentProduct.subdescription);
-    $(price).html(parseInt(currentProduct.price).toFixed(2)+" Lei");
-    $(priceWithoutVat).html("("+parseInt(currentProduct.price_before_tva).toFixed(2)+" Lei fara TVA)");
+    $(price).html(parseInt(currentProduct.price).toFixed(2) + " Lei");
+    $(priceWithoutVat).html("(" + parseInt(currentProduct.price_before_tva).toFixed(2) + " Lei fara TVA)");
 
 
     $(discountedFrom).html(currentProduct.priceBeforeDiscount);
 
 
-    $(productImage).attr('src', 'img/produse/'+currentProduct.image);
+    $(productImage).attr('src', 'img/produse/' + currentProduct.image);
     $('.blur-5').removeClass('blur-5');
 
     $(addProductToCart).on('click', function () {
@@ -518,8 +497,6 @@ $(document).ready(function () {
 
 function addItemToCart(productCode, quantity) {
     //alert("ADDINT ITEM TO CART " + productCode + "x" + quantity);
-
-
 
 
     let currentCart = getCart();
@@ -610,7 +587,7 @@ function redrawCart() {
             item.productDetail = product;
             console.log(product);
 
-            item.helper = [...Array(Math.min(product.stoc+1,100)).keys()];
+            item.helper = [...Array(Math.min(product.stoc + 1, 100)).keys()];
 
 
             item.helper.splice(0, 1);
