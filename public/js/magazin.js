@@ -255,6 +255,9 @@ const cartItemTemplate = `
                             </select>
             </label>
             <h4>{{total}} Lei</h4>
+            <a href="javascript:void(0)" onclick="removeItemFromCart('{{product_code}}')">
+                <i class="fa fa-trash-o" style="font-size:1.7rem" aria-hidden="true"></i>
+            </a>
         </div>
 
     </td>
@@ -381,7 +384,7 @@ function populateProductList() {
         if (!product.inStock)
             product.priceFormatted = "Out of stock";
         else
-            product.priceFormatted = parseInt(product.price).toFixed(2) + " Lei";
+            product.priceFormatted = parseFloat(product.price).toFixed(2) + " Lei";
 
     });
     Mustache.parse(template);
@@ -464,8 +467,8 @@ function initProductPage() {
     $(shortDescription).text(currentProduct.shortDescription);
     $(longDescription).html(currentProduct.longDescription);
     $(subdescription).html(currentProduct.subdescription);
-    $(price).html(parseInt(currentProduct.price).toFixed(2) + " Lei");
-    $(priceWithoutVat).html("(" + parseInt(currentProduct.price_before_tva).toFixed(2) + " Lei fara TVA)");
+    $(price).html(parseFloat(currentProduct.price).toFixed(2) + " Lei");
+    $(priceWithoutVat).html("(" + parseFloat(currentProduct.price_before_tva).toFixed(2) + " Lei fara TVA)");
 
 
     $(discountedFrom).html(currentProduct.priceBeforeDiscount);
@@ -583,7 +586,7 @@ function redrawCart() {
     cart.items.forEach((item) => {
         let product = getItemByCode(item.product_code);
         if (product !== undefined) {
-            item.total = (parseInt(product.price) * item.quantity).toFixed(2);
+            item.total = (parseFloat(product.price) * item.quantity).toFixed(2);
             item.productDetail = product;
             console.log(product);
 
@@ -619,7 +622,7 @@ function redrawCart() {
 
     let total = 0;
     cart.items.forEach(item => {
-        total += parseInt(item.total);
+        total += parseFloat(item.total);
 
     });
 
@@ -687,8 +690,8 @@ function initCheckout() {
     currentCart.items.forEach((item) => {
         let product = getItemByCode(item.product_code);
         if (product !== undefined) {
-            item.total = (parseInt(product.price) * item.quantity).toFixed(2);
-            subtotal += parseInt(product.price) * parseInt(item.quantity);
+            item.total = (parseFloat(product.price) * item.quantity).toFixed(2);
+            subtotal += parseFloat(product.price) * parseFloat(item.quantity);
             item.productDetail = product;
 
         }
@@ -767,7 +770,7 @@ function updateCheckoutTotals() {
     $(subtotalText).html(subtotal.toFixed(2));
 
     $(totalText).html((subtotal + costTransport).toFixed(2));
-    $(vatText).html(((subtotal + costTransport) * .19).toFixed(2));
+    $(vatText).html(((subtotal + costTransport) * (19/119)).toFixed(2));
 
 
     $(shippingText).html(costTransport.toFixed(2));
