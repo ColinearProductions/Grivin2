@@ -499,15 +499,25 @@ $(document).ready(function () {
 
 
 function addItemToCart(productCode, quantity) {
-    //alert("ADDINT ITEM TO CART " + productCode + "x" + quantity);
 
 
     let currentCart = getCart();
 
     let itemExists = false;
+
+
+    let product =getItemByCode(productCode);
+
+    if(product.stoc==0)
+        return;
+
     currentCart.items.forEach(itemInCart => {
         if (itemInCart.product_code === productCode) {
             let newQuantity = parseInt(itemInCart.quantity) + parseInt(quantity);
+
+            if(newQuantity>product.stoc)
+                newQuantity=product.stoc;
+
             if (newQuantity > 99)
                 newQuantity = 99;
             itemInCart.quantity = newQuantity;
@@ -689,6 +699,8 @@ function initCheckout() {
 
     currentCart.items.forEach((item) => {
         let product = getItemByCode(item.product_code);
+
+
         if (product !== undefined) {
             item.total = (parseFloat(product.price) * item.quantity).toFixed(2);
             subtotal += parseFloat(product.price) * parseFloat(item.quantity);
