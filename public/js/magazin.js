@@ -129,6 +129,10 @@ const productsTemplate = `
             
             {{priceFormatted}} <small class="text-gray" style="text-decoration: line-through">{{priceBeforeDiscount}}</small>
         </h3>
+        <h4 class="font-weight-bold text-center text-gray">
+            
+           ( {{priceWithoutVAT}} fara TVA )
+        </h4>
        
     </a>
 
@@ -373,6 +377,9 @@ function loadCartBadge() {
     });
     value = (value < 1) ? 'Gol' : value;
     $("#shoping_cart_badge").html(`(${value})`)
+
+
+
 }
 
 function populateProductList() {
@@ -386,6 +393,7 @@ function populateProductList() {
         else
             product.priceFormatted = parseFloat(product.price).toFixed(2) + " Lei";
 
+        product.priceWithoutVAT = withoutVAT(product.price).toFixed(2) +" Lei";
     });
     Mustache.parse(template);
 
@@ -468,7 +476,7 @@ function initProductPage() {
     $(longDescription).html(currentProduct.longDescription);
     $(subdescription).html(currentProduct.subdescription);
     $(price).html(parseFloat(currentProduct.price).toFixed(2) + " Lei");
-    $(priceWithoutVat).html("(" + parseFloat(currentProduct.price_before_tva).toFixed(2) + " Lei fara TVA)");
+    $(priceWithoutVat).html("(" + withoutVAT(currentProduct.price).toFixed(2) + " Lei fara TVA)");
 
 
     $(discountedFrom).html(currentProduct.priceBeforeDiscount);
@@ -487,6 +495,10 @@ function initProductPage() {
 
 //</editor-fold>
 
+function withoutVAT(withVAT){
+    return (parseFloat(withVAT)/1.19)
+
+}
 
 //<editor-fold desc="Cart">
 
@@ -782,7 +794,7 @@ function updateCheckoutTotals() {
     $(subtotalText).html(subtotal.toFixed(2));
 
     $(totalText).html((subtotal + costTransport).toFixed(2));
-    $(vatText).html(((subtotal + costTransport) /1.19).toFixed(2));
+    $(vatText).html((withoutVAT(subtotal + costTransport) ).toFixed(2));
 
 
     $(shippingText).html(costTransport.toFixed(2));
