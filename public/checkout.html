@@ -117,7 +117,30 @@
                                 <input type="text" class="form-control" id="prenume" name="prenume"
                                        placeholder="Prenume">
                             </div>
+
+
                             <div class="col-md-12 p-2">
+                                <label for="telefon">
+                                    Numar de telefon *
+                                </label>
+                                <input type="text" class="form-control" id="telefon" name="telefon"
+                                       placeholder="Numar de telefon">
+
+                            </div>
+
+                            <div class="col-md-12 p-2">
+                                <h4>Modalitate de plata</h4>
+                            </div>
+                            <div class="col-md-12 p-2">
+
+                                <label class="radio-inline mx-3"><input class="mx-2" type="radio" name="modalitate_de_plata" value="RAMBURS" checked>Ramburs</label>
+                                <label class="radio-inline mx-3"><input class="mx-2"  type="radio" name="modalitate_de_plata" value="OP">Transfer bancar</label>
+                                <label class="radio-inline mx-3"><input class="mx-2"  type="radio" name="modalitate_de_plata" value="SHOWROOM">Ridicare din showroom (livrare gratuita) </label>
+                                <br>
+                                <h5 class="text-gray">*Adresa showroom: Strada Tipografilor 11-15 Bucuresti 013714</h5>
+                            </div>
+
+                            <div class="col-md-12 p-2 hide-if-showroom">
                                 <label for="adresa">
                                     Adresa *
                                 </label>
@@ -125,7 +148,7 @@
                             </div>
 
 
-                            <div class="col-md-12 p-2">
+                            <div class="col-md-12 p-2 hide-if-showroom">
                                 <label for="judet">
                                     Judet *
                                 </label>
@@ -179,13 +202,13 @@
 
                             </div>
 
-                            <div class="col-md-6 p-2">
+                            <div class="col-md-6 p-2 hide-if-showroom">
                                 <label for="oras">
                                     Oras *
                                 </label>
                                 <input type="text" class="form-control" id="oras" name="oras" placeholder="Oras">
                             </div>
-                            <div class="col-md-6 p-2">
+                            <div class="col-md-6 p-2 hide-if-showroom">
                                 <label for="cod_postal">
                                     Cod postal
                                 </label>
@@ -194,14 +217,6 @@
                             </div>
 
 
-                            <div class="col-md-12 p-2">
-                                <label for="telefon">
-                                    Numar de telefon *
-                                </label>
-                                <input type="text" class="form-control" id="telefon" name="telefon"
-                                       placeholder="Numar de telefon">
-
-                            </div>
 
                             <div class="col-md-12 p-2 mb-5 mt-3 hidden-md-up">
                                 <div class="button red" style="width:100%"><a href="#">Plaseaza Comanda</a></div>
@@ -275,7 +290,7 @@
                                         Total
                                     </h4>
                                     <small>
-                                        Include <span id="vat"> 0.00 </span> lei TVA (19%)
+                                        (<span id="vat"> 0.00 </span> Lei fara TVA)
                                     </small>
                                 </td>
                                 <td class="text-right p-0">

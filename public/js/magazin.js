@@ -6,6 +6,7 @@ const categoriesData = {
     categories: [{
         name: "Vinuri",
         category_id: 1000,
+        active:true,
         subcategories: [
             {
                 id: 1001,
@@ -22,6 +23,7 @@ const categoriesData = {
         ]
     }, {
         name: "Arta",
+
         category_id: 2000,
         subcategories: [
             {
@@ -34,10 +36,14 @@ const categoriesData = {
             },
             {
                 id: 2003,
-                subcategory: "Muzica"
+                subcategory: "Muzica Vinyl"
             },
             {
                 id: 2004,
+                subcategory: "Muzica CD"
+            },
+            {
+                id: 2005,
                 subcategory: "Sculptura"
             },
         ]
@@ -198,7 +204,7 @@ const filtersTemplate = `
                 {{/active}}
                     <div class="row">
                         <a href="javascript:void(0);" onclick="onSelectSubcategory(this,-1,{{category_id}})"
-                           class="col-md-12">
+                           class="col-md-12 according_active">
                             <h4 class="hover-red accordion-option">Toate</h4>
                         </a>
                     </div>
@@ -388,12 +394,17 @@ function populateProductList() {
     productsData.products.forEach(product => {
 
         product.inStock = product.stoc > 0;
-        if (!product.inStock)
+
+        product.priceWithoutVAT = withoutVAT(product.price).toFixed(2) +" Lei";
+
+        if (!product.inStock) {
             product.priceFormatted = "Out of stock";
+            product.priceWithoutVAT = ""
+        }
         else
             product.priceFormatted = parseFloat(product.price).toFixed(2) + " Lei";
 
-        product.priceWithoutVAT = withoutVAT(product.price).toFixed(2) +" Lei";
+
     });
     Mustache.parse(template);
 
@@ -408,6 +419,8 @@ function populateFilters() {
     Mustache.parse(template);
     let rendered = Mustache.render(template, categoriesData);
     $('#filters_container').html(rendered);
+
+
 }
 
 function onSelectSubcategory(button, subcategory_id, category_id) {
@@ -417,9 +430,12 @@ function onSelectSubcategory(button, subcategory_id, category_id) {
 
     let noProductsLabel = $("#no_products_label");
     $(noProductsLabel).hide();
-    $(".according_active").removeClass("according_active");
 
-    $(button).addClass("according_active");
+
+    if(button) {
+        $(".according_active").removeClass("according_active");
+        $(button).addClass("according_active");
+    }
 
     console.log(subcategory_id, category_id);
     let shopItems = $('.shop_item');
@@ -441,6 +457,8 @@ function initShopPage() {
     populateFilters();
     populateProductList();
     initAccordions()
+
+    onSelectSubcategory(null,-1,categoriesData.categories[0].category_id);
 }
 
 //</editor-fold>
@@ -690,7 +708,14 @@ function continueToCheckout() {
 let subtotal = 0;
 let tempCart;
 
+let deliveryType = "RAMBURS";
+
 function initCheckout() {
+
+
+
+
+
     let checkoutState = $("#judet");
 
 
@@ -734,9 +759,31 @@ function initCheckout() {
 
     initCheckoutFormValidation();
     updateCheckoutTotals();
+
+
+
+    $('input[type=radio][name=modalitate_de_plata]').change(function() {
+        if(this.value==="RAMBURS" || this.value==="OP"){
+            $('.hide-if-showroom').show();
+        }else{
+            $('.hide-if-showroom').hide();
+        }
+
+        deliveryType=this.value;
+        updateCheckoutTotals();
+    });
+
 }
 
 function initCheckoutFormValidation() {
+
+    $.validator.addMethod("requiredIfNotShowroom", function(value, element) {
+        if(deliveryType==="SHOWROOM")
+            return true;
+        else
+            return value;
+    }, "Campul acesta este obligatoriu");
+
     $('#address_form').validate({
         // Specify validation rules
         rules: {
@@ -744,9 +791,15 @@ function initCheckoutFormValidation() {
             // of an input field. Validation rules are defined
             // on the right side
             nume: "required",
-            adresa: "required",
-            judet: "required",
-            oras: "required",
+            adresa: {
+                requiredIfNotShowroom:true
+            },
+            judet: {
+                requiredIfNotShowroom:true
+            },
+            oras: {
+                requiredIfNotShowroom:true
+            },
             telefon: {
                 required: true,
                 min: 9
@@ -790,6 +843,10 @@ function updateCheckoutTotals() {
         costTransport = costTransportTara;
     }
 
+    if(deliveryType==="SHOWROOM")
+        costTransport = 0;
+
+
 
     $(subtotalText).html(subtotal.toFixed(2));
 
@@ -829,9 +886,10 @@ function MAKE_ORDER() {
         'Cost_transport': costTransport.toFixed(2),
         'Subtotal_fara_transport': subtotal.toFixed(2),
         'Total': (subtotal + costTransport).toFixed(2),
-        'TVA': ((subtotal + costTransport) * .19).toFixed(2)
+        'FARA_TVA': (withoutVAT(subtotal,costTransport)).toFixed(2)
     };
     order.date_de_livrare = {
+        'Plata':deliveryType,
         'Email': $(checkoutEmail).val(),
         'Nume': $(checkoutFirstname).val(),
         'Prenume': $(checkoutLastname).val(),
@@ -843,7 +901,11 @@ function MAKE_ORDER() {
     };
 
     console.log(order);
+
+
     let isFormValid = $("#address_form").valid();
+
+
     order.note = Cookies.get('note');
 
     if (isFormValid) {
