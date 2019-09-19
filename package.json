@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ColinearProductions/GRIVIn2.git"
+    "url": "git+https://github.com/ColinearProductions/GRIVIN2.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ColinearProductions/GRIVIn2/issues"
+    "url": "https://github.com/ColinearProductions/GRIVIN2/issues"
   },
-  "homepage": "https://github.com/ColinearProductions/GRIVIn2#readme",
+  "homepage": "https://github.com/ColinearProductions/GRIVIN2#readme",
   "dependencies": {
     "convert-excel-to-json": "^1.6.1"
   }
