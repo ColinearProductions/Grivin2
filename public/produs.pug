@@ -1,7 +1,7 @@
 doctype html
 head
-    title Despre noi | Grivin House
-    meta(name='description' content='Grivin House')
+    title Despre noi | GRIVIn House
+    meta(name='description' content='GRIVIn House')
     include pug_includes/css_imports
 
 - var headerStyle= 'background: rgba(0,0,0,0.65)'
@@ -48,16 +48,17 @@ head
                     h4.font-weight-bold Livrare in Bucuresti
                     ul.dotted
                         li
+                            h5
+                                strong Ridicare gratuita din showroom-ul #{showroom}
+                                br
+                                | Numar de contact: #{contact_phone}
+                        li
                             h5 Tranport Gratuit pentru comenzi cu valoarea mai mare de 200 lei
                         li
-                            h5
+                            h5.mb-4
                                 | Pentru comenzi cu valoare mai mica de 200 lei, costul transportului este de
                                 | 14,99 lei (TVA inclus)
-                        li
-                            h5.mb-4  Ridicare gratuita de la showroom-ul nostru:
-                                strong.ml-2 Strada Tipografilor 11-15 Bucuresti 013714, Cladirea S-Park - corp B3-B4, Parter.
-                                br
-                                | Numar de contact: +40 730 017 452
+
                     h4.font-weight-bold Livrare in Tara
                     ul.dotted
                         li
