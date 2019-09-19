@@ -27,6 +27,10 @@ const categoriesData = {
         category_id: 2000,
         subcategories: [
             {
+                id: 2006,
+                subcategory: "Albume Arta"
+            },
+            {
                 id: 2001,
                 subcategory: "Pictura"
             },
