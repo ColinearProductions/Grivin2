@@ -120,7 +120,7 @@ const productsTemplate = `
     
 
         <h2 class="text-center font-weight-bold mb-5" id="no_products_label" style="display: none">
-            Nici-un produs in aceasta categorie
+            Catalog la <a href="contact.html"> cerere </a>
         </h2>
     </div>
 {{#products}}
@@ -139,10 +139,11 @@ const productsTemplate = `
             
             {{priceFormatted}} <small class="text-gray" style="text-decoration: line-through">{{priceBeforeDiscount}}</small>
         </h3>
-        <h4 class="font-weight-bold text-center text-gray">
+        <h5 class=" text-center text-gray">
             
-           ( {{priceWithoutVAT}} fara TVA )
-        </h4>
+          <!--  ( {{priceWithoutVAT}} fara TVA )-->
+          (TVA inclus)
+        </h5>
        
     </a>
 
@@ -482,6 +483,8 @@ function initProductPage() {
         alert("Produs inexistent");
         return;
     }
+
+    console.log(currentProduct);
     let productName = $("#product_name");
     let shortDescription = $("#short_description");
     let subdescription = $("#subdescription");
@@ -498,7 +501,7 @@ function initProductPage() {
     $(longDescription).html(currentProduct.longDescription);
     $(subdescription).html(currentProduct.subdescription);
     $(price).html(parseFloat(currentProduct.price).toFixed(2) + " Lei");
-    $(priceWithoutVat).html("(" + withoutVAT(currentProduct.price).toFixed(2) + " Lei fara TVA)");
+    //$(priceWithoutVat).html("(" + withoutVAT(currentProduct.price).toFixed(2) + " Lei fara TVA)");
 
 
     $(discountedFrom).html(currentProduct.priceBeforeDiscount);

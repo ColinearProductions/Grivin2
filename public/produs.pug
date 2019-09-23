@@ -11,6 +11,14 @@ head
     .intro.mt-header
         .container
             .row
+                //.col-md-12.mb-3
+                    h4.font-weight-bold
+                        a(href='index.html')
+                            i.fa.fa-arrow-left(aria-hidden='true').mr-2
+                            | Continua Cumparaturile
+
+
+
                 .col-md-6.text-center
                     img#product_image.img-fluid.blur-5(src='#' style='max-height: 70vh')
                 .col-md-6
@@ -23,7 +31,7 @@ head
                             span#price 75.00
                             small.text-gray.mr-2  (TVA inclus)
                             small#discounted_from(style='color:gray;text-decoration: line-through;margin-left: 15px;')
-                        h3.font-weight-bold.blur-5
+                        //h3.font-weight-bold.blur-5
                             small#price_without_vat.text-gray.mr-2  (TVA inclus)
 
                         input.product_quantity_picker(type='number' name='quantity' min='1' max='5' value='1')
@@ -41,6 +49,9 @@ head
                             .col-md-12.my-2.font-weight-bold(style='font-size: 16px;line-height: 19px;')
                                 img(src='img/icons/retur2.svg')
                                 span.ml-2 14 de zile perioada de retur
+                            .col-md-6.my-2
+                                .button.red.trans_200.ml-1.w-100
+                                    a(href='magazin.html') Continua Cumparaturile
             .row.my-5.pt-3.mx-1(style='border-top:1px solid gray')
                 div
                     h3.font-weight-bold.mb-3 LIVRAREA SI PLATA
@@ -53,10 +64,10 @@ head
                                 br
                                 | Numar de contact: #{contact_phone}
                     .embed-responsive.embed-responsive-21by9.mb-5
-                        iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1196.8219669721252!2d26.073226935545474!3d44.48363379444759!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9ed933dd6d814e7d!2sS-Park!5e0!3m2!1sen!2sro!4v1568890292738!5m2!1sen!2sro' )
+                        iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d22771.019219241767!2d26.058363613647472!3d44.48693317666703!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9ed933dd6d814e7d!2sS-Park!5e0!3m2!1sen!2sro!4v1569232164421!5m2!1sen!2sro' )
                     ul.dotted
                         li
-                            h5 Tranport Gratuit pentru comenzi cu valoarea mai mare de 200 lei
+                            h5 Transport Gratuit pentru comenzi cu valoarea mai mare de 200 lei
                         li
                             h5.mb-4
                                 | Pentru comenzi cu valoare mai mica de 200 lei, costul transportului este de
@@ -65,7 +76,7 @@ head
                     h4.font-weight-bold Livrare in Tara
                     ul.dotted
                         li
-                            h5 Tranport Gratuit pentru comenzi cu valoarea mai mare de 200 lei
+                            h5 Transport Gratuit pentru comenzi cu valoarea mai mare de 200 lei
                         li
                             h5.mb-4
                                 | Pentru comenzi cu valoare mai mica de 200 lei, costul transportului este de

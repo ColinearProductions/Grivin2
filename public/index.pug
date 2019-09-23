@@ -17,11 +17,15 @@ html(lang="ro")
             .home_container
                 .container
                     .row
-                        .col
+                        //.col
                             .home_content.text-center
                                 .home_subtitle.grivin-font(style='color:#CE9042') GRIVIN House
                                 .home_title.grivin-font
-                                    h1 An Extraordinary Experience
+                                    h1.text-red An Extraordinary Experience
+                        .home_content.text-center.grivin-border.m-auto(style="background-color:#ffffffc9;padding:7%;border:3px solid black; outline:10px solid #ffffffc9;box-shadow: 0px 0px 32px -4px rgba(0,0,0,0.75);")
+                            .home_subtitle.grivin-font.grivin-emblem GRIVIN House
+                            .home_title.grivin-font
+                                h1.text-red An Extraordinary Experience
 
             .scroll_icon
         // Intro
@@ -68,9 +72,9 @@ html(lang="ro")
                         .text-center
                             img.img-fluid(src='img/produse/grivin_red.png' alt='Vin GRIVIN Rosu'  style='max-height: 30vh')
 
-                        h4.mt-2.mx-3.text-center  Un cupaj nobil de Merlot, Cabernet Sauvignon si Syrah
+                        h4.mt-2.mx-3.text-center  Un cupaj nobil de Merlot, Cabernet Sauvignon si Syrah <br> Temperatura servire: 16-18 °C
                         h3.mt-1.text-center  64.00 lei
-                        h4.text-center.text-gray (53.78 Lei fara TVA)
+                        h5.text-center.text-gray (TVA inclus)
                         .button.red(style='width:100%')
                                 a(href='produs.html?product_code=00000034') Detalii
                 .col-lg-4.my-3
@@ -79,9 +83,9 @@ html(lang="ro")
                         .text-center
                             img.img-fluid(src='img/produse/grivin_rose.png' alt='Vin GRIVIN Rose' style='max-height: 30vh')
 
-                        h4.mt-2.mx-2.text-center  Un buchet intens de fructe cu o nota predominanta clara de capsuni
+                        h4.mt-2.mx-2.text-center  Un buchet intens de fructe cu o nota predominanta clara de capsuni<br> Temperatura servire: 10-14 °C
                         h3.mt-1.text-center  54.00 lei
-                        h4.text-center.text-gray (45.38 Lei fara TVA)
+                        h5.text-center.text-gray (TVA inclus)
                         .button.red(style='width:100%')
                             a(href='produs.html?product_code=00000033') Detalii
                 .col-lg-4.my-3
@@ -90,12 +94,15 @@ html(lang="ro")
                         .text-center
                             img.img-fluid(src='img/produse/grivin_white.png' alt='Vin GRIVIN Alb' style='max-height: 30vh')
 
-                        h4.mt-2.mx-3.text-center  Floral, cu note de tei, salcam si caprifoi. Gurmand si plin
+                        h4.mt-2.mx-3.text-center  Floral, cu note de tei, salcam si caprifoi. Gurmand si plin<br> Temperatura servire: 10-14 °C
                         h3.mt-1.text-center  54.00 lei
-                        h4.text-center.text-gray (45.38 Lei fara TVA)
+                        h5.text-center.text-gray (TVA inclus)
                         .button.red(style='width:100%')
                             a(href='produs.html?product_code=00000032') Detalii
 
+                .col-lg-6.offset-lg-3.mt-5
+                    .button.red(style='width:100%')
+                        a(href='produs.html?product_code=00000032') Spre magazin
 
         //
             .intro(style='margin-bottom: 0;margin-top:0')
@@ -177,7 +184,7 @@ html(lang="ro")
                 .row.text-center
                     .col-sm-6.offset-md-3
                         .single
-                            h3 Abonati-va la noutatile grivin
+                            h3 Abonati-va la noutatile GRIVIN
                             .col-md-12
                                 label(for='subscribe_email') Adresa de email
                                 input#subscribe_email.form-control.p-2(type='email' placeholder='Adresa de email')

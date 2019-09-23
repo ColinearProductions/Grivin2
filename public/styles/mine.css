@@ -522,7 +522,9 @@ div.zoom-wrapper:hover > div {
     transform-origin: 15% 92%;
 }
 
-
+h5.address, h4.address{
+    word-spacing: 4px;
+}
 
 .confidentiality > ul {
     list-style-type: disc;

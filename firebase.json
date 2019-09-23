@@ -6,20 +6,29 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "redirects":[
+    "redirects": [
       {
-        "source":"email",
-        "destination":"https://pro03.octosquid.com:2096",
-        "type":301
+        "source": "email",
+        "destination": "https://pro03.octosquid.com:2096",
+        "type": 301
       }
     ],
-    "headers":[
+    "headers": [
       {
-        "source":"**/*.@(html,css,js,jpg|jpeg|gif|png)",
-        "headers":[
+        "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+        "headers": [
           {
-            "key":"Cache-Control",
-            "value":"max-age=3600"
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=7200"
           }
         ]
       }
