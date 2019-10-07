@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            font-size: 17px;
+        }
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+    </style>
+
+
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="error/css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="styles/complete.css"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+    <source src="error/404.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+<div class="home">
+
+    <div class="w-100 h-100 position-absolute" style=" background: black; opacity: .0"></div>
+    <div class="home_container" style="  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);">
+        <div class="container p-5">
+            <div class="row">
+                <div class="home_content text-center grivin-border m-auto"
+                     style="background-color:#ffffffc9;padding:7%;border:3px solid black; outline:10px solid #ffffffc9;box-shadow: 0px 0px 32px -4px rgba(0,0,0,0.75);">
+                    <div class="home_subtitle grivin-font grivin-emblem m-5" style="font-size:5.5rem">404</div>
+                    <div class="home_title grivin-font"><h1 class="text-red">Pagina pe care incercati sa o accesati nu exista</h1></div>
+                    <div class="col-md-8 offset-md-2 my-5">
+                        <div class="button red" style="width:100%"><a href="index.html">Inapoi acasa</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

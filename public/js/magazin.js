@@ -6,7 +6,7 @@ const categoriesData = {
     categories: [{
         name: "Vinuri",
         category_id: 1000,
-        active:true,
+        active: true,
         subcategories: [
             {
                 id: 1001,
@@ -390,7 +390,6 @@ function loadCartBadge() {
     $("#shoping_cart_badge").html(`(${value})`)
 
 
-
 }
 
 function populateProductList() {
@@ -400,13 +399,12 @@ function populateProductList() {
 
         product.inStock = product.stoc > 0;
 
-        product.priceWithoutVAT = withoutVAT(product.price).toFixed(2) +" Lei";
+        product.priceWithoutVAT = withoutVAT(product.price).toFixed(2) + " Lei";
 
         if (!product.inStock) {
             product.priceFormatted = "Out of stock";
             product.priceWithoutVAT = ""
-        }
-        else
+        } else
             product.priceFormatted = parseFloat(product.price).toFixed(2) + " Lei";
 
 
@@ -437,7 +435,7 @@ function onSelectSubcategory(button, subcategory_id, category_id) {
     $(noProductsLabel).hide();
 
 
-    if(button) {
+    if (button) {
         $(".according_active").removeClass("according_active");
         $(button).addClass("according_active");
     }
@@ -463,7 +461,7 @@ function initShopPage() {
     populateProductList();
     initAccordions()
 
-    onSelectSubcategory(null,-1,categoriesData.categories[0].category_id);
+    onSelectSubcategory(null, -1, categoriesData.categories[0].category_id);
 }
 
 //</editor-fold>
@@ -520,8 +518,8 @@ function initProductPage() {
 
 //</editor-fold>
 
-function withoutVAT(withVAT){
-    return (parseFloat(withVAT)/1.19)
+function withoutVAT(withVAT) {
+    return (parseFloat(withVAT) / 1.19)
 
 }
 
@@ -543,17 +541,17 @@ function addItemToCart(productCode, quantity) {
     let itemExists = false;
 
 
-    let product =getItemByCode(productCode);
+    let product = getItemByCode(productCode);
 
-    if(product.stoc==0)
+    if (product.stoc == 0)
         return;
 
     currentCart.items.forEach(itemInCart => {
         if (itemInCart.product_code === productCode) {
             let newQuantity = parseInt(itemInCart.quantity) + parseInt(quantity);
 
-            if(newQuantity>product.stoc)
-                newQuantity=product.stoc;
+            if (newQuantity > product.stoc)
+                newQuantity = product.stoc;
 
             if (newQuantity > 99)
                 newQuantity = 99;
@@ -561,6 +559,13 @@ function addItemToCart(productCode, quantity) {
 
             itemExists = true;
         }
+    });
+
+
+    gtag('event', 'add_item_to_cart', {
+        'event_category': 'shop',
+        'event_label': product.name,
+            'value': product.price
     });
 
     if (!itemExists)
@@ -720,9 +725,6 @@ let deliveryType = "RAMBURS";
 function initCheckout() {
 
 
-
-
-
     let checkoutState = $("#judet");
 
 
@@ -768,15 +770,14 @@ function initCheckout() {
     updateCheckoutTotals();
 
 
-
-    $('input[type=radio][name=modalitate_de_plata]').change(function() {
-        if(this.value==="RAMBURS" || this.value==="OP"){
+    $('input[type=radio][name=modalitate_de_plata]').change(function () {
+        if (this.value === "RAMBURS" || this.value === "OP") {
             $('.hide-if-showroom').show();
-        }else{
+        } else {
             $('.hide-if-showroom').hide();
         }
 
-        deliveryType=this.value;
+        deliveryType = this.value;
         updateCheckoutTotals();
     });
 
@@ -784,8 +785,8 @@ function initCheckout() {
 
 function initCheckoutFormValidation() {
 
-    $.validator.addMethod("requiredIfNotShowroom", function(value, element) {
-        if(deliveryType==="SHOWROOM")
+    $.validator.addMethod("requiredIfNotShowroom", function (value, element) {
+        if (deliveryType === "SHOWROOM")
             return true;
         else
             return value;
@@ -799,13 +800,13 @@ function initCheckoutFormValidation() {
             // on the right side
             nume: "required",
             adresa: {
-                requiredIfNotShowroom:true
+                requiredIfNotShowroom: true
             },
             judet: {
-                requiredIfNotShowroom:true
+                requiredIfNotShowroom: true
             },
             oras: {
-                requiredIfNotShowroom:true
+                requiredIfNotShowroom: true
             },
             telefon: {
                 required: true,
@@ -850,15 +851,14 @@ function updateCheckoutTotals() {
         costTransport = costTransportTara;
     }
 
-    if(deliveryType==="SHOWROOM")
+    if (deliveryType === "SHOWROOM")
         costTransport = 0;
-
 
 
     $(subtotalText).html(subtotal.toFixed(2));
 
     $(totalText).html((subtotal + costTransport).toFixed(2));
-    $(vatText).html((withoutVAT(subtotal + costTransport) ).toFixed(2));
+    $(vatText).html((withoutVAT(subtotal + costTransport)).toFixed(2));
 
 
     $(shippingText).html(costTransport.toFixed(2));
@@ -885,6 +885,7 @@ function MAKE_ORDER() {
             'Cod_Produs': item.product_code,
             'Cantitate': item.quantity,
             'Pret_final_vazut_de_client': item.productDetail.price,
+            'Pret_total_vazut_de_client': parseFloat(item.productDetail.price) * parseFloat(item.quantity),
             'Pret_discount_vazut_de_client': item.productDetail.priceBeforeDiscount,
             'Apare_in_stock': item.productDetail.in_stock
         };
@@ -893,10 +894,10 @@ function MAKE_ORDER() {
         'Cost_transport': costTransport.toFixed(2),
         'Subtotal_fara_transport': subtotal.toFixed(2),
         'Total': (subtotal + costTransport).toFixed(2),
-        'FARA_TVA': (withoutVAT(subtotal,costTransport)).toFixed(2)
+        'FARA_TVA': (withoutVAT(subtotal, costTransport)).toFixed(2)
     };
     order.date_de_livrare = {
-        'Plata':deliveryType,
+        'Plata': deliveryType,
         'Email': $(checkoutEmail).val(),
         'Nume': $(checkoutFirstname).val(),
         'Prenume': $(checkoutLastname).val(),
@@ -947,6 +948,12 @@ function showOrderCompleteModal() {
 
     let countdown = $("#countdown");
 
+
+    gtag('event', 'place_order', {
+        'event_category': 'shop',
+    });
+
+
     setInterval(function () {
         {
             $(countdown).html(orderCompleteTimer);
@@ -975,6 +982,9 @@ function correctCaptcha() {
 
 function initContactPage() {
 
+    gtag('event', 'contacts_page', {
+        'event_category': 'visit',
+    });
 
     $('#contact_form').validate({
         // Specify validation rules

@@ -383,9 +383,11 @@ select {
         margin-top:10vh;
     }
 
-    .grivin-emblem{
-        font-size: 37px;
+    .h1{
+        font-size:24px!important;
     }
+
+
 }
 
 /* Breakpoint SM */
@@ -401,7 +403,11 @@ select {
     }
 
     .grivin-emblem{
-        font-size: 37px;
+        font-size: 45px;
+    }
+
+    .h1{
+        font-size:24px!important;
     }
 }
 
@@ -468,7 +474,9 @@ select {
     }
 }
 
-
+.grivin-emblem{
+    line-height: 1em;
+}
 
 
 
