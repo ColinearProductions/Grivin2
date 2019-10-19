@@ -1,8 +1,8 @@
 doctype html
 html(lang="ro")
     head
-        title Acasa | GRIVIN House
-        meta(name='description' content='GRIVIN House')
+        title Acasa | GRIVIN HOUSE
+        meta(name='description' content='GRIVIN HOUSE')
         include pug_includes/css_imports
     - var headerStyle= 'background: rgba(0,0,0,0.65)'
     .super_container
@@ -12,13 +12,13 @@ html(lang="ro")
 
         // Home 
         .home
-            .parallax_background.parallax-window(data-parallax='scroll' data-image-src='img/home_bg_light.png' data-speed='0.8')
+            .parallax_background.parallax-window(data-parallax='scroll' data-image-src='img/home_bg_light-min.png' data-speed='0.8')
             div.w-100.h-100.position-absolute(style=' background: black; opacity: .0')
             .home_container
                 .container
                     .row.p-3
                         .home_content.text-center.grivin-border.m-auto(style="background-color:#ffffffc9;padding:7%;border:3px solid black; outline:10px solid #ffffffc9;box-shadow: 0px 0px 32px -4px rgba(0,0,0,0.75);")
-                            .home_subtitle.grivin-font.grivin-emblem GRIVIN House
+                            .home_subtitle.grivin-font.grivin-emblem GRIVIN HOUSE
                             .home_title.grivin-font
                                 h1.h1.text-red An Extraordinary Experience
 
@@ -43,7 +43,13 @@ html(lang="ro")
                         .row.hidden-lg-down
                             .col-lg-8
                                 .intro_image
-                                    img(src='img/home_grivin_experience.png' alt='Ciocolata GRIVIN' )
+                                    picture
+                                        source(srcset='img/home_grivin_experience.webp' type="image/webp")
+
+                                        source(srcset='img/home_grivin_experience-min.png' type="image/png" )
+
+                                        img(src='img/home_grivin_experience-min.png' alt='Ciocolata GRIVIN' )
+
         .intro.mb-0(style="margin-top:5vh")
             .container
                 .row
@@ -65,7 +71,7 @@ html(lang="ro")
                     .grivin-border(style='padding:10px;	z-index: 1; padding-top:30px; padding-bottom:30px;')
                         h3.text-center.font-weight-bold GRIVIN Rosu
                         .text-center
-                            img.img-fluid(src='img/produse/grivin_red.png' alt='Vin GRIVIN Rosu'  style='max-height: 30vh')
+                            img.img-fluid(src='img/produse/grivin_red_small.png' alt='Vin GRIVIN Rosu'  style='max-height: 30vh')
 
                         h4.mt-2.mx-3.text-center  Un cupaj nobil de Merlot, Cabernet Sauvignon si Syrah <br> Temperatura servire: 16-18 °C
                         h3.mt-1.text-center  64.00 lei
@@ -76,7 +82,7 @@ html(lang="ro")
                     .grivin-border(style='padding:10px;	z-index: 1; padding-top:30px; padding-bottom:30px;')
                         h3.text-center.font-weight-bold GRIVIN Rose
                         .text-center
-                            img.img-fluid(src='img/produse/grivin_rose.png' alt='Vin GRIVIN Rose' style='max-height: 30vh')
+                            img.img-fluid(src='img/produse/grivin_rose_small.png' alt='Vin GRIVIN Rose' style='max-height: 30vh')
 
                         h4.mt-2.mx-2.text-center  Un buchet intens de fructe cu o nota predominanta clara de capsuni<br> Temperatura servire: 10-14 °C
                         h3.mt-1.text-center  54.00 lei
@@ -87,7 +93,7 @@ html(lang="ro")
                     .grivin-border(style='padding:10px;	z-index: 1; padding-top:30px; padding-bottom:30px;')
                         h3.text-center.font-weight-bold GRIVIN Alb
                         .text-center
-                            img.img-fluid(src='img/produse/grivin_white.png' alt='Vin GRIVIN Alb' style='max-height: 30vh')
+                            img.img-fluid(src='img/produse/grivin_white_small.png' alt='Vin GRIVIN Alb' style='max-height: 30vh')
 
                         h4.mt-2.mx-3.text-center  Floral, cu note de tei, salcam si caprifoi. Gurmand si plin<br> Temperatura servire: 10-14 °C
                         h3.mt-1.text-center  54.00 lei
