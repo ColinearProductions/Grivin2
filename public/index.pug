@@ -16,11 +16,21 @@ html(lang="ro")
             div.w-100.h-100.position-absolute(style=' background: black; opacity: .0')
             .home_container
                 .container
-                    .row.p-3
-                        .home_content.text-center.grivin-border.m-auto(style="background-color:#ffffffc9;padding:7%;border:3px solid black; outline:10px solid #ffffffc9;box-shadow: 0px 0px 32px -4px rgba(0,0,0,0.75);")
-                            .home_subtitle.grivin-font.grivin-emblem GRIVIN HOUSE
-                            .home_title.grivin-font
-                                h1.h1.text-red An Extraordinary Experience
+                    .row.p-1
+                        .home_content.text-center.grivin-border.m-auto(style='background-color:#ffffffc9;padding:7%;border:3px solid black; outline:10px solid #ffffffc9;box-shadow: 0px 0px 32px -4px rgba(0,0,0,0.75);')
+                            .align-text-bottom.d-md-none.d-inline-block
+                                p.text-red(style='font-size: 1rem; white-space:nowrap;')
+                                    img(src='img/new_logo.png' style='display: inline-block; max-width: 50%; vertical-align: baseline;')
+                                    |                                 La Culture du Vivre
+                            .align-text-bottom.d-none.d-md-inline-block.d-lg-none
+                                p.text-red(style='font-size: 1.5rem; white-space:nowrap;')
+                                    img(src='img/new_logo.png' style='display: inline-block; max-width: 70%; vertical-align: baseline;')
+                                    |                                 La Culture du Vivre
+                            .align-text-bottom.d-none.d-md-none.d-lg-inline-block
+                                p.text-red(style='font-size:2rem; white-space:nowrap;')
+                                    img(src='img/new_logo.png' style='display: inline-block; max-width: 70%; vertical-align: baseline;')
+                                    |                                 La Culture du Vivre
+
 
             .scroll_icon
         // Intro
@@ -190,6 +200,12 @@ html(lang="ro")
         .intro(style='margin-bottom: 1vh; margin-top:0')
             .container
                 .row.text-center
+                    .col-lg-6.offset-lg-3.mt-2
+                        .button.red(style='width:100%')
+                            a(href='magazin.html')
+                                i.fa.fa-shopping-cart(aria-hidden='true').mx-3
+                                | Spre magazin
+
                     .col-sm-6.offset-md-3
                         .single
                             h3 Abonati-va la noutatile GRIVIN
