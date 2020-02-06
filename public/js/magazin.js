@@ -917,7 +917,7 @@ function MAKE_ORDER() {
     order.note = Cookies.get('note');
 
     if (isFormValid) {
-        postData('https://glacial-stream-75477.herokuapp.com/order', order)
+        postData('https://glacial-stream-75477.herokuapp.com/grivin/order', order)
             .then(data => {
                 console.log(JSON.stringify(data));
                 Cookies.set('cart', {items: []});
@@ -1027,9 +1027,8 @@ function initContactPage() {
                 data[item.name] = item.value;
             });
 
-            //https://glacial-stream-75477.herokuapp.com/message
-            //http://localhost:5000/message
-            postData('https://glacial-stream-75477.herokuapp.com/message', data).then(data => {
+
+            postData('https://glacial-stream-75477.herokuapp.com/grivin/message', data).then(data => {
                 console.log(JSON.stringify(data));
 
                 showMessageReceivedModal();

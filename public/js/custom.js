@@ -165,7 +165,7 @@ function onRequestDataDelete(){
 	if(!email)
 		alert("Va rog sa introduceti o adresa de email valida");
 	else{
-		postData('https://glacial-stream-75477.herokuapp.com/delete_data_request',{email:email}).then(data => {
+		postData('https://glacial-stream-75477.herokuapp.com/grivin/delete_data_request',{email:email}).then(data => {
 			alert("Am inregistrat cererea. Informatiile dumneavoastra vor fi sterse de pe serverul nostru in interval de 30 de zile");
 			Cookies.remove('cookieconsent_status');
 			window.location.reload()
