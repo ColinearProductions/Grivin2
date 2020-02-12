@@ -126,6 +126,8 @@ const productsTemplate = `
 {{#products}}
 <div class="col-md-4 p-3 shop_item" data-category-id="{{category_id}}" data-subcategory-id="{{subcategory_id}}">
     <a href="produs.html?product_code={{product_code}}" class="">
+        <i class="fa fa-heart-o mx-3" aria-hidden="true" style="position: absolute;font-size: 2em;z-index: 2"></i>
+        
         <div class="text-center" style="min-height:250px">
             <img class="img-fluid" src="img/produse/{{image}}" alt="" style="max-height:250px;">
         </div>
@@ -392,6 +394,14 @@ function loadCartBadge() {
 
 }
 
+function countItemsInCart() {
+    let value = 0;
+    getCart().items.forEach(item => {
+        value += parseInt(item.quantity);
+    });
+    return value;
+}
+
 function populateProductList() {
     let template = productsTemplate;
 
@@ -530,11 +540,65 @@ $(document).ready(function () {
         Cookies.set('cart', {items: []});
     }
     loadCartBadge()
+
+
+    $("#modal_container").html(`
+    
+        
+            <!-- The Modal -->
+            <div class="modal" id="received_order_modal">
+                <div class="modal-dialog grivin-border">
+                    <div class="modal-content p-4">
+            
+                        <!-- Modal Header -->
+                        <div class="modal-header border-0">
+                            <img src="img/logo_complet.png" style="max-height:5vh;margin:auto">
+                        </div>
+            
+                        <!-- Modal body -->
+                        <div class="modal-body text-center" >
+                            <h2>
+                            Felicitari!
+                            </h2>
+                            <h3>
+                                Deoarece ai adaugat <span style="font-size:1.3em; color:#9d2c30">3</span> sticle in cos,  <span style="font-size:1.3em; color:#9d2c30">1</span> sticla o primesti cadou!
+                                Cand vei fi contactat de unul dintre agentii nostri pentru a confirma comanda,
+                                mentioneaza si ce sticla vrei cadou
+                                <br>
+                                O zi buna!
+                            </h3>
+                                      
+                        </div>
+            
+                        <!-- Modal footer -->
+                        <div class="modal-footer border-0">
+                            <div class="button red" style="width:100%">
+                                <a href="" data-dismiss="modal">Okay</a>
+                            </div>     
+                                   </div>
+            
+                    </div>
+                </div>
+            </div>
+
+    `)
 });
 
 
 function addItemToCart(productCode, quantity) {
 
+    let itemsInCart = countItemsInCart();
+    //alert(itemsInCart + " : " +  (itemsInCart + parseInt(quantity)));
+    if (itemsInCart < 3 && (itemsInCart + parseInt(quantity)) >= 3) {
+
+        let orderCompleteModal = $("#received_order_modal");
+
+        $(orderCompleteModal).modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+        $(orderCompleteModal).modal('show');
+    }
 
     let currentCart = getCart();
 
@@ -565,8 +629,9 @@ function addItemToCart(productCode, quantity) {
     gtag('event', 'add_item_to_cart', {
         'event_category': 'shop',
         'event_label': product.name,
-            'value': product.price
+        'value': product.price
     });
+
 
     if (!itemExists)
         currentCart.items.push({product_code: productCode, quantity: quantity});

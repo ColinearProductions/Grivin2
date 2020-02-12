@@ -4,6 +4,42 @@ html(lang="ro")
         title Acasa | GRIVIN HOUSE
         meta(name='description' content='GRIVIN HOUSE')
         include pug_includes/css_imports
+        style.
+            #promotie {
+                position: relative !important;
+            }
+
+            #promotie:before {
+                content: '';
+                position: absolute;
+                z-index: 3;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                pointer-events: none;
+                background-image: url(img/hearts.png);
+                animation: falling-hearts 200s linear infinite;
+            }
+
+            @keyframes falling-hearts {
+                0% {
+                    background-position: 0% -300%;
+                }
+            }
+
+            @-moz-keyframes falling-hearts {
+                0% {
+                    background-position: 0% -300%;
+                }
+            }
+
+            @-webkit-keyframes falling-hearts {
+                0% {
+                    background-position: 0% -300%;
+                }
+            }
+
     - var headerStyle= 'background: rgba(0,0,0,0.65)'
     .super_container
         include pug_includes/header
@@ -33,6 +69,36 @@ html(lang="ro")
 
 
             .scroll_icon
+
+        #promotie.intro.mb-0(style='padding-top:15vh; padding-bottom: 15vh')
+            .container
+                .row
+                    .col
+                        .themenu_title_bar_container
+                            .themenu_stars.text-center.grivin-emblem.hidden-sm-down(style='z-index:2; margin-top:-15px')
+                                | GRIVIN
+                            .themenu_rating.text-center(style='z-index:2')
+                                .rating_r.rating_r_5
+                            .grivin-border.d-flex.flex-column.align-items-center.justify-content-center
+                                .themenu_title.grivin-font.text-center(style='padding: 15px;color:#9d2c30')
+                                    | Promotie
+                                    | Valentines
+                                .intro_text.pl-5.pr-5.pb-5
+                                    h3.text-center
+                                        | Sarbatoreste luna iubirii cu un vin bun. Pana pe 26 februarie iti oferim un vin
+                                        | cadou la
+                                        | orice alte 3 sticle de vin cumparate. Share the love
+
+                                    h4.text-center
+                                        | *Cand te vom suna sa confirmam comanda, ne poti zice ce sticla doresti drept cadou
+                                    .col-lg-6.offset-lg-3.mt-5
+                                        .button.red(style='width:100%')
+                                            a(href='magazin.html')
+                                                i.fa.fa-heart-o.mx-3(aria-hidden='true')
+                                                |                                         Spre magazin
+
+
+
         // Intro
         .intro.mt-5.pt-5
             .container
