@@ -40,8 +40,187 @@ html(lang="ro")
                 }
             }
 
+            .flex-container {
+                height: 100%;
+                padding: 0;
+                margin: 0;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .trapezoid {
+                clip-path: polygon(0 0, 100% 0, 100% 57%, 92% 89%, 7% 89%, 0 57%);
+                margin-left: -1px;
+                width: calc(100% + 3px);
+                height: 100%;
+                background: rgb(128, 35, 39);
+                background: linear-gradient(180deg, rgba(128, 35, 39, 1) 0%, rgba(61, 9, 10, 1) 100%);
+                position: absolute;
+            }
+
+            #circle {
+                clip-path: circle(50% at 50% 50%);
+                width: 300px;
+                top: -150px;
+                height: 300px;
+                z-index: 2;
+                background: #f9f1ce;
+                position: absolute;
+            }
+
+            .button.yellow {
+                border-color: #f9f1ce;
+                color: #f9f1ce;
+            }
+
+            .button.yellow > a {
+                color: #f9f1ce;
+            }
+
+            .button.yellow:hover {
+                background-color: #f9f1ce;
+            }
+
+            .button.yellow > a:hover {
+                color: rgb(128, 35, 39)
+            }
+
+            .button.large > a {
+                font-size: 2em;
+            }
+
+            .button.large {
+                width: 250px;
+                height: 60px;
+                padding: 5px;
+            }
+
+            .only-on-desktop {
+                display: none;
+            }
+
+            .promo-text-wrapper {
+                width: 80%;
+            }
+
+            .logo-vertical {
+                width: 200px;
+                margin-top: 100px;
+            }
+
+            @media only screen and (min-width: 1400px) {
+                .only-on-desktop {
+                    display: block;
+                }
+
+                .promo-text-wrapper {
+                    width: 50%
+                }
+            }
+
+            @media only screen and (max-width: 1000px) {
+                .trapezoid {
+                    clip-path: polygon(0 0, 100% 0, 100% 57%, 100% 100%, 0% 100%, 0 57%);
+                }
+
+                #circle {
+                    width: 200px;
+                    top: -100px;
+                    height: 200px;
+                }
+
+                .logo-vertical {
+                    width: 100px;
+                    margin-top: 75px;
+                }
+
+                .promo-text {
+                    font-size: 2em;
+                }
+            }
+
+            @media only screen and (max-width: 550px) {
+                .promo-text {
+                    font-size: 1.5em;
+                }
+
+                .button.large > a {
+                    font-size: 1.3em;
+                }
+
+                .button.large {
+                    width: 150px;
+                    height: 50px;
+                    padding: 0;
+                    margin: 5px !important;
+                }
+
+                .button {
+                    width: 100px;
+                }
+
+                #circle {
+                    width: 150px;
+                    top: -75px;
+                    height: 150px;
+                }
+
+                .logo-vertical {
+                    width: 100px;
+                    margin-top: 50px;
+                }
+            }
+
+            @media only screen and (max-width: 400px) {
+                .promo-text {
+                    font-size: 1.2em;
+                }
+
+                .button.large > a {
+                    font-size: 1em;
+                }
+
+                .button > a {
+                    font-size: 1em;
+                }
+
+                .button.large {
+                    height: 50px;
+                }
+            }
+
+
     - var headerStyle= 'background: rgba(0,0,0,0.65)'
     .super_container
+
+        #promo-banner.flex-container(style='display:none;position:fixed; height:100vh; width:100%; background: rgba(0,0,0,0.73); z-index:105')
+            .flex-container(style='width:80%; height:80%; background-color:#f9f1ce; overflow: hidden')
+                #circle.flex-container
+                    img.logo-vertical(src='img/logo_vertical.svg')
+                .trapezoid.flex-container
+                    .promo-text-wrapper(style='text-align: center')
+                        h2.my-4.promo-text(style='color:white')
+                            span.grivin-font Grivin House
+                            |  ofera acum si abonament lunar sau saptamanal la vin!
+                        h3.promo-text(style='color:white; ')
+                            | In fiecare luna iti vom trimite un set de
+                            span(style='font-size: 1.2em; font-weight: bold') 3
+                            |                     sau
+                            span(style='font-size: 1.2em; font-weight: bold') 6
+                            |  vinuri alese de expertii nostri la un
+                            |                     pret fix si redus
+                    .button.yellow.large.my-4
+                        a(href='magazin.html') Aboneaza-te
+                    .button.yellow
+                        a(href='javascript:closePromoBanner();') x Inchide
+                img.only-on-desktop(src='img/bottle_promo.png' style='z-index:222; position: absolute; height:100%;left:0')
+
         include pug_includes/header
 
 

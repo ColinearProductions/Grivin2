@@ -126,7 +126,6 @@ const productsTemplate = `
 {{#products}}
 <div class="col-md-4 p-3 shop_item" data-category-id="{{category_id}}" data-subcategory-id="{{subcategory_id}}">
     <a href="produs.html?product_code={{product_code}}" class="">
-        <i class="fa fa-heart-o mx-3" aria-hidden="true" style="position: absolute;font-size: 2em;z-index: 2"></i>
         
         <div class="text-center" style="min-height:250px">
             <img class="img-fluid" src="img/produse/{{image}}" alt="" style="max-height:250px;">
@@ -535,11 +534,43 @@ function withoutVAT(withVAT) {
 
 //<editor-fold desc="Cart">
 
+let promoBanner;
+
+function closePromoBanner() {
+    $(promoBanner).hide();
+
+
+    Cookies.set('alreadySeenPromotion', true);
+    Cookies.set('seenPromotionAt', new Date().getTime());
+
+    return;
+}
+
+function subscribeToWine() {
+    alert("Subscribed");
+    Cookies.set('alreadySeenPromotion', true);
+    Cookies.set('seenPromotionAt', new Date().getTime());
+
+    return;
+}
+
 $(document).ready(function () {
+
+    promoBanner = $("#promo-banner");
+
+    let currentTimestamp = new Date().getTime();
+
     if (Cookies.get('cart') === undefined) {
         Cookies.set('cart', {items: []});
     }
-    loadCartBadge()
+
+    let alreadySeenPromotion = Cookies.get('alreadySeenPromotion');
+    alreadySeenPromotion = alreadySeenPromotion !== undefined;
+    console.log(alreadySeenPromotion);
+    if(!alreadySeenPromotion || ( currentTimestamp - Cookies.get('seenPromotionAt')) > 30*24*60*60*100) //30 days
+        $(promoBanner).show();
+
+    loadCartBadge();
 
 
     $("#modal_container").html(`
@@ -561,9 +592,7 @@ $(document).ready(function () {
                             Felicitari!
                             </h2>
                             <h3>
-                                Deoarece ai adaugat <span style="font-size:1.3em; color:#9d2c30">3</span> sticle in cos,  <span style="font-size:1.3em; color:#9d2c30">1</span> sticla o primesti cadou!
-                                Cand vei fi contactat de unul dintre agentii nostri pentru a confirma comanda,
-                                mentioneaza si ce sticla vrei cadou
+                             Sunteti eligibil pentru promotia noastra 3 Sticle de vin + 1 Gratis. In cel mai scurt timp dupa plasarea comeznii veti fi contact de un reprezentant GRIVIN pentru confirmarea comenzii si pentru a va alege sticla de vin cadou
                                 <br>
                                 O zi buna!
                             </h3>
