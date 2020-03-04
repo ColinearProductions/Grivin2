@@ -1,0 +1,272 @@
+doctype html
+head
+    title Despre noi | GRIVIN HOUSE
+    meta(name='description' content='GRIVIN HOUSE')
+    include pug_includes/css_imports
+    style.
+        table.responsive {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        th.responsive, td.responsive {
+            padding: 8px;
+        }
+
+
+- var headerStyle= 'background: rgba(0,0,0,0.65)'
+#modal_container
+.super_container
+    include pug_includes/header
+    div
+        .parallax_background_lineup.parallax-window(style='min-height: 700px; background-color: transparent' data-parallax='scroll' data-image-src='img/wine_lineup.jpeg' data-speed='0.8')
+            .home_container
+                .container
+                    .row.p-1
+                        .home_content.text-center.grivin-border.m-auto(style='background-color:#ffffffc9;padding:3%;border:3px solid black; outline:10px solid #ffffffc9;box-shadow: 0px 0px 32px -4px rgba(0,0,0,0.75);')
+                            .align-text-bottom.d-md-none.d-inline-block
+                                p.text-red(style='font-size: 2rem; white-space:nowrap;')
+                                    | Iti aducem lumea
+                                    br
+                                    |vinurilor direct la usa
+                            .align-text-bottom.d-none.d-md-inline-block.d-lg-none
+                                p.text-red(style='font-size: 2rem; white-space:nowrap;')
+                                    | Iti aducem lumea vinurilor direct la usa
+                            .align-text-bottom.d-none.d-md-none.d-lg-inline-block
+                                p.text-red(style='font-size:2rem; white-space:nowrap;')
+                                    | Iti aducem lumea vinurilor direct la usa
+    .container.mt-5.pt-5
+        .row
+            .col
+                .section_title_container
+                    .section_title
+                        h1.text-red
+                            | Ne-am propus sa va introducem putin cate putin in lumea vinului de
+                            | calitate,
+                        h3
+                            | a savurarii unei bauturi
+                            | cu adevarat miraculoase daca este consumata asa cum trebuie, la temperatura corecta, in
+                            | ambianta
+                            | si in compania potrivita.
+        .my-5
+            .row.themenu_text_row
+                .col-lg-4.text-center
+                    .themenu_text
+                        .themenu_image.mb-5
+                            img(src='img/bottle1.png' style='height:150px; border-bottom: 5px solid #9c2a30; padding-bottom:10px;  ' alt='')
+                        p
+                            | In fiecare luna veti avea parte de o surpriza, nu doar de Sarbatori, zile de nastere,
+                            | onomastice. Noi
+                            | ne-am propus sa va suprindem placut pe tot parcursul anului.
+                .col-lg-4.text-center
+                    .themenu_image.mb-5
+                        img(src='img/bottle2.png' style='height:150px; border-bottom: 5px solid #9c2a30; padding-bottom:10px;  ' alt='')
+                    .themenu_text
+                        p
+                            | Vinurile sunt atent selectionate de noi si de somelierii cu care noi colaboram, te vom
+                            | suprinde placut
+                            | in fiecare luna..
+                .col-lg-4.text-center
+                    .themenu_image.mb-5
+                        img(src='img/bottle3.png' style='height:150px; border-bottom: 5px solid #9c2a30; padding-bottom:10px;  ' alt='')
+                    .themenu_text
+                        p
+                            | Tinem cont de preferintele tale, vei putea sa comunici cu noi si daca ai un fel de vin
+                            | preferat, alb,
+                            | rosu sau rose, ne poti contacta si vom incerca sa ti-l transmitem de fiecare data.
+                .col-lg-12.mt-5
+                    .themenu_text
+                        h3
+                            | Veti descoperi gustul vinului si veti aprecia aceasta bautura ca pe una din placerile
+                            | vietii, alaturi de o
+                            | carte buna, o ciocolata buna, sau pur si simplu alaturi de cei dragi oricand. Nu te vom
+                            | putea
+                            | transforma intr-un somelier, dar cu siguranta vei stii sa apreciezi intr-adevar un vin
+                            | bun.
+                .col-lg-12.mt-5
+                    .themenu_text.text-center
+                        h1.text-red Alte beneficii
+                        .col-lg-12.mt-2
+                            h3 1. Livrarile le lasi in seama noastra, la adresa solicitata de tine, si gratuit.
+                            h3
+                                | 2. Vinurile sunt atent selectionate de noi si de somelierii cu care noi colaboram, te
+                                | vom suprinde placut
+                                | in fiecare luna.
+                            h3
+                                | 3. Am pregatit abonamente care pot fi oferite si ca vouchere de tip cadou pentru cei
+                                | dragi.
+                            h3 4. Abonatii au preturi preferentiale la toate produsele noastre.
+                .col-lg-12.mt-5
+                    .themenu_text.text-center
+                        h1.text-red Oferta noastra
+                        h3 Pretul abonamentului este pe luna
+                        div(style='overflow-x:auto')
+                            table(style=';width: 100%')
+                                tr
+                                    th
+                                    th.responsive
+                                        h3.text-red.font-weight-bold 1 luna
+                                    th.responsive
+                                        h3.text-red.font-weight-bold 3 luni
+                                    th.responsive
+                                        h3.text-red.font-weight-bold 6 luni
+                                    th.responsive
+                                        h3.text-red.font-weight-bold 12 luni
+                                tr
+                                    td.responsive
+                                        h3.text-red.font-weight-bold 2 Sticle
+                                    td.responsive
+                                        h4 100 Ron/Luna
+                                    td.responsive
+                                        h4 95 Ron/Luna
+                                    td.responsive
+                                        h4 90 Ron/Luna
+                                    td.responsive
+                                        h4 85 Ron/Luna
+                                tr
+                                    td.responsive
+                                        h3.text-red.font-weight-bold 4 Sticle
+                                    td.responsive
+                                        h4 200 Ron/Luna
+                                    td.responsive
+                                        h4 190 Ron/Luna
+                                    td.responsive
+                                        h4 180 Ron/Luna
+                                    td.responsive
+                                        h4 170 Ron/Luna
+                                tr
+                                    td.responsive
+                                        h3.text-red.font-weight-bold 6 Sticle
+                                    td.responsive
+                                        h4 300 Ron/Luna
+                                    td.responsive
+                                        h4 285 Ron/Luna
+                                    td.responsive
+                                        h4 270 Ron/Luna
+                                    td.responsive
+                                        h4 255 Ron/Luna
+                                tr
+                                    td.responsive
+                                        h3.text-red.font-weight-bold 12 Sticle
+                                    td.responsive
+                                        h4 550 Ron/Luna
+                                    td.responsive
+                                        h4 522 Ron/Luna
+                                    td.responsive
+                                        h4 495 Ron/Luna
+                                    td.responsive
+                                        h4 467 Ron/Luna
+                                tr
+                                    td.responsive
+                                        h3.text-red.font-weight-bold 18 Sticle
+                                    td.responsive
+                                        h4 800 Ron/Luna
+                                    td.responsive
+                                        h4 760 Ron/Luna
+                                    td.responsive
+                                        h4 720 Ron/Luna
+                                    td.responsive
+                                        h4 680 Ron/Luna
+                .col-lg-12.mt-5
+                    .themenu_text.text-center
+                        h1.text-red Alege pachetul potrivit pentru tine:
+                        .row
+                            .col-lg-6.mt-2
+                                h4 Durata
+                                select#durata.form-control.text-red(name='judet' style='font-size: 1.4rem')
+                                    option(value='0') 1 Luna
+                                    option(value='1') 3 Luni
+                                    option(value='2') 6 Luni
+                                    option(value='3') 12 Luni
+                            .col-lg-6.mt-2
+                                h4 Cantitate
+                                select#cantitate.form-control.text-red(name='judet' style='font-size: 1.4rem')
+                                    option(value='0') 2 Sticle
+                                    option(value='1') 4 Sticle
+                                    option(value='2') 6 Sticle
+                                    option(value='3') 12 Sticle
+                                    option(value='4') 18 Sticle
+                            .col-md-6.offset-md-6.mt-5(style='overflow-x:auto')
+                                table(style='width: 100%;')
+                                    tr(style='border-bottom: 1px solid #cacaca ')
+                                        th.responsive.text-left
+                                            h4.text-red Luni
+                                        th.responsive.text-right
+                                            h3#luni 1
+                                    tr(style='border-bottom: 1px solid #cacaca')
+                                        th.responsive.text-left
+                                            h4.text-red Sticle
+                                        th.responsive.text-right
+                                            h3
+                                                span#sticle 1
+                                                |  Sticle
+                                    tr(style='border-bottom: 1px solid #cacaca')
+                                        th.responsive.text-left
+                                            h4.text-red Pret / Luna
+                                        th.responsive.text-right
+                                            h3
+                                                span#pret_pe_luna 1
+                                                |  Ron
+                                    tr
+                                        th.responsive.text-left
+                                            h3.text-red.font-weight-bold
+                                                | Total
+                                        th.responsive.text-right
+                                            h3.font-weight-bold
+                                                span#total
+                                                |  Ron
+                            .col-lg-6.offset-lg-3.mt-4
+                                button.button.red(style='width:100%' onclick='placeOrder()')
+                                    | Aboneaza-te
+
+
+    include pug_includes/footer
+
+
+include pug_includes/generic_imports
+script.
+    let quantities = [2, 4, 6, 12, 18];
+    let durations = [1, 3, 6, 12];
+    let cantitate = 0;
+    let durationIndex = 0;
+    let TOTAL = 0;
+    let FINAL_QUANTITY = 0;
+    let FINAL_DURATION = 0;
+    Cookies.set('alreadySeenPromotion', true);
+    Cookies.set('seenPromotionAt', new Date().getTime());
+    function placeOrder() {
+        Cookies.set('SUBSCRIPTION_QTY', FINAL_QUANTITY);
+        Cookies.set('SUBSCRIPTION_DURATION', FINAL_DURATION);
+        Cookies.set('SUBSCRIPTION_TOTAL', TOTAL);
+        window.location.href = "checkout.html"
+    }
+    let prices = [
+        100, 95, 90, 85,
+        200, 190, 180, 170,
+        300, 285, 270, 255,
+        550, 522, 495, 465,
+        800, 760, 720, 680
+    ];
+    function setTotalTable() {
+        FINAL_DURATION = durations[durationIndex];
+        $("#luni").text(FINAL_DURATION);
+        FINAL_QUANTITY = quantities[cantitate];
+        $("#sticle").text(FINAL_QUANTITY);
+        let pretPeLuna = prices[durationIndex + cantitate * (durations.length)];
+        $("#pret_pe_luna").text(pretPeLuna);
+        TOTAL = pretPeLuna * FINAL_DURATION;
+        $("#total").text(TOTAL);
+    }
+    setTotalTable();
+    $("#cantitate").change(function () {
+        cantitate = parseInt(this.value);
+        console.log(cantitate);
+        setTotalTable()
+    });
+    $("#durata").change(function () {
+        durationIndex = parseInt(this.value);
+        setTotalTable()
+    });
+

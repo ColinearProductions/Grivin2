@@ -615,6 +615,9 @@ $(document).ready(function () {
 
 
 function addItemToCart(productCode, quantity) {
+    Cookies.remove('SUBSCRIPTION_QTY');
+    Cookies.remove('SUBSCRIPTION_DURATION');
+    Cookies.remove('SUBSCRIPTION_TOTAL');
 
     let itemsInCart = countItemsInCart();
     //alert(itemsInCart + " : " +  (itemsInCart + parseInt(quantity)));
@@ -877,6 +880,75 @@ function initCheckout() {
 
 }
 
+
+
+
+
+function initCheckoutSpecial() {
+
+
+
+    let qty = Cookies.get('SUBSCRIPTION_QTY');
+    let dur = Cookies.get('SUBSCRIPTION_DURATION');
+    let tot =Cookies.get('SUBSCRIPTION_TOTAL');
+
+    let checkoutState = $("#judet");
+    $(checkoutState).on('change', updateCheckoutTotals);
+    let checkoutBasketContainer = $("#checkout-basket-container");
+
+
+
+    currentCart = {
+        items:[
+            {
+                product_code: "Abonament",
+                quantity: 1,
+                total: tot,
+                productDetail:{
+                    product_code: "Abonament",
+                    category_id: 1000,
+                    subcategory_id: 1003,
+                    name: `Abonament ${qty} vinuri pentru ${dur} luni `,
+                    den_tip: 156,
+                    stoc: 250,
+                    price: tot,
+                    shortDescription: "Abonament lunar - 6 vinuri",
+                    longDescription: "Este un vin floral, cu note de tei, salcam si caprifoi. Gurmand si plin, lasa o savoare unica, cu o aciditate placuta si usoara, iti va oferi toata bogatia sa aromata daca il savurezi la o temperatura intre 10 si 14 grade Celsius.",
+                    subdescription: "Alcool: 12%",
+                    image: "Subscription_6.png",
+                    considera: 1
+                }
+            }
+        ]
+    };
+    tempCart = currentCart;
+
+    subtotal=parseInt(tot);
+
+
+    let template = checkoutBasketItemTemplate;
+    Mustache.parse(template);
+    let rendered = Mustache.render(template, currentCart);
+    $(checkoutBasketContainer).html(rendered);
+
+
+    initCheckoutFormValidation();
+    updateCheckoutTotals(true);
+
+
+    $('input[type=radio][name=modalitate_de_plata]').change(function () {
+        if (this.value === "RAMBURS" || this.value === "OP") {
+            $('.hide-if-showroom').show();
+        } else {
+            $('.hide-if-showroom').hide();
+        }
+
+        deliveryType = this.value;
+        updateCheckoutTotals(true);
+    });
+
+}
+
 function initCheckoutFormValidation() {
 
     $.validator.addMethod("requiredIfNotShowroom", function (value, element) {
@@ -932,7 +1004,7 @@ function initCheckoutFormValidation() {
 
 let costTransport;
 
-function updateCheckoutTotals() {
+function updateCheckoutTotals(no_shipping=false) {
     let subtotalText = $("#subtotal");
     let shippingText = $("#shipping");
     let totalText = $("#total");
@@ -947,6 +1019,10 @@ function updateCheckoutTotals() {
 
     if (deliveryType === "SHOWROOM")
         costTransport = 0;
+    if(no_shipping)
+        costTransport = 0;
+
+
 
 
     $(subtotalText).html(subtotal.toFixed(2));
@@ -954,8 +1030,12 @@ function updateCheckoutTotals() {
     $(totalText).html((subtotal + costTransport).toFixed(2));
     $(vatText).html((withoutVAT(subtotal + costTransport)).toFixed(2));
 
+    if(no_shipping) {
 
-    $(shippingText).html(costTransport.toFixed(2));
+        $(shippingText).html("Gratuit <br>");
+
+    }else
+        $(shippingText).html(costTransport.toFixed(2));
 
 
 }
@@ -1046,6 +1126,9 @@ function showOrderCompleteModal() {
     gtag('event', 'place_order', {
         'event_category': 'shop',
     });
+    Cookies.remove('SUBSCRIPTION_QTY');
+    Cookies.remove('SUBSCRIPTION_DURATION');
+    Cookies.remove('SUBSCRIPTION_TOTAL');
 
 
     setInterval(function () {

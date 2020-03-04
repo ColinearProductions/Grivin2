@@ -345,7 +345,14 @@
 <script src="js/magazin.js"></script>
 <script>
     $(document).ready(function () {
-        initCheckout()
+
+        if(Cookies.get('SUBSCRIPTION_TOTAL')===undefined){
+            initCheckout()
+        }else{
+            initCheckoutSpecial()
+        }
+
+
     });
 </script>
 
