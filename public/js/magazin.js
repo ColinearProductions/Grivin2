@@ -567,7 +567,7 @@ $(document).ready(function () {
     let alreadySeenPromotion = Cookies.get('alreadySeenPromotion');
     alreadySeenPromotion = alreadySeenPromotion !== undefined;
     console.log(alreadySeenPromotion);
-    if(!alreadySeenPromotion || ( currentTimestamp - Cookies.get('seenPromotionAt')) > 30*24*60*60*100) //30 days
+    if(!alreadySeenPromotion || ( currentTimestamp - Cookies.get('seenPromotionAt')) > 1*24*60*60*100) //1 days
         $(promoBanner).show();
 
     loadCartBadge();
