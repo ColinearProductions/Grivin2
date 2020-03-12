@@ -819,12 +819,14 @@ let tempCart;
 
 let deliveryType = "RAMBURS";
 
+let NO_SHIPPING = false;
+
 function initCheckout() {
 
 
     let checkoutState = $("#judet");
 
-
+    NO_SHIPPING=false;
     $(checkoutState).on('change', updateCheckoutTotals);
 
     let checkoutBasketContainer = $("#checkout-basket-container");
@@ -887,6 +889,7 @@ function initCheckout() {
 function initCheckoutSpecial() {
 
 
+    NO_SHIPPING=true;
 
     let qty = Cookies.get('SUBSCRIPTION_QTY');
     let dur = Cookies.get('SUBSCRIPTION_DURATION');
@@ -933,7 +936,7 @@ function initCheckoutSpecial() {
 
 
     initCheckoutFormValidation();
-    updateCheckoutTotals(true);
+    updateCheckoutTotals();
 
 
     $('input[type=radio][name=modalitate_de_plata]').change(function () {
@@ -944,7 +947,7 @@ function initCheckoutSpecial() {
         }
 
         deliveryType = this.value;
-        updateCheckoutTotals(true);
+        updateCheckoutTotals();
     });
 
 }
@@ -1004,22 +1007,24 @@ function initCheckoutFormValidation() {
 
 let costTransport;
 
-function updateCheckoutTotals(no_shipping=false) {
+function updateCheckoutTotals() {
     let subtotalText = $("#subtotal");
     let shippingText = $("#shipping");
     let totalText = $("#total");
     let vatText = $("#vat");
 
 
+
     costTransport = costTransportBucuresti;
     let checkoutState = $("#judet").val();
+
     if (checkoutState !== "Bucuresti" && checkoutState !== '') {
         costTransport = costTransportTara;
     }
 
     if (deliveryType === "SHOWROOM")
         costTransport = 0;
-    if(no_shipping)
+    if(NO_SHIPPING)
         costTransport = 0;
 
 
@@ -1030,10 +1035,8 @@ function updateCheckoutTotals(no_shipping=false) {
     $(totalText).html((subtotal + costTransport).toFixed(2));
     $(vatText).html((withoutVAT(subtotal + costTransport)).toFixed(2));
 
-    if(no_shipping) {
-
+    if(NO_SHIPPING) {
         $(shippingText).html("Gratuit <br>");
-
     }else
         $(shippingText).html(costTransport.toFixed(2));
 
