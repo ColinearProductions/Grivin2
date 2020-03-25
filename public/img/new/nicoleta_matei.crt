@@ -1,0 +1,98 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 47 (0x2f)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=RO, ST=RO, L=Bucharest, O=CONICDESIGN, OU=CONICDESIGN, CN=CONICDESIGN CA/name=EasyRSA/emailAddress=conic@conicdesign.ro
+        Validity
+            Not Before: Mar 16 13:33:10 2020 GMT
+            Not After : Mar 14 13:33:10 2030 GMT
+        Subject: C=RO, ST=RO, L=Bucharest, O=CONICDESIGN, OU=CONICDESIGN, CN=nicoleta_matei/name=EasyRSA/emailAddress=conic@conicdesign.ro
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:c9:ff:f3:5a:71:7d:54:e7:12:34:de:9c:db:2f:
+                    c3:7c:22:58:f2:b4:9f:b4:6c:77:50:fe:cb:2f:b3:
+                    6a:36:0d:9a:28:25:e7:fe:17:85:3b:59:f3:dd:20:
+                    d6:5a:ce:17:ad:ab:6b:44:b9:3e:32:5a:bb:3d:1a:
+                    17:17:d9:c3:75:f3:9d:c6:3c:2d:30:fc:71:a0:9f:
+                    d3:be:46:f3:32:ea:38:21:19:86:7e:4a:50:f7:08:
+                    50:14:5f:a3:86:fa:5b:13:a7:73:ed:cc:24:b4:ec:
+                    dd:65:de:76:79:08:72:99:1f:59:b6:6c:2f:c3:85:
+                    d9:27:de:82:51:c8:6b:2e:f9:c7:cd:f1:23:97:23:
+                    f0:4d:24:f3:5f:5d:40:b1:35:10:d3:48:df:a9:f6:
+                    40:ce:61:b3:e2:d2:9e:a0:ae:d7:b1:ba:cb:a5:08:
+                    03:73:de:a8:d0:ab:22:b1:3c:d1:ec:3b:f7:9a:5b:
+                    a0:04:99:ef:10:46:f8:4e:39:ce:4a:b4:6d:7c:72:
+                    96:fb:9e:0f:21:94:7a:f1:bb:a1:cc:36:63:ed:b4:
+                    bb:27:71:5c:b6:6a:9d:20:f1:37:24:4a:e1:11:d0:
+                    ad:87:7d:a3:16:ef:cc:92:48:c8:c7:6e:3c:3c:96:
+                    40:43:f5:ce:52:37:5b:e6:bb:c1:5f:73:18:4c:d9:
+                    4f:51
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                Easy-RSA Generated Certificate
+            X509v3 Subject Key Identifier: 
+                27:8C:7E:32:5F:C9:DA:80:2C:E5:1A:CC:9D:0D:46:03:16:40:77:02
+            X509v3 Authority Key Identifier: 
+                keyid:95:F5:E1:84:CA:6B:3E:84:93:D4:7F:54:D5:C7:9A:5F:91:F6:78:44
+                DirName:/C=RO/ST=RO/L=Bucharest/O=CONICDESIGN/OU=CONICDESIGN/CN=CONICDESIGN CA/name=EasyRSA/emailAddress=conic@conicdesign.ro
+                serial:D3:07:37:28:13:29:50:C9
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+            X509v3 Subject Alternative Name: 
+                DNS:nicoleta_matei
+    Signature Algorithm: sha256WithRSAEncryption
+         40:cc:2e:b4:96:e4:01:95:2d:0e:03:e4:7a:7b:49:20:33:d9:
+         1c:0b:4b:e6:ec:f2:4f:88:18:3c:02:cc:e3:68:e3:74:ce:78:
+         b1:61:98:16:fb:69:9a:72:fa:27:f1:a4:1f:4a:68:ec:0c:da:
+         02:ee:69:5c:e1:6a:ea:bd:96:27:a1:71:9e:97:1b:f0:ea:54:
+         34:63:25:50:7b:11:6a:66:19:ee:4f:ea:f2:f1:77:90:98:86:
+         72:e8:58:84:f4:b6:4e:07:62:e2:5a:32:f5:44:a8:6a:c2:4a:
+         c3:b3:1e:3c:8d:d7:ef:c6:9c:a7:03:63:a3:e3:ba:7d:8c:34:
+         ae:00:eb:6e:0d:b3:1e:25:35:c4:88:a5:34:17:76:1b:f7:b2:
+         f0:89:28:2e:4e:87:6a:08:e6:78:26:ee:4b:e3:b3:aa:41:aa:
+         17:5c:1d:7d:37:61:24:1b:ca:c0:bc:94:04:c0:28:61:73:6c:
+         9b:8b:e5:bc:03:52:20:41:88:00:5e:5d:85:bb:e7:a2:57:2a:
+         2a:cf:7e:30:1a:e4:2f:d1:aa:de:b9:92:81:b9:01:58:db:18:
+         79:57:64:b5:67:f8:e6:3e:7f:0f:46:7e:21:06:d2:33:1a:ae:
+         d6:a6:30:b0:ab:8a:94:25:ae:41:06:50:35:11:8b:1d:0c:55:
+         57:f1:37:a2
+-----BEGIN CERTIFICATE-----
+MIIFTzCCBDegAwIBAgIBLzANBgkqhkiG9w0BAQsFADCBqjELMAkGA1UEBhMCUk8x
+CzAJBgNVBAgTAlJPMRIwEAYDVQQHEwlCdWNoYXJlc3QxFDASBgNVBAoTC0NPTklD
+REVTSUdOMRQwEgYDVQQLEwtDT05JQ0RFU0lHTjEXMBUGA1UEAxMOQ09OSUNERVNJ
+R04gQ0ExEDAOBgNVBCkTB0Vhc3lSU0ExIzAhBgkqhkiG9w0BCQEWFGNvbmljQGNv
+bmljZGVzaWduLnJvMB4XDTIwMDMxNjEzMzMxMFoXDTMwMDMxNDEzMzMxMFowgaox
+CzAJBgNVBAYTAlJPMQswCQYDVQQIEwJSTzESMBAGA1UEBxMJQnVjaGFyZXN0MRQw
+EgYDVQQKEwtDT05JQ0RFU0lHTjEUMBIGA1UECxMLQ09OSUNERVNJR04xFzAVBgNV
+BAMUDm5pY29sZXRhX21hdGVpMRAwDgYDVQQpEwdFYXN5UlNBMSMwIQYJKoZIhvcN
+AQkBFhRjb25pY0Bjb25pY2Rlc2lnbi5ybzCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAMn/81pxfVTnEjTenNsvw3wiWPK0n7Rsd1D+yy+zajYNmigl5/4X
+hTtZ890g1lrOF62ra0S5PjJauz0aFxfZw3XzncY8LTD8caCf075G8zLqOCEZhn5K
+UPcIUBRfo4b6WxOnc+3MJLTs3WXednkIcpkfWbZsL8OF2SfeglHIay75x83xI5cj
+8E0k819dQLE1ENNI36n2QM5hs+LSnqCu17G6y6UIA3PeqNCrIrE80ew795pboASZ
+7xBG+E45zkq0bXxylvueDyGUevG7ocw2Y+20uydxXLZqnSDxNyRK4RHQrYd9oxbv
+zJJIyMduPDyWQEP1zlI3W+a7wV9zGEzZT1ECAwEAAaOCAXwwggF4MAkGA1UdEwQC
+MAAwLQYJYIZIAYb4QgENBCAWHkVhc3ktUlNBIEdlbmVyYXRlZCBDZXJ0aWZpY2F0
+ZTAdBgNVHQ4EFgQUJ4x+Ml/J2oAs5RrMnQ1GAxZAdwIwgd8GA1UdIwSB1zCB1IAU
+lfXhhMprPoST1H9U1ceaX5H2eEShgbCkga0wgaoxCzAJBgNVBAYTAlJPMQswCQYD
+VQQIEwJSTzESMBAGA1UEBxMJQnVjaGFyZXN0MRQwEgYDVQQKEwtDT05JQ0RFU0lH
+TjEUMBIGA1UECxMLQ09OSUNERVNJR04xFzAVBgNVBAMTDkNPTklDREVTSUdOIENB
+MRAwDgYDVQQpEwdFYXN5UlNBMSMwIQYJKoZIhvcNAQkBFhRjb25pY0Bjb25pY2Rl
+c2lnbi5yb4IJANMHNygTKVDJMBMGA1UdJQQMMAoGCCsGAQUFBwMCMAsGA1UdDwQE
+AwIHgDAZBgNVHREEEjAQgg5uaWNvbGV0YV9tYXRlaTANBgkqhkiG9w0BAQsFAAOC
+AQEAQMwutJbkAZUtDgPkentJIDPZHAtL5uzyT4gYPALM42jjdM54sWGYFvtpmnL6
+J/GkH0po7AzaAu5pXOFq6r2WJ6Fxnpcb8OpUNGMlUHsRamYZ7k/q8vF3kJiGcuhY
+hPS2Tgdi4loy9USoasJKw7MePI3X78acpwNjo+O6fYw0rgDrbg2zHiU1xIilNBd2
+G/ey8IkoLk6HagjmeCbuS+OzqkGqF1wdfTdhJBvKwLyUBMAoYXNsm4vlvANSIEGI
+AF5dhbvnolcqKs9+MBrkL9Gq3rmSgbkBWNsYeVdktWf45j5/D0Z+IQbSMxqu1qYw
+sKuKlCWuQQZQNRGLHQxVV/E3og==
+-----END CERTIFICATE-----
