@@ -9664,11 +9664,96 @@ button.red:disabled:hover {
 }
 
 .header {
+
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease
+}
+
+.header.with_promo {
+  padding-top: 50px;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease
+}
+
+.header.with_promo.scrolled {
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  padding-top: 0px;
+}
+
+.header > .promo_banner > h3 {
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
+  -ms-transition: all 100ms ease;
+  color:white
+}
+
+.header.scrolled > .promo_banner > h3{
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
+  -ms-transition: all 100ms ease;
+  color:transparent;
+}
+
+@media only screen and (max-width: 900px)
+{
+  .header > .promo_banner > h3{
+    font-size:.5em;
+  }
+}
+
+
+
+.header.scrolled > .promo_banner{
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  height:0;
+  padding:0px;
+}
+
+.hamburger_bar > .hamburger{
+  top: calc( 50% + 50px);
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+}
+.hamburger_bar.scrolled > .hamburger{
+  top:50%;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+}
+
+
+.promo_banner {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  padding:10px;
+  font-size: 28px;
+  top: 0;
+  left: 0;
+  background-color: #9D2C30;
+  z-index: 100000;
   -webkit-transition: all 400ms ease;
   -moz-transition: all 400ms ease;
   -ms-transition: all 400ms ease;

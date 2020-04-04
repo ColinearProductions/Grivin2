@@ -1026,6 +1026,9 @@ function updateCheckoutTotals() {
         costTransport = 0;
     if(NO_SHIPPING)
         costTransport = 0;
+    //todo PROMO - to remove
+    if(subtotal>=100)
+        costTransport=0;
 
 
 
