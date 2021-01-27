@@ -9,6 +9,7 @@ script(src='https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js')
 script(src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.3/mustache.js')
 script(src='https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js')
 script(src='https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js')
 script(src='js/custom.js')
 script(src='js/produse.js')
 script(src='js/magazin.js')
@@ -20,6 +21,8 @@ script.
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-147392597-1');
+
+    document.getElementById("month_name").innerText = " " + moment().lang('ro').format('MMMM');
 
 
 script(type='application/ld+json').

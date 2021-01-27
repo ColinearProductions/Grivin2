@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectTasksOptions">
     <TaskOptions isEnabled="true">
-      <option name="arguments" value="-O C:\Users\Razvan\git\Grivin\global.json $FileName$" />
+      <option name="arguments" value="-O C:\Conic\Grivin2\global.json $FileName$" />
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" />
       <option name="exitCodeBehavior" value="ERROR" />
